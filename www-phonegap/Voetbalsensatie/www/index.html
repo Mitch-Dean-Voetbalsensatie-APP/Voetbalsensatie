@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voetbalsensatie Live Score App</title>
+  <link rel="stylesheet" href="css/themes/Voetbalsensatie.min.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//api.statsfc.com/widget/table-2.0.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, "script", "statsfc-table-js"));</script>
+</head>
+<body>
+  <div data-role="page" data-theme="a">
+    <div data-role="header" data-position="inline">
+       <h1><img src="img/logo.png"><h1>
+    </div>
+    <div data-role="content" data-theme="a">
+    <div data-role="collapsible">
+    <h3>new</h3>
+<div data-role="content" data-theme="a" class="statsfc-table"
+    data-key="8na7AFjWrTwPTAZ2xqf0jg035eRlBC7lS35SMKWL"
+    data-competition="EPL"
+    data-table-type="full"
+    data-rows="10"
+    data-show-badges="true"
+    data-show-form="true"
+    data-omit-errors="false"
+    data-use-default-css="false">
+</div>
+<h1>hallo</h1>
+    </div>
+  </div>
+</body>
+</html>
