@@ -21,6 +21,35 @@
 <body>
   <div data-role="page" data-theme="a">
     <div data-role="header" data-position="inline">
+                 <?php
+              $data =  ( "request" => array(
+                "passengers" => array( 
+                  adultCount => 1
+                  ),
+                "slice" => array( 
+                  array(
+                origin => "AMS",
+                destination => "MAN",
+                date => "2016-05-09"),
+                  ),
+                "slice" => array( 
+                array(
+                origin => "MAN",
+                destination => "AMS",
+                date => "2016-05-13"),
+                  ),
+                solutions => "1",
+                maxPrice => "EUR250.00",
+                saleCountry => "NL",
+                ),     
+              );  
+              $data_string = json_encode($data);$ch = curl_init('https://api.crowdscores.com/api/v1/teams{?round_ids,competition_ids}/search?key=db1e5763fc564844948c5fad0b8d4c3a');     
+              curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");  
+              curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);   
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);    
+              curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));     
+              $result = curl_exec($ch);curl_close($ch);
+            ?> 
     </div>
     <div data-role="content" data-theme="a">
     <div data-role="collapsible">
