@@ -18,9 +18,12 @@
   <?php foreach($fixtures['fixtures'] as $key)
   { ?> <tr> 
   <td><?php echo $key['homeTeamName']; ?></td> 
+    <td><?php echo $key['result']['goalsHomeTeam']; ?></td> 
+      <td><p>-</p></td>
+      <td><?php echo $key['result']['goalsAwayTeam']; ?></td> 
   <td><?php echo $key['awayTeamName']; ?></td> 
-  <td><?php echo $key['result']['goalsHomeTeam']; ?></td> 
-  <td><?php echo $key['result']['goalsAwayTeam']; ?></td> 
+
+
     <?php foreach($key['result'] as $values)
       { ?>
       <td><?php echo $values['goalsHomeTeam']; ?></td> 
@@ -29,6 +32,5 @@
 </tr> <?php }}   ?> 
 </table>
 
-<p value="<?php echo $key['teamName'];?>"></p>
   </ion-content>
 </ion-view>
