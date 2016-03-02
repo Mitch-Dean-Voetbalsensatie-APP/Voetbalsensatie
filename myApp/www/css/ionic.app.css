@@ -3360,6 +3360,7 @@ body.grade-c {
   bottom: 0;
   left: 0;
   overflow: hidden;
+	
   margin-top: -1px;
   padding-top: 1px;
   margin-bottom: -1px;
@@ -3509,7 +3510,7 @@ ion-infinite-scroll {
 
 /* If you change these, change platform.scss as well */
 .has-header {
-  top: 44px; }
+  top: 44px; padding-left:4%; background-color:#3D3D3D;}
 
 .no-header {
   top: 0; }
@@ -3576,7 +3577,7 @@ ion-infinite-scroll {
  * --------------------------------------------------
  */
 p {
-  margin: 0 0 10px; }
+  margin: 0 0 10px; color:white;}
 
 small {
   font-size: 85%; }
@@ -3595,7 +3596,7 @@ cite {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #000;
+  color: white;
   font-weight: 500;
   font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   line-height: 1.2; }
@@ -3933,7 +3934,7 @@ a.subdued {
     background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
     color: #444; }
     .bar.bar-stable .title {
-      color: #444; }
+      color: white; }
     .bar.bar-stable.bar-footer {
       background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
   .bar.bar-positive {
@@ -5226,9 +5227,9 @@ ion-tabs.tabs-color-active-dark .tab-item {
   width: 275px;
   background-color: #fff; }
   .menu .scroll-content {
-    z-index: 10; }
+    z-index: 10; background-color: #343434;}
   .menu .bar-header {
-    z-index: 11; }
+    z-index: 11;     background-color: #00344C; }
 
 .menu-content {
   -webkit-transform: none;
@@ -5648,16 +5649,14 @@ ion-tabs.tabs-color-active-dark .tab-item {
  */
 .item {
   border-color: #ddd;
-  background-color: #fff;
-  color: #444;
-  position: relative;
-  z-index: 2;
-  display: block;
-  margin: -1px;
-  padding: 16px;
-  border-width: 1px;
-  border-style: solid;
-  font-size: 16px; }
+    background-color: #fff;
+    color: white;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    border-width: 1px;
+    font-size: 16px;}
   .item h2 {
     margin: 0 0 2px 0;
     font-size: 16px;
@@ -5949,7 +5948,7 @@ button.item.item-complex {
   z-index: 2;
   padding: 16px 49px 16px 16px;
   border: none;
-  background-color: #fff; }
+  background-color: #343434;; }
 
 a.item-content {
   display: block;
