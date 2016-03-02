@@ -3510,7 +3510,7 @@ ion-infinite-scroll {
 
 /* If you change these, change platform.scss as well */
 .has-header {
-  top: 44px; padding-left:4%; background-color:#3D3D3D;}
+  top: 44px; padding-left:4%; background-color:white;}
 
 .no-header {
   top: 0; }
@@ -3577,7 +3577,7 @@ ion-infinite-scroll {
  * --------------------------------------------------
  */
 p {
-  margin: 0 0 10px; color:white;}
+  margin: 0 0 10px; color:black;}
 
 small {
   font-size: 85%; }
@@ -3596,7 +3596,7 @@ cite {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: white;
+  color: black;
   font-weight: 500;
   font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   line-height: 1.2; }
