@@ -8,20 +8,22 @@
     $stream_context = stream_context_create($reqPrefs);
     $response = file_get_contents($uri, false, $stream_context);
     $fixtures = json_decode($response, true);
-    echo "<pre>";
-    print_r($fixtures);
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r($fixtures);
+    // echo "</pre>";
 ?>
 
 
 <table> 
-  <?php foreach($fixtures['fixtures'] as $key): ?> <tr> 
-  <td>
-    <img style="height:30px;width:30px;"src="<?php echo $key['crestURI']; ?>">
-  </td>
+  <?php foreach($fixtures['fixtures'] as $key)
+  { ?> <tr> 
   <td><?php echo $key['homeTeamName']; ?></td> 
   <td><?php echo $key['awayTeamName']; ?></td> 
-</tr> <?php endforeach; ?> 
+    <?php foreach($key['result'] as $values)
+      { ?>
+      <td><?php echo $values['goalsHomeTeam']; ?></td> 
+      <td><?php echo $values['goalsAwayTeam']; ?></td> 
+</tr> <?php }}   ?> 
 </table>
 
 <p value="<?php echo $key['teamName'];?>"></p>

@@ -10,9 +10,9 @@
     $stream_context = stream_context_create($reqPrefs);
     $response = file_get_contents($uri, false, $stream_context);
     $fixtures = json_decode($response, true);
-    // echo "<pre>";
-    // print_r($fixtures);
-    // echo "</pre>";
+    echo "<pre>";
+    print_r($fixtures);
+    echo "</pre>";
 ?>
 
 
