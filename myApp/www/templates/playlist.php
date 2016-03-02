@@ -2,7 +2,7 @@
   <ion-content>
     <h1>nfefwfe</h1>
          <?php
-    $uri = 'http://api.football-data.org/v1/soccerseasons/398/fixtures?matchday=28';
+    $uri = 'http://api.football-data.org/v1/soccerseasons/398/fixtures?timeFrame=n12&venue=home';
     $reqPrefs['http']['method'] = 'GET';
     $reqPrefs['http']['header'] = 'X-Auth-Token:68e5abb8860b467dba8e4c28f41ab20c';
     $stream_context = stream_context_create($reqPrefs);
