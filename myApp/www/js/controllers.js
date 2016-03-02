@@ -43,10 +43,10 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
-    { title: 'test', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
+    { title: 'Premiere League', id: 1 },
+    { title: 'Spanish league', id: 2 },
+    { title: 'Bundes liga', id: 3 },
+    { title: 'Serie A', id: 4 },
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];
