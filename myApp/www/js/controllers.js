@@ -1,3 +1,4 @@
+
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
@@ -41,12 +42,22 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('MainCtrl', function($scope,footballdataAPIservice) {
+  
+  footballdataAPIservice.getTeams().success(function(data){
+    $scope.teams=data;
+    console.log($scope.teams)
+  });
+  
+})
+
+
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
-    { title: 'Premiere League', id: 1 },
-    { title: 'Spanish league', id: 2 },
-    { title: 'Bundes liga', id: 3 },
-    { title: 'Serie A', id: 4 },
+    { title: 'Reggae', id: 1 },
+    { title: 'Chill', id: 2 },
+    { title: 'Dubstep', id: 3 },
+    { title: 'Indie', id: 4 },
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];

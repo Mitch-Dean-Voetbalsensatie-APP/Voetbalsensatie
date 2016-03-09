@@ -22,6 +22,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
+
+
+.factory('footballdataAPIservice', function($http) {
+    
+        return {
+           getTeams: function(){
+              return $http({
+                  url:'http://www.football-data.org/alpha/soccerseasons/398/leagueTable',
+                  headers: { 'X-Auth-Token': '613a6b6937394ae8a94d69f358f76902' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           }       
+          
+        }
+     })
+
+
+
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
@@ -32,20 +52,20 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.contact', {
-    url: '/contact',
+  .state('app.search', {
+    url: '/search',
     views: {
       'menuContent': {
-        templateUrl: 'templates/contact.html'
+        templateUrl: 'templates/search.html'
       }
     }
   })
 
-  .state('app.team', {
-      url: '/team',
+  .state('app.browse', {
+      url: '/browse',
       views: {
         'menuContent': {
-          templateUrl: 'templates/team.html'
+          templateUrl: 'templates/browse.html'
         }
       }
     })
@@ -59,33 +79,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-     .state('app.home', {
-      url: '/home',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/home.php',
-        }
-      }
-    })	
-  
-   .state('app.faq', {
-      url: '/faq',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/faq.html',
-        }
-      }
-    })	
-  
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.php',
+        templateUrl: 'templates/playlist.html',
         controller: 'PlaylistCtrl'
       }
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/app/playlists');
 });
