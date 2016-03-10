@@ -22,8 +22,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-
-
 .factory('voetbalsensatieApi', function($http) {
     
         return {
@@ -39,8 +37,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           
         }
      })
-
-
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -70,11 +66,21 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
   
-  .state('app.engeland', {
-      url: '/engeland',
+  .state('app.england', {
+      url: '/england',
       views: {
         'menuContent': {
-             templateUrl: 'templates/engeland.html',
+             templateUrl: 'templates/england.html',
+          
+        }
+      }
+    })
+
+  .state('app.spain', {
+      url: '/spain',
+      views: {
+        'menuContent': {
+             templateUrl: 'templates/spain.html',
           
         }
       }
@@ -104,7 +110,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent': {
           templateUrl: 'templates/404.html',
-          controller: 'PlaylistsCtrl'
         }
       }
     })
@@ -119,7 +124,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/404');
+  $urlRouterProvider.otherwise('/app/home');
 });
 
 
