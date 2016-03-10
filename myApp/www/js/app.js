@@ -65,7 +65,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent': {
              templateUrl: 'templates/competities.html',
-          controller: 'PlaylistsCtrl'
+          
+        }
+      }
+    })
+  
+  .state('app.engeland', {
+      url: '/engeland',
+      views: {
+        'menuContent': {
+             templateUrl: 'templates/engeland.html',
+          
         }
       }
     })
@@ -111,3 +121,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/404');
 });
+
+
+function MyCtrl($scope, $ionicTabsDelegate) {
+  $scope.selectTabWithIndex = function(index) {
+    $ionicTabsDelegate.select(index);
+  }
+}
+
+

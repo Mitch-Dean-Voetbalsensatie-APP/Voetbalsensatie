@@ -13,6 +13,10 @@ angular.module('starter.controllers', [])
   
 })
 
+// .controller('HomeTabCtrl', function($scope) {
+//   console.log('HomeTabCtrl');
+// })
+
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
