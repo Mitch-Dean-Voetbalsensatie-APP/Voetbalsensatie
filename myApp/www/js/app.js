@@ -24,7 +24,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 
 
-.factory('footballdataAPIservice', function($http) {
+.factory('voetbalsensatieApi', function($http) {
     
         return {
            getTeams: function(){
@@ -49,26 +49,36 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.home', {
+    url: '/home',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/home.html'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.competities', {
+      url: '/competities',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+             templateUrl: 'templates/competities.html',
+          controller: 'PlaylistsCtrl'
         }
       }
     })
+  
+   .state('app.contact', {
+      url: '/contact',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/contact.html'
+        }
+      }
+    })
+  
     .state('app.playlists', {
       url: '/playlists',
       views: {
@@ -78,7 +88,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
+  
+ .state('app.404', {
+      url: '/404',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/404.html',
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+  
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
@@ -89,5 +109,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/404');
 });
