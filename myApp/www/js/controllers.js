@@ -8,6 +8,7 @@ angular.module('starter.controllers', [])
   voetbalsensatieApi.getTeams().success(function(data){
     $scope.teams=data;
     console.log($scope.teams)
+    console.log($scope.points)
   });
   
 })
