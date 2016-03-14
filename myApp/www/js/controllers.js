@@ -1,9 +1,64 @@
 
 angular.module('starter.controllers', [])
 
-.controller('MainCtrl', function($scope,voetbalsensatieApi) {
+.controller('EnglandCtrl', function($scope,engelandApi) {
   
-  voetbalsensatieApi.getTeams().success(function(data){
+  engelandApi.getTeams().success(function(data){
+    $scope.teams=data;
+    console.log($scope.teams)
+    console.log($scope.points)
+    console.log($scope.crestUrl)
+  });
+  
+})
+
+.controller('SpainCtrl', function($scope,spainApi) {
+  
+  spainApi.getTeams().success(function(data){
+    $scope.teams=data;
+    console.log($scope.teams)
+    console.log($scope.points)
+    console.log($scope.crestUrl)
+  });
+  
+})
+
+.controller('ItalyCtrl', function($scope,italyApi) {
+  
+  italyApi.getTeams().success(function(data){
+    $scope.teams=data;
+    console.log($scope.teams)
+    console.log($scope.points)
+    console.log($scope.crestUrl)
+  });
+  
+})
+
+.controller('GermanyCtrl', function($scope,germanyApi) {
+  
+  germanyApi.getTeams().success(function(data){
+    $scope.teams=data;
+    console.log($scope.teams)
+    console.log($scope.points)
+    console.log($scope.crestUrl)
+  });
+  
+})
+
+.controller('DutchCtrl', function($scope,dutchApi) {
+  
+  dutchApi.getTeams().success(function(data){
+    $scope.teams=data;
+    console.log($scope.teams)
+    console.log($scope.points)
+    console.log($scope.crestUrl)
+  });
+  
+})
+
+.controller('FranceCtrl', function($scope,franceApi) {
+  
+  franceApi.getTeams().success(function(data){
     $scope.teams=data;
     console.log($scope.teams)
     console.log($scope.points)

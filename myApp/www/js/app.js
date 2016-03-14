@@ -22,13 +22,93 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-.factory('voetbalsensatieApi', function($http) {
+.factory('engelandApi', function($http) {
     
         return {
            getTeams: function(){
               return $http({
                   url:'http://www.football-data.org/v1/soccerseasons/398/leagueTable',
-                  headers: { 'X-Auth-Token': '613a6b6937394ae8a94d69f358f76902' },
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           }       
+          
+        }
+     })
+
+.factory('spainApi', function($http) {
+    
+        return {
+           getTeams: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/399/leagueTable',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           }       
+          
+        }
+     })
+
+.factory('italyApi', function($http) {
+    
+        return {
+           getTeams: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/401/leagueTable',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           }       
+          
+        }
+     })
+
+.factory('germanyApi', function($http) {
+    
+        return {
+           getTeams: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/394/leagueTable',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           }       
+          
+        }
+     })
+
+.factory('dutchApi', function($http) {
+    
+        return {
+           getTeams: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/404/leagueTable',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           }       
+          
+        }
+     })
+
+.factory('franceApi', function($http) {
+    
+        return {
+           getTeams: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/396/leagueTable',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
                   method: 'GET'
               }).success(function(data){
                   return data;
@@ -81,6 +161,46 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent': {
              templateUrl: 'templates/spain.html',
+          
+        }
+      }
+    })
+
+  .state('app.italy', {
+      url: '/italy',
+      views: {
+        'menuContent': {
+             templateUrl: 'templates/italy.html',
+          
+        }
+      }
+    })
+
+  .state('app.germany', {
+      url: '/germany',
+      views: {
+        'menuContent': {
+             templateUrl: 'templates/germany.html',
+          
+        }
+      }
+    })
+
+  .state('app.dutch', {
+      url: '/dutch',
+      views: {
+        'menuContent': {
+             templateUrl: 'templates/dutch.html',
+          
+        }
+      }
+    })
+
+  .state('app.france', {
+      url: '/france',
+      views: {
+        'menuContent': {
+             templateUrl: 'templates/france.html',
           
         }
       }
