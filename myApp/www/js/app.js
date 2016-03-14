@@ -38,6 +38,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
      })
 
+.factory('engelandfixturesApi', function($http) {
+    
+        return {
+           getTeams: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/398/fixtures',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           }       
+          
+        }
+     })
+
 .factory('spainApi', function($http) {
     
         return {
@@ -205,6 +221,18 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+  
+  .state('app.englandoptions', {
+      url: '/englandoptions',
+      views: {
+        'menuContent': {
+             templateUrl: 'templates/englandoptions.html',
+          
+        }
+      }
+    })
+  
+  
   
    .state('app.contact', {
       url: '/contact',
