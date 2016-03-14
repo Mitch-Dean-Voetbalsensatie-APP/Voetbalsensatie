@@ -27,7 +27,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         return {
            getTeams: function(){
               return $http({
-                  url:'http://www.football-data.org/alpha/soccerseasons/398/leagueTable',
+                  url:'http://www.football-data.org/v1/soccerseasons/398/leagueTable',
                   headers: { 'X-Auth-Token': '613a6b6937394ae8a94d69f358f76902' },
                   method: 'GET'
               }).success(function(data){
@@ -128,10 +128,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 });
 
 
-function MyCtrl($scope, $ionicTabsDelegate) {
-  $scope.selectTabWithIndex = function(index) {
-    $ionicTabsDelegate.select(index);
-  }
-}
 
 

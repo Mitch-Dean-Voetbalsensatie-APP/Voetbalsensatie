@@ -1,6 +1,7 @@
-<ion-view view-title="premiere-league">
+<ion-view view-title="Premiere League">
   <ion-content ng-controller="MainCtrl">
     <ul>
+      <li ng-repeat="t in teams.standing"><img ng-src="{{t.crestURI}}"></li>
       <li ng-repeat="t in teams.standing">{{t.teamName}}</li>
       <li ng-repeat="t in teams.standing">{{t.points}}</li>
     </ul>

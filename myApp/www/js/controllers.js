@@ -1,22 +1,16 @@
 
 angular.module('starter.controllers', [])
 
-
-
 .controller('MainCtrl', function($scope,voetbalsensatieApi) {
   
   voetbalsensatieApi.getTeams().success(function(data){
     $scope.teams=data;
     console.log($scope.teams)
     console.log($scope.points)
+    console.log($scope.crestUrl)
   });
   
 })
-
-// .controller('HomeTabCtrl', function($scope) {
-//   console.log('HomeTabCtrl');
-// })
-
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
