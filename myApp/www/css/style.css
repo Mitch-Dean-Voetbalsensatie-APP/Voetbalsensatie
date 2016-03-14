@@ -12,5 +12,5 @@ ion-item:nth-child(even) {background: #EAEAEA;}
 .logoclub {    height: 24px;
     margin-right: 16px; width: 23px; display:inline-block; float:left;}
 
-.points {display:inline-block; float: right; margin-right: 40px; margin-top:3px;}
+.points {display:inline-block; float: right; margin-right: 32%; margin-top:3px;}
 .teamname {display:inline-block; margin-top:3px; }
