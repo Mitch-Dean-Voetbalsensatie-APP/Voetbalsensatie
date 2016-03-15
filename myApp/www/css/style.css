@@ -14,3 +14,8 @@ ion-item:nth-child(even) {background: #EAEAEA;}
 
 .points {display:inline-block; float: right; margin-right: 32%; margin-top:3px;}
 .teamname {display:inline-block; margin-top:3px; }
+
+.homeimg {width: 100%;
+   }
+
+.container {padding:9px;}

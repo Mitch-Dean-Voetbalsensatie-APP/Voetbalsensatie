@@ -181,7 +181,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
+  
+.state('app.spainoptions', {
+      url: '/spainoptions',
+      views: {
+        'menuContent': {
+             templateUrl: 'templates/spainoptions.html',
+          
+        }
+      }
+    })
+  
   .state('app.italy', {
       url: '/italy',
       views: {
