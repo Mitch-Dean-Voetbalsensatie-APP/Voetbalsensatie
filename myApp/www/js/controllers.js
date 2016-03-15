@@ -5,6 +5,7 @@ angular.module('starter.controllers', [])
   
   engelandApi.getTeams().success(function(data){
     $scope.teams=data;
+	$scope.league=data.leagueCaption;
     console.log($scope.teams)
     console.log($scope.points)
     console.log($scope.crestUrl)
@@ -16,6 +17,7 @@ angular.module('starter.controllers', [])
   
   spainApi.getTeams().success(function(data){
     $scope.teams=data;
+	  $scope.league=data.leagueCaption;
     console.log($scope.teams)
     console.log($scope.points)
     console.log($scope.crestUrl)
@@ -27,6 +29,7 @@ angular.module('starter.controllers', [])
   
   italyApi.getTeams().success(function(data){
     $scope.teams=data;
+	  $scope.league=data.leagueCaption;
     console.log($scope.teams)
     console.log($scope.points)
     console.log($scope.crestUrl)
@@ -38,6 +41,7 @@ angular.module('starter.controllers', [])
   
   germanyApi.getTeams().success(function(data){
     $scope.teams=data;
+	  $scope.league=data.leagueCaption;
     console.log($scope.teams)
     console.log($scope.points)
     console.log($scope.crestUrl)
@@ -49,6 +53,7 @@ angular.module('starter.controllers', [])
   
   dutchApi.getTeams().success(function(data){
     $scope.teams=data;
+	  $scope.league=data.leagueCaption;
     console.log($scope.teams)
     console.log($scope.points)
     console.log($scope.crestUrl)
@@ -60,6 +65,7 @@ angular.module('starter.controllers', [])
   
   franceApi.getTeams().success(function(data){
     $scope.teams=data;
+	  $scope.league=data.leagueCaption;
     console.log($scope.teams)
     console.log($scope.points)
     console.log($scope.crestUrl)
@@ -77,6 +83,18 @@ angular.module('starter.controllers', [])
     { title: 'Cowbell', id: 6 }
   ];
 })
+
+
+.controller('FirstCtrl', function($scope) {
+    $scope.title = 'Title1';
+    $scope.subheader = 'Subheader1';
+    $scope.items = [{name:'Yes', ref:'state2'},{name:'No', ref:'column-chart'}]
+})
+.controller('SecondCtrl', ['$scope', function ($scope) {
+    $scope.title = 'Title2';
+    $scope.subheader = 'Subheader2';
+    $scope.items = [{name:'name1', ref:'state1'},{name:'name2', ref:'ref2'}];
+}])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
