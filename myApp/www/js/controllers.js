@@ -85,16 +85,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('FirstCtrl', function($scope) {
-    $scope.title = 'Title1';
-    $scope.subheader = 'Subheader1';
-    $scope.items = [{name:'Yes', ref:'state2'},{name:'No', ref:'column-chart'}]
-})
-.controller('SecondCtrl', ['$scope', function ($scope) {
-    $scope.title = 'Title2';
-    $scope.subheader = 'Subheader2';
-    $scope.items = [{name:'name1', ref:'state1'},{name:'name2', ref:'ref2'}];
-}])
+
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });

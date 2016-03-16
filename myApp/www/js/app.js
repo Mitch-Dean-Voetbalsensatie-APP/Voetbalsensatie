@@ -210,8 +210,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/germany',
       views: {
         'menuContent': {
-             templateUrl: 'templates/germany.html',
-          
+             templateUrl: 'templates/leaguetables.html',
+          			controller: 'GermanyCtrl'
+
         }
       }
     })
@@ -220,8 +221,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/dutch',
       views: {
         'menuContent': {
-             templateUrl: 'templates/dutch.html',
-          
+             templateUrl: 'templates/leaguetables.html',
+                    			controller: 'DutchCtrl'
+
         }
       }
     })
@@ -230,8 +232,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/france',
       views: {
         'menuContent': {
-             templateUrl: 'templates/france.html',
-          
+             templateUrl: 'templates/leaguetables.html',
+                    			controller: 'FranceCtrl'
+
         }
       }
     })
