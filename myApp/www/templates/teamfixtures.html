@@ -1,11 +1,11 @@
 <ion-view>
       <ion-nav-title>
-Marktwaarde
+Komende wedstrijden
     </ion-nav-title>
   <ion-content>
     <ion-list>
            
-      <ion-item ng-repeat="team in isActive"> <div class="marketvalue">  {{team.status}} </div></ion-item>
+      <ion-item ng-repeat="team in isActive">  {{team.homeTeamName}} - {{team.awayTeamName}}  {{team.date}}</ion-item>
       
    </ion-list>
   </ion-content>
