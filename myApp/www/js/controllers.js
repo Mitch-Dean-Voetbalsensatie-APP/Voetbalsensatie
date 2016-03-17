@@ -6,9 +6,7 @@ angular.module('starter.controllers', [])
   engelandApi.getTeams().success(function(data){
     $scope.teams=data;
 	$scope.league=data.leagueCaption;
-    console.log($scope.teams)
-    console.log($scope.points)
-    console.log($scope.crestUrl)
+   
   });
   
 })
@@ -16,9 +14,7 @@ angular.module('starter.controllers', [])
 .controller('engelandteaminfoApi', function($scope,engelandteaminfoApi) {
   engelandteaminfoApi.getTeam().success(function(data){
     $scope.teams=data;
-    console.log($scope.name)
-    console.log($scope.code)
-  });
+     });
   
 })
 
@@ -37,10 +33,7 @@ angular.module('starter.controllers', [])
   spainApi.getTeams().success(function(data){
     $scope.teams=data;
 	  $scope.league=data.leagueCaption;
-    console.log($scope.teams)
-    console.log($scope.points)
-    console.log($scope.crestUrl)
-  });
+     });
   
 })
 
@@ -49,10 +42,7 @@ angular.module('starter.controllers', [])
   italyApi.getTeams().success(function(data){
     $scope.teams=data;
 	  $scope.league=data.leagueCaption;
-    console.log($scope.teams)
-    console.log($scope.points)
-    console.log($scope.crestUrl)
-  });
+     });
   
 })
 
@@ -61,10 +51,7 @@ angular.module('starter.controllers', [])
   germanyApi.getTeams().success(function(data){
     $scope.teams=data;
 	  $scope.league=data.leagueCaption;
-    console.log($scope.teams)
-    console.log($scope.points)
-    console.log($scope.crestUrl)
-  });
+     });
   
 })
 
@@ -73,10 +60,7 @@ angular.module('starter.controllers', [])
   dutchApi.getTeams().success(function(data){
     $scope.teams=data;
 	  $scope.league=data.leagueCaption;
-    console.log($scope.teams)
-    console.log($scope.points)
-    console.log($scope.crestUrl)
-  });
+     });
   
 })
 
@@ -85,26 +69,8 @@ angular.module('starter.controllers', [])
   franceApi.getTeams().success(function(data){
     $scope.teams=data;
 	  $scope.league=data.leagueCaption;
-    console.log($scope.teams)
-    console.log($scope.points)
-    console.log($scope.crestUrl)
-  });
+   });
   
-})
-
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
-
-
-
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
 });
+
+
