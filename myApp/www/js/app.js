@@ -25,7 +25,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .factory('engelandApi', function($http) {
     
         return {
-           getTeams: function(){
+           getLeague: function(){
               return $http({
                   url:'http://www.football-data.org/v1/soccerseasons/398/leagueTable',
                   headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
@@ -33,10 +33,37 @@ angular.module('starter', ['ionic', 'starter.controllers'])
               }).success(function(data){
                   return data;
                 });
-           }       
+           },
+          getFixtures: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/398/fixtures',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           },
+           
+
           
         }
      })
+
+// .factory('engelandfixturesApi', function($http) {
+    
+//         return {
+//            getTeams: function(){
+//               return $http({
+//                   url:'http://www.football-data.org/v1/soccerseasons/398/fixtures',
+//                   headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+//                   method: 'GET'
+//               }).success(function(data){
+//                   return data;
+//                 });
+//            }       
+          
+//         }
+//      })
 
 .factory('engelandteaminfoApi', function($http) {
     
@@ -44,23 +71,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
            getTeam: function(){
               return $http({
                   url:'http://www.football-data.org/v1/soccerseasons/398/teams',
-                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
-                  method: 'GET'
-              }).success(function(data){
-                  return data;
-                });
-           }       
-          
-        }
-     })
-
-
-.factory('engelandfixturesApi', function($http) {
-    
-        return {
-           getTeam: function(){
-              return $http({
-                  url:'http://www.football-data.org/v1/soccerseasons/398/fixtures',
                   headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
                   method: 'GET'
               }).success(function(data){
@@ -208,7 +218,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent': {
              templateUrl: 'templates/teamfixtures.html',
-			          controller: 'engelandfixturesApi'
+			          controller: 'EnglandCtrl'
 
           
         }

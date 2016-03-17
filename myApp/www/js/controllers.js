@@ -3,10 +3,15 @@ angular.module('starter.controllers', [])
 
 .controller('EnglandCtrl', function($scope,engelandApi) {
   
-  engelandApi.getTeams().success(function(data){
+  engelandApi.getLeague().success(function(data){
     $scope.teams=data;
-	$scope.league=data.leagueCaption;
+    $scope.league=data.leagueCaption;
    
+  }),
+  engelandApi.getFixtures().success(function(data){
+    $scope.isActive = data.fixtures.filter(function(value) {
+    return value.status !== "FINISHED";
+    });
   });
   
 })
@@ -18,21 +23,21 @@ angular.module('starter.controllers', [])
   
 })
 
-.controller('engelandfixturesApi', function($scope,engelandfixturesApi) {
-  engelandfixturesApi.getTeam().success(function(data){
+// .controller('engelandfixturesApi', function($scope,engelandfixturesApi) {
+//   engelandfixturesApi.getTeam().success(function(data){
 
-	$scope.isActive = data.fixtures.filter(function(value) {
-		return value.status !== "FINISHED";
-	});
-  });
+//  $scope.isActive = data.fixtures.filter(function(value) {
+//    return value.status !== "FINISHED";
+//  });
+//   });
 
-})
+// })
 
 .controller('SpainCtrl', function($scope,spainApi) {
   
   spainApi.getTeams().success(function(data){
     $scope.teams=data;
-	  $scope.league=data.leagueCaption;
+    $scope.league=data.leagueCaption;
      });
   
 })
@@ -41,7 +46,7 @@ angular.module('starter.controllers', [])
   
   italyApi.getTeams().success(function(data){
     $scope.teams=data;
-	  $scope.league=data.leagueCaption;
+    $scope.league=data.leagueCaption;
      });
   
 })
@@ -50,7 +55,7 @@ angular.module('starter.controllers', [])
   
   germanyApi.getTeams().success(function(data){
     $scope.teams=data;
-	  $scope.league=data.leagueCaption;
+    $scope.league=data.leagueCaption;
      });
   
 })
@@ -59,7 +64,7 @@ angular.module('starter.controllers', [])
   
   dutchApi.getTeams().success(function(data){
     $scope.teams=data;
-	  $scope.league=data.leagueCaption;
+    $scope.league=data.leagueCaption;
      });
   
 })
@@ -68,7 +73,7 @@ angular.module('starter.controllers', [])
   
   franceApi.getTeams().success(function(data){
     $scope.teams=data;
-	  $scope.league=data.leagueCaption;
+    $scope.league=data.leagueCaption;
    });
   
 });
