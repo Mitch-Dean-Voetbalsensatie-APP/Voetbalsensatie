@@ -12,10 +12,12 @@ ion-item:nth-child(even) {background: #EAEAEA;}
 .logoclub {    height: 24px;
     margin-right: 16px; width: 23px; display:inline-block; float:left;}
 
-.points {display:inline-block; float: right; margin-right: 32%; margin-top:3px;}
+.points {display:inline-block; float: right; margin-right: 2%; margin-top:3px;}
 .teamname {display:inline-block; margin-top:3px; }
 
 .homeimg {width: 100%;
    }
 
 .container {padding:9px;}
+.marketvalue {    float: right;
+    margin-right: 0%;}

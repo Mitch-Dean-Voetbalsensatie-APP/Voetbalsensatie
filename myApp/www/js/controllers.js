@@ -13,6 +13,25 @@ angular.module('starter.controllers', [])
   
 })
 
+.controller('engelandteaminfoApi', function($scope,engelandteaminfoApi) {
+  engelandteaminfoApi.getTeam().success(function(data){
+    $scope.teams=data;
+    console.log($scope.name)
+    console.log($scope.code)
+  });
+  
+})
+
+.controller('engelandfixturesApi', function($scope,engelandfixturesApi) {
+  engelandfixturesApi.getTeam().success(function(data){
+
+	$scope.isActive = data.fixtures.filter(function(value) {
+		return value.status !== "FINISHED";
+	});
+  });
+
+})
+
 .controller('SpainCtrl', function($scope,spainApi) {
   
   spainApi.getTeams().success(function(data){

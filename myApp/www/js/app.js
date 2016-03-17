@@ -38,10 +38,27 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
      })
 
+.factory('engelandteaminfoApi', function($http) {
+    
+        return {
+           getTeam: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/398/teams',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           }       
+          
+        }
+     })
+
+
 .factory('engelandfixturesApi', function($http) {
     
         return {
-           getTeams: function(){
+           getTeam: function(){
               return $http({
                   url:'http://www.football-data.org/v1/soccerseasons/398/fixtures',
                   headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
@@ -168,6 +185,30 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         'menuContent': {
              templateUrl: 'templates/leaguetables.html',
 			          controller: 'EnglandCtrl'
+
+          
+        }
+      }
+    })
+  
+  .state('app.teaminfo', {
+      url: '/teaminfo',
+      views: {
+        'menuContent': {
+             templateUrl: 'templates/teaminfo.html',
+			          controller: 'engelandteaminfoApi'
+
+          
+        }
+      }
+    })
+  
+   .state('app.teamfixtures', {
+      url: '/teamfixtures',
+      views: {
+        'menuContent': {
+             templateUrl: 'templates/teamfixtures.html',
+			          controller: 'engelandfixturesApi'
 
           
         }
