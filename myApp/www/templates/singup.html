@@ -1,8 +1,16 @@
 <ion-view view-title="Signup">
   	<ion-content>
-	  Email: <input type="email" ng-model="newUser.email">
-	  Password: <input type="password" ng-model="newUser.password">
+  	<h4 class="logintitle" >Maak hier uw account aan</h4>
+	    <div class="containerSignup">
+	   <h5>Email:</h5>
+	   <label class="item item-input">
+        <input type="email" ng-model="newUser.email" placeholder="Email:">
+      </label><br>
+	  <h5>Wachtwoord:</h5>
+	  <label class="item item-input">
+        <input type="password" ng-model="newUser.password" placeholder="Wachtwoord:">
+      </label>
 	  <button ng-click="signup()" class="button button-block button-positive">Signup</button>
-	  <button ng-click="facebook()"class="button button-block button-positive">Facebook</button>
+	  </div>
 	</ion>
 </ion>

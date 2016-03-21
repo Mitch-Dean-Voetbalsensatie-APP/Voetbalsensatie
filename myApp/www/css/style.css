@@ -24,7 +24,7 @@ ion-item:nth-child(even) {background: #F8F8F8;}
 
 .facebooklogin {width: 15px; margin-right:8px;}
 
-button#geenAccount {    float: left;
+a#geenAccount {    float: left;
     font-size: 13px;}
 
 button#wachtwoordvergeten {    font-size: 13px;

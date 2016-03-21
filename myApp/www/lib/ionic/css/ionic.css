@@ -3519,6 +3519,9 @@ ion-infinite-scroll {
 
 .logintitle {text-align:center;}
 .containerlogin {padding:22px; background-color: #F8F8F8;     height: 231px;}
+.containerSignup {padding:22px; background-color: #F8F8F8;      padding-top: 9px;
+   height: auto;}
+
 
 .has-header.has-subheader.has-tabs-top {
   top: 137px; }
