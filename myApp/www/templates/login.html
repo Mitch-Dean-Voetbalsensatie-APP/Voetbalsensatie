@@ -1,13 +1,24 @@
 <ion-view view-title="Login">
   	<ion-content>
-      <label class="item item-input">
+     
+	  
+	  
+	  <h4 class="logintitle" >Log in met</h4>
+	  <button class="button button-block"ng-click="facebook()"><img class="facebooklogin" ng-src="img/facebooklogin.png" alt="">Facebook</button>
+	  
+	   <h4 class="logintitle" >-------------  &nbsp;&nbsp;of&nbsp;&nbsp;  --------------</h4>
+	   <div class="containerlogin">
+	   <label class="item item-input">
         <input type="email" ng-model="user.email" placeholder="Email:">
       </label>
       <label class="item item-input">
         <input type="password" ng-model="user.password" placeholder="Wachtwoord:">
       </label>
-	  <button class="button button-block button-positive"ng-click="login()">Inloggen</button>
-	  <button class="button button-block button-assertive"ng-click="forgot()">Wachtwoord vergeten</button>
-	  <button class="button button-block button-positive"ng-click="facebook()">Facebook Inloggen</button>
+      
+      <button class="button button-block button-positive"ng-click="login()">Inloggen</button>
+      	  <button id="geenAccount" class="button button-clear button-positive" ng-click="forgot()">Nog geen Account?</button>
+
+	  <button id="wachtwoordvergeten" class="button button-clear button-assertive" ng-click="forgot()">Wachtwoord vergeten?</button>
+	  </div>
 	</ion-content>
 </ion-view>
