@@ -17,6 +17,7 @@ angular.module('starter.controllers', [])
 			  $rootScope.check = {};
 			  $rootScope.check.facebook = authData.facebook.displayName;
 			  console.log("facebook name ", $rootScope.check.facebook);
+				$state.go('app.home');
 			}).catch(function(error) {
 			  console.error("Authentication failed:", error);
 			});
