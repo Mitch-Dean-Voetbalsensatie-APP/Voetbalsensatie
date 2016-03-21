@@ -13,7 +13,7 @@ angular.module('starter.controllers', [])
 	    $scope.facebook=function()
 	    {
 	    	$scope.authObj.$authWithOAuthPopup("facebook").then(function(authData) {
-			  console.log("Logged in as:", authData);
+			  console.log("U bent ingelogd als:", authData);
 			  $rootScope.check = {};
 			  $rootScope.check.facebook = authData.facebook.displayName;
 			  console.log("facebook name ", $rootScope.check.facebook);
@@ -28,7 +28,7 @@ angular.module('starter.controllers', [])
 			$scope.authObj.$resetPassword({
 			  email: $scope.user.email
 			}).then(function() {
-			  console.log("Password reset email sent successfully!");
+			  console.log("Wachtwoord reset is gelukt!");
 			}).catch(function(error) {
 			  console.error("Error: ", error);
 			});
@@ -40,23 +40,23 @@ angular.module('starter.controllers', [])
 			  email: $scope.user.email,
 			  password: $scope.user.password
 			}).then(function(authData) {
-			  console.log("Logged in as:", authData);
+			  console.log("U bent ingelogd als:", authData);
 
 			  $rootScope.check = {};
 
 			var authData = $scope.authObj.$getAuth();
 			if (authData) {
 			  $rootScope.check.email= authData.password.email;//for ng show
-			  console.log("Account, Logged in as:", $rootScope.check.email);
+			  console.log("Account, U bent ingelogd als:", $rootScope.check.email);
 			  $state.go('app.home');//switch to account tab
 			} else {
-			  console.log("Logged out");
+			  console.log("U ben uitgelogd!");
 			}
 			}).catch(function(error) {
 			  console.error("Authentication failed:", error);
 		  		//error messages
 			   var alertPopup = $ionicPopup.alert({
-			     title: 'Login Error',
+			     title: 'Inlog problemen!',
 			     template: error
 			   });
 			   alertPopup.then(function(res) {
@@ -82,11 +82,11 @@ angular.module('starter.controllers', [])
 	    $scope.facebook=function()
 	    {
 	    	$scope.authObj.$authWithOAuthPopup("facebook").then(function(authData) {
-			  console.log("Logged in as:", authData);
+			  console.log("U bent ingelogd als:", authData);
 			  $rootScope.check = {};
 			  $rootScope.check.facebook = authData.facebook.displayName;
 				$rootScope.check.facebook1 = authData.facebook.profileImageURL;
-			  console.log("facebook name ", $rootScope.check.facebook);
+			  console.log("facebook name ", $rootScope.check.facebook, $rootScope.check.facebook1);
 			}).catch(function(error) {
 			  console.error("Authentication failed:", error);
 			});
@@ -105,14 +105,14 @@ angular.module('starter.controllers', [])
 			    password: $scope.newUser.password
 			  });
 			}).then(function(authData) {
-			  console.log("Logged in as:", authData);
+			  console.log("U bent ingelogd als:", authData);
 			  $rootScope.check = {};
 
 			var authData = $scope.authObj.$getAuth();
 			if (authData) {
 			  $rootScope.check.email= authData.password.email;//for ng show
 			  console.log("Account, Logged in as:", $rootScope.check.email);
-			  $state.go('app.login');//switch to account tab
+			  $state.go('app.home');//switch to account tab
 			} else {
 			  console.log("Logged out");
 			}

@@ -8,7 +8,8 @@
         </button>
       </ion-nav-buttons>
       <ion-nav-buttons side="right">
-      <button ng-click="go('#/app/account')" ng-show="check.email" class="button button-clear button-light">Account</button>
+      <a ng-show="check.email" href="#/app/account" class="button button-clear button-light">Account</a>
+      <a ng-show="check.facebook" href="#/app/account" class="button button-clear button-light">{{ check.facebook }} {{ check.facebook1 }} </a>
       </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
