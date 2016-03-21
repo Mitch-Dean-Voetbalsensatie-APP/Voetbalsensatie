@@ -1,0 +1,13 @@
+<ion-view view-title="Login">
+  	<ion-content>
+      <label class="item item-input">
+        <input type="email" ng-model="user.email" placeholder="Email:">
+      </label>
+      <label class="item item-input">
+        <input type="password" ng-model="user.password" placeholder="Wachtwoord:">
+      </label>
+	  <button class="button button-block button-positive"ng-click="login()">Inloggen</button>
+	  <button class="button button-block button-assertive"ng-click="forgot()">Wachtwoord vergeten</button>
+	  <button class="button button-block button-positive"ng-click="facebook()">Facebook Inloggen</button>
+	</ion-content>
+</ion-view>

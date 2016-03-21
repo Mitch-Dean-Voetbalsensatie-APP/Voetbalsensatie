@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,7 +23,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 })
 
 .factory('engelandApi', function($http) {
-    
+
         return {
            getLeague: function(){
               return $http({
@@ -43,14 +43,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
                   return data;
                 });
            },
-           
 
-          
+
+
         }
      })
 
 // .factory('engelandfixturesApi', function($http) {
-    
+
 //         return {
 //            getTeams: function(){
 //               return $http({
@@ -60,13 +60,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 //               }).success(function(data){
 //                   return data;
 //                 });
-//            }       
-          
+//            }
+
 //         }
 //      })
 
 .factory('engelandteaminfoApi', function($http) {
-    
+
         return {
            getTeam: function(){
               return $http({
@@ -76,13 +76,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
               }).success(function(data){
                   return data;
                 });
-           }       
-          
+           }
+
         }
      })
 
 .factory('spainApi', function($http) {
-    
+
         return {
            getTeams: function(){
               return $http({
@@ -92,13 +92,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
               }).success(function(data){
                   return data;
                 });
-           }       
-          
+           }
+
         }
      })
 
 .factory('italyApi', function($http) {
-    
+
         return {
            getTeams: function(){
               return $http({
@@ -108,13 +108,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
               }).success(function(data){
                   return data;
                 });
-           }       
-          
+           }
+
         }
      })
 
 .factory('germanyApi', function($http) {
-    
+
         return {
            getTeams: function(){
               return $http({
@@ -124,13 +124,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
               }).success(function(data){
                   return data;
                 });
-           }       
-          
+           }
+
         }
      })
 
 .factory('dutchApi', function($http) {
-    
+
         return {
            getTeams: function(){
               return $http({
@@ -140,13 +140,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
               }).success(function(data){
                   return data;
                 });
-           }       
-          
+           }
+
         }
      })
 
 .factory('franceApi', function($http) {
-    
+
         return {
            getTeams: function(){
               return $http({
@@ -156,8 +156,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
               }).success(function(data){
                   return data;
                 });
-           }       
-          
+           }
+
         }
      })
 
@@ -179,16 +179,54 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.login', {
+    url: '/login',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/login.html',
+        controller: 'loginCtrl'
+      }
+    }
+  })
+
+  .state('app.voorkeur', {
+    url: '/voorkeur',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/voorkeur.html',
+        controller: 'HomeCtrl'
+      }
+    }
+  })
+
+  .state('app.account', {
+    url: '/account',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/account.html',
+        controller: 'AccountCtrl'
+      }
+    }
+  })
+  .state('app.signup', {
+    url: '/signup',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/singup.html',
+        controller: 'signupCtrl'
+      }
+    }
+  })
   .state('app.competities', {
       url: '/competities',
       views: {
         'menuContent': {
              templateUrl: 'templates/competities.html',
-          
+
         }
       }
     })
-  
+
   .state('app.england', {
       url: '/england',
       views: {
@@ -196,11 +234,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
              templateUrl: 'templates/leaguetables.html',
 			          controller: 'EnglandCtrl'
 
-          
+
         }
       }
     })
-  
+
   .state('app.teaminfo', {
       url: '/teaminfo',
       views: {
@@ -208,11 +246,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
              templateUrl: 'templates/teaminfo.html',
 			          controller: 'engelandteaminfoApi'
 
-          
+
         }
       }
     })
-  
+
    .state('app.teamfixtures', {
       url: '/teamfixtures',
       views: {
@@ -220,7 +258,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
              templateUrl: 'templates/teamfixtures.html',
 			          controller: 'EnglandCtrl'
 
-          
+
         }
       }
     })
@@ -231,21 +269,21 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         'menuContent': {
              templateUrl: 'templates/leaguetables.html',
 			controller: 'SpainCtrl'
-          
+
         }
       }
     })
-  
+
 .state('app.spainoptions', {
       url: '/spainoptions',
       views: {
         'menuContent': {
              templateUrl: 'templates/spainoptions.html',
-          
+
         }
       }
     })
-  
+
   .state('app.italy', {
       url: '/italy',
       views: {
@@ -289,19 +327,19 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-  
+
   .state('app.englandoptions', {
       url: '/englandoptions',
       views: {
         'menuContent': {
              templateUrl: 'templates/englandoptions.html',
-          
+
         }
       }
     })
-  
-  
-  
+
+
+
    .state('app.contact', {
       url: '/contact',
       views: {
@@ -310,9 +348,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-  
 
-  
+
+
  .state('app.404', {
       url: '/404',
       views: {
@@ -321,12 +359,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     });
-  
+
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
-
-
-
-
