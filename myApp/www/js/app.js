@@ -168,6 +168,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
+    controller: 'AccountCtrl'
   })
 
   .state('app.home', {
