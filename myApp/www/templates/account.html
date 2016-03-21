@@ -1,16 +1,32 @@
 <ion-view view-title="Account">
   	<ion-content>
 		<span ng-show="check.email">
-		  {{ check.email }} | <a href="#" ng-click="logout()">Logout</a>
+	<h4 class="pagetitles" >	Welkom!  {{ check.email }}</h4> 
 		</span>
-		<span ng-show="check.facebook">
-		  {{ check.facebook }} | {{ check.facebook1 }} <a href="#" ng-click="logout()">Logout</a>
-		</span>
-		<br>
-		<h1>Reset Password</h1>
-	  	Old Password: <input type="password" ng-model="reset.oldPassword">
-	  	New Password: <input type="password" ng-model="reset.newPassword">
-	  	<button ng-click="resetPassword()">Reset Password</button>
+		
+		
+	<button class="button button-block">	Reset Password </button>
+	  		   <h4 class="pagetitles" >------------  &nbsp;&nbsp;uw gegevens&nbsp;&nbsp;  ------------</h4>
+		<div class="containerlogin">
+
+	  	<h5>Oud Wachtwoord: </h5>
+	  	 
+	  	 <label class="item item-input">
+        <input type="password" ng-model="reset.oldPassword" placeholder="Oud wachtwoord:">
+      </label>
+	  	
+	  <h5>	Nieuw wachtwoord: </h5>
+	  	 <label class="item item-input">
+        <input type="password" ng-model="reset.newPassword" placeholder="Nieuw wachtwoord:">
+      </label>
+	  		  	<a href="#" id="geenAccount" class="button button-clear button-positive" ng-click="logout()">Uitloggen</a>
+
+	  	
+	  	<button id="wachtwoordvergeten" class="button button-clear button-assertive" ng-click="resetPassword()">Reset wachtwoord</button>
+	  	
 	  	<!--<h1>Upgrade account</h1>-->
+	  	
+	  	
+	  	</div>
 	</ion-content>
 </ion-view>
