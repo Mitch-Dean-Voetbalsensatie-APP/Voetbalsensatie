@@ -6,6 +6,11 @@ background-color: #003352;}
 	width:30px;
 }
 
+.facebook-icon{
+	height:35px;
+	border-radius:2em;
+}
+
 
 ion-item:nth-child(even) {background: #F8F8F8;}
 

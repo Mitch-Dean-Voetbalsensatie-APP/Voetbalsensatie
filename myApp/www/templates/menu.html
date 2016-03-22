@@ -9,7 +9,7 @@
       </ion-nav-buttons>
       <ion-nav-buttons side="right">
       <a ng-show="check.email" href="#/app/account" class="button button-clear button-light">Account</a>
-      <a ng-show="check.facebook" href="#/app/account" class="button button-clear button-light">Welkom! {{ check.facebook }} <img class="pic" src="https://graph.facebook.com/{{check.facebook1}}/picture"> </a>
+      <a ng-show="check.facebook" href="#/app/account" class="button button-clear button-light">Welkom! {{ check.facebook }}</a><img class="facebook-icon" ng-src="{{ check.facebookprofileImageURL }}"> 
       </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>

@@ -16,6 +16,7 @@ angular.module('starter.controllers', [])
 			  console.log("U bent ingelogd als:", authData);
 			  $rootScope.check = {};
 			  $rootScope.check.facebook = authData.facebook.displayName;
+				$rootScope.check.facebookprofileImageURL = authData.facebook.profileImageURL;
 			  console.log("facebook name ", $rootScope.check.facebook);
 				$state.go('app.home');
 			}).catch(function(error) {
@@ -85,8 +86,7 @@ angular.module('starter.controllers', [])
 			  console.log("U bent ingelogd als:", authData);
 			  $rootScope.check = {};
 			  $rootScope.check.facebook = authData.facebook.displayName;
-				$rootScope.check.facebook1 = authData.facebook.profileImageURL;
-			  console.log("facebook name ", $rootScope.check.facebook, $rootScope.check.facebook1);
+			  console.log("facebook name ", $rootScope.check.facebook);
 			}).catch(function(error) {
 			  console.error("Authentication failed:", error);
 			});
