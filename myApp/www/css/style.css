@@ -47,3 +47,19 @@ button#wachtwoordvergeten {    font-size: 13px;
 #username {margin-left: 13px;
     margin-top: 6px;
     font-size: 16px; color:white;}
+
+ 
+
+    .background.scroll-content {
+      background: url('../img/voetbalveld.png') no-repeat;
+     background: url('../img/voetbalveld.png') no-repeat;
+    z-index: 9999;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom: 49px;
+    background-position: center;
+    }
+
