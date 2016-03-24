@@ -20,7 +20,7 @@ ion-item:nth-child(even) {background: #F0F0F0;}
 .points {display:inline-block; float: right; margin-right: 2%; margin-top:3px;}
 .teamname {display:inline-block; margin-top:3px; }
 
-.homeimg {    margin-left: -28px; 
+.homeimg {    margin-left: -20px; 
    }
 
 .container {padding:9px;}
