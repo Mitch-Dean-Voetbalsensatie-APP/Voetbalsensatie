@@ -1,11 +1,8 @@
-<ion-view view-title="Login">
+<ion-view view-title="Login" hide-back-button="true">
   	<ion-content>
-     
-	  
-	  
 	  <h4 class="pagetitles" >Log in met</h4>
 	  <button class="button button-block"ng-click="facebook()"><img class="facebooklogin" ng-src="img/facebooklogin.png" alt="">Facebook</button>
-	  
+
 	   <h4 class="pagetitles" >-------------  &nbsp;&nbsp;of&nbsp;&nbsp;  -------------</h4>
 	   <div class="containerlogin">
 	   <label class="item item-input">
@@ -14,7 +11,7 @@
       <label class="item item-input">
         <input type="password" ng-model="user.password" placeholder="Wachtwoord:">
       </label>
-      
+
       <button class="button button-block button-positive"ng-click="login()">Inloggen</button>
       	  <a id="geenAccount" class="button button-clear button-positive" href="#/app/signup">Nog geen Account?</a>
 

@@ -28,7 +28,7 @@
   </head>
 
   <body ng-app="starter">
-    <ion-tabs ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive" enable-menu-with-back-views="true">
+    <ion-tabs hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive" enable-menu-with-back-views="true">
       <ion-tab title="Home" icon-off="ion-ios-home" icon-on="ion-ios-home" href="#/app/home">
         <ion-nav-view name="home"></ion-nav-view>
       </ion-tab>

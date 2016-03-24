@@ -207,35 +207,40 @@ angular.module('starter.controllers', [])
 
 // })
 
-.controller('SpainCtrl', function($scope,spainApi, $ionicLoading) {
+.controller('SpainCtrl', function($scope,spainApi, $ionicLoading, $timeout) {
 
-	// Setup the loader
-$ionicLoading.show({
-	content: 'Loading',
-	animation: 'fade-in',
-	showBackdrop: true,
-	maxWidth: 200,
-	showDelay: 0
-});
-
-// Set a timeout to clear loader, however you would actually call the $ionicLoading.hide(); method whenever everything is ready or loaded.
-$timeout(function () {
   spainApi.getTeams().success(function(data){
-    $scope.teams=data;
-    $scope.league=data.leagueCaption;
-     });
-		$ionicLoading.hide();
-	});
-
+		$ionicLoading.show({
+		 	content: 'Loading',
+		 	animation: 'fade-in',
+		 	showBackdrop: true,
+		 	maxWidth: 300,
+		 	showDelay: 0
+		 });
+	$timeout(function () {
+			$ionicLoading.hide();
+			$scope.teams=data;
+			$scope.league=data.leagueCaption;
+		}, 700);
+    });
 })
 
-.controller('ItalyCtrl', function($scope,italyApi) {
+.controller('ItalyCtrl', function($scope,italyApi,$ionicLoading,$timeout) {
 
   italyApi.getTeams().success(function(data){
-    $scope.teams=data;
-    $scope.league=data.leagueCaption;
-     });
-
+		$ionicLoading.show({
+			content: 'Loading',
+			animation: 'fade-in',
+			showBackdrop: true,
+			maxWidth: 300,
+			showDelay: 0
+		 });
+	$timeout(function () {
+	 		$ionicLoading.hide();
+	    $scope.teams=data;
+	    $scope.league=data.leagueCaption;
+		}, 700);
+    });
 })
 
 .controller('GermanyCtrl', function($scope,germanyApi) {
