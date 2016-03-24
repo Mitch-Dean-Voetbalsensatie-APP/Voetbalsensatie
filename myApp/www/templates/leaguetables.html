@@ -1,12 +1,12 @@
-<ion-view>
+<ion-view ng-controller="SpainCtrl"  has-header="true">
       <ion-nav-title>
 		  {{league}}
     </ion-nav-title>
   <ion-content>
     <ion-list>
-           
+
       <ion-item ng-repeat="t in teams.standing"><img class="logoclub" ng-src="{{t.crestURI}}"> <div class="teamname"> <p> {{t.teamName}}  </p></div>  <div class="points"> <p>{{t.points}} </p></div></ion-item>
-      
+
    </ion-list>
   </ion-content>
 </ion-view>

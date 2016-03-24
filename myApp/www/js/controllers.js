@@ -76,7 +76,6 @@ angular.module('starter.controllers', [])
 
 		$scope.newUser={};
 
- 		//database connection
 	    var ref = new Firebase("https://sensatie.firebaseio.com");
 	    $scope.authObj = $firebaseAuth(ref);
 
@@ -150,7 +149,6 @@ angular.module('starter.controllers', [])
 		//database connection
 		var ref = new Firebase("https://sensatie.firebaseio.com");
 	    $scope.authObj = $firebaseAuth(ref);
-
 	    $scope.reset={};
 
 	    $scope.resetPassword=function()
@@ -194,6 +192,7 @@ angular.module('starter.controllers', [])
 .controller('engelandteaminfoApi', function($scope,engelandteaminfoApi) {
   engelandteaminfoApi.getTeam().success(function(data){
     $scope.teams=data;
+		$scope.loader=true;
      });
 
 })
@@ -208,12 +207,25 @@ angular.module('starter.controllers', [])
 
 // })
 
-.controller('SpainCtrl', function($scope,spainApi) {
+.controller('SpainCtrl', function($scope,spainApi, $ionicLoading) {
 
+	// Setup the loader
+$ionicLoading.show({
+	content: 'Loading',
+	animation: 'fade-in',
+	showBackdrop: true,
+	maxWidth: 200,
+	showDelay: 0
+});
+
+// Set a timeout to clear loader, however you would actually call the $ionicLoading.hide(); method whenever everything is ready or loaded.
+$timeout(function () {
   spainApi.getTeams().success(function(data){
     $scope.teams=data;
     $scope.league=data.leagueCaption;
      });
+		$ionicLoading.hide();
+	});
 
 })
 
@@ -243,8 +255,6 @@ angular.module('starter.controllers', [])
      });
 
 })
-
-
 
 .controller('FranceCtrl', function($scope,franceApi) {
 
