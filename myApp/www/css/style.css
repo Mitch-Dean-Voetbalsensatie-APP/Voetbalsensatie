@@ -343,3 +343,11 @@ button#wachtwoordvergeten {    font-size: 13px;
 		.visitor-team .player.eleven:after{
 		  left:0px;
 		}
+@media screen and (max-width: 320px) {
+    #pitch {    zoom: 83%;     margin-top: 93px; height: 399px;}
+}
+
+@media screen and (min-width: 400px) {
+    #pitch {    zoom: 111%;}
+}
+
