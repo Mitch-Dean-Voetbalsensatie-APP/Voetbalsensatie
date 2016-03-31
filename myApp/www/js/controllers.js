@@ -211,9 +211,10 @@ angular.module('starter.controllers', [])
 
   spainApi.getTeams().success(function(data){
 		$ionicLoading.show({
-		 	content: 'Loading',
+		 	content: '<ion-spinner class="spinner-energized"></ion-spinner>',
 		 	animation: 'fade-in',
-		 	showBackdrop: true,
+			hideOnStageChange: true,
+		 	showBackdrop: false,
 		 	maxWidth: 300,
 		 	showDelay: 0
 		 });
