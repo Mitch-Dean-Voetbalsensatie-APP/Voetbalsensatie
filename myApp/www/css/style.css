@@ -203,63 +203,63 @@ button#wachtwoordvergeten {    font-size: 13px;
 		.home-team .player.one:after{
 		}
 		.home-team .player.two{
-		  top:310px;
-		  left:80px;
+		      top: 284px;
+    left: 81px;
 		}
 		.home-team .player.two:after{
 		}
 		.home-team .player.three{
-		  top:30px;
-		  left:80px;
+		top: 46px;
+    left: 78px;
 		}
 		.home-team .player.three:after{
 		}
 		.home-team .player.four{
-		  top:145px;
-		  left:80px;
+		    top: 165px;
+    left: 86px;
 		}
 		.home-team .player.four:after{
 		}
 		.home-team .player.five{
-		  top:225px;
-		  left:80px;
+		      top: 66px;
+    left: 239px;
 		}
 		.home-team .player.five:after{
 		}
 		.home-team .player.six{
-		  top:310px;
-		  left:160px;
+		      top: 304px;
+    left: 160px;
 		}
 		.home-team .player.six:after{
 		}
 		.home-team .player.seven{
-		  top:60px;
-		  left:160px;
+		top: 28px;
+    left: 160px;
 		}
 		.home-team .player.seven:after{
 		}
 		.home-team .player.eight{
-		  top:145px;
-		  left:160px;
+		  top: 114px;
+    left: 160px;
 		}
 		.home-team .player.eight:after{
 		}
 		.home-team .player.nine{
-		  top:225px;
-		  left:160px;
+		      top: 215px;
+    left: 160px;
 		}
 		.home-team .player.nine:after{
 		}
 		.home-team .player.ten{
-		  top:145px;
-		  left:240px;
+		          top: 165px;
+    left: 240px;
 		}
 		.home-team .player.ten:after{
 		  left:0px;
 		}
 		.home-team .player.eleven{
-		  top:225px;
-		  left:240px;
+		     top: 265px;
+    left: 240px;
 		}
 		.home-team .player.eleven:after{
 		  left:0px;
@@ -274,71 +274,71 @@ button#wachtwoordvergeten {    font-size: 13px;
 		  color:white;
 		}
 		.visitor-team .player.one{
-		  top:185px;
-		  right:20px;
+		    top: 167px;
+    right: 20px;
 		  background:transparent;
 		}
 		.visitor-team .player.one:after{
 		  color:red;
 		}
 		.visitor-team .player.two{
-		  top:310px;
-		  right:80px;
+		  top: 284px;
+    right: 80px;
 		}
 		.visitor-team .player.two:after{
 		}
 		.visitor-team .player.three{
-		  top:60px;
-		  right:80px;
+		  top: 28px;
+    right: 161px;
 		}
 		.visitor-team .player.three:after{
 		}
 		.visitor-team .player.four{
-		  top:145px;
-		  right:80px;
+		 top: 46px;
+    right: 80px;
 		}
 		.visitor-team .player.four:after{
 		}
 		.visitor-team .player.five{
-		  top:225px;
-		  right:80px;
+		      top: 166px;
+    right: 86px;
 		}
 		.visitor-team .player.five:after{
 		}
 		.visitor-team .player.six{
-		  top:310px;
-		  right:160px;
+		      top: 304px;
+    right: 160px;
 		}
 		.visitor-team .player.six:after{
 		}
 		.visitor-team .player.seven{
-		  top:60px;
-		  right:160px;
+		     top: 66px;
+    right: 238px;
 		}
 		.visitor-team .player.seven:after{
 		}
 		.visitor-team .player.eight{
-		  top:145px;
-		  right:160px;
+		 top: 114px;
+    right: 160px;
 		}
 		.visitor-team .player.eight:after{
 		}
 		.visitor-team .player.nine{
-		  top:225px;
-		  right:160px;
+		 top: 215px;
+    right: 160px;
 		}
 		.visitor-team .player.nine:after{
 		}
 		.visitor-team .player.ten{
-		  top:145px;
-		  right:240px;
+		 top: 162px;
+    right: 240px;
 		}
 		.visitor-team .player.ten:after{
 		  left:0px;
 		}
 		.visitor-team .player.eleven{
-		  top:225px;
-		  right:240px;
+		    top: 265px;
+    right: 238px;
 		}
 		.visitor-team .player.eleven:after{
 		  left:0px;
