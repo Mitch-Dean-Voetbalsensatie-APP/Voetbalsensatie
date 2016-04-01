@@ -2088,7 +2088,9 @@
   content: ""; }
 
 .ion-ios-person:before {
-  content: ""; }
+  content: "";
+  color: #FFCC7B;
+  margin-right: 8px; }
 
 .ion-ios-person-outline:before {
   content: ""; }
@@ -2502,7 +2504,9 @@
   content: ""; }
 
 .ion-person-add:before {
-  content: ""; }
+  content: "";
+  color: #FFCC7B;
+  margin-right: 8px; }
 
 .ion-person-stalker:before {
   content: ""; }

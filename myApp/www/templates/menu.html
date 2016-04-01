@@ -1,4 +1,4 @@
-<ion-side-menus hide-back-button="false" enable-menu-with-back-views="true">
+<ion-side-menus enable-menu-with-back-views="false">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-stable">
       <ion-nav-back-button>
@@ -29,17 +29,17 @@
         <ion-item menu-close href="#/app/contact">
          <p class="ion-ios-telephone"> Contact</p>
         </ion-item>
-        <ion-item menu-close href="#/app/login" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive" enable-menu-with-back-views="true">
+        <ion-item menu-close href="#/app/login" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive">
          <p class="ion-ios-person"> Login</p>
         </ion-item>
-        <ion-item menu-close href="#/app/signup" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive" enable-menu-with-back-views="true">
+        <ion-item menu-close href="#/app/signup" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive">
          <p class="ion-person-add"> Signup</p>
         </ion-item>
-        <ion-item menu-close href="#/app/account" hide-back-button="true" ng-show="check.email||check.facebook" class="tabs-icon-top tabs-positive">
+        <ion-item menu-close href="#/app/account" hide-back-button="true" ng-show="check.email||check.facebook">
          <p class="ion-ios-gear"> Account</p>
         </ion-item>
-        <ion-item menu-close href="#/app/voorkeur" hide-back-button="true"ng-show="check.email||check.facebook" class="tabs-icon-top tabs-positive">
-         <p class="ion-ios-gear"> voorkeur</p>
+        <ion-item menu-close href="#/app/voorkeur" hide-back-button="true"ng-show="check.email||check.facebook">
+         <p class="ion-ios-gear"> Voorkeuren</p>
         </ion-item>
       </ion-list>
     </ion-content>

@@ -1,8 +1,8 @@
-<ion-view title='<img class="title-image" src="img/logosensatie2.png" />'>
-<ion-content scroll="false">
+<ion-view  hide-back-button="true" title='Home'>
+<ion-content ng-controller="HomeCtrl" scroll="false">
   <!-- <div class="homecontainer">
   </div> -->
-  <div id="pitch">
+<div id="pitch">
     <div class="field left">
         <div class="penalty-area">
         </div>
@@ -13,11 +13,11 @@
     </div>
     <div class="center-circle"></div>
   <div class="home-team">
-    <img class="player one"src="img/ac-milan.png"/>
-    <img class="player two"src="img/Arsenal-icon.png"/>
-    <img class="player three"src="img/AS-Roma-icon.png"/>
-    <img class="player four"src="img/Atletico-Madrid-icon.png"/>
-    <img class="player five"src="img/bayern-icon.png"/>
+    <img ng-click="showAlert()" class="player one"src="img/ac-milan.png"/>
+    <img ng-click="showAlert()" class="player two"src="img/Arsenal-icon.png"/>
+    <img ng-click="showAlert()" class="player three"src="img/AS-Roma-icon.png"/>
+    <img ng-click="showAlert()" class="player four"src="img/Atletico-Madrid-icon.png"/>
+    <img ng-click="showAlert()" class="player five"src="img/bayern-icon.png"/>
     <img class="player six"src="img/Celtic-icon.png"/>
     <img class="player seven"src="img/Chelsea-icon.png"/>
     <img class="player eight"src="img/dortmunt-icon.png"/>
@@ -39,7 +39,6 @@
     <img class="player eleven"src="img/Valencia-icon.png"/>
   </div>
 </div>
-
 </ion-content>
 <ion-footer-bar align-title="left" class="bar-assertive">
   <h1 class="title">Title!</h1>

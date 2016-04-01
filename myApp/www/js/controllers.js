@@ -137,10 +137,22 @@ angular.module('starter.controllers', [])
 	}
 ])
 
-.controller('HomeCtrl', function($scope) {
+.controller('HomeCtrl', function($scope, $ionicPopup,germanyApi) {
 
-  $scope.showMap = true;
-  $scope.showList = false;
+  // $scope.showMap = true;
+  // $scope.showList = false;
+	germanyApi.getTeams().success(function(data){
+    $scope.teams=data;
+    $scope.league=data.leagueCaption;
+     });
+	$scope.showAlert = function() {
+	$ionicPopup.alert({
+		title: 'Lea',
+		content: '',
+	}).then(function(res) {
+		console.log('Test Alert Box');
+	});
+};
 })
 
 .controller('AccountCtrl', ["$scope", "$rootScope", "$state", "$firebaseAuth",
