@@ -18,14 +18,16 @@ ion-item:nth-child(even) {background: #F0F0F0;}
     margin-right: 16px; width: 23px; display:inline-block; float:left;}
 
 .points {display:inline-block; float: right; margin-right: 2%; margin-top:3px;}
-.teamname {display:inline-block; margin-top:3px; }
+.teamname {display:inline-block; margin-top:3px; color:#939393; }
 
 .homeimg {    width:100%;
    }
 
+
+
 .container {padding:9px;}
 .marketvalue {    float: right;
-    margin-right: 0%;}
+    margin-right: 0%; color:#939393;}
 
 .facebooklogin {width: 15px; margin-right:8px;}
 
@@ -343,8 +345,25 @@ button#wachtwoordvergeten {    font-size: 13px;
 		.visitor-team .player.eleven:after{
 		  left:0px;
 		}
+
+.homeawayteam {float:left;}
+.teamdate {float: right; }
+p.homeawayteam.ng-binding {font-size:9px;}
+p.teamdate.ng-binding {font-size:9px;}
+
+
 @media screen and (max-width: 320px) {
     #pitch {    zoom: 83%;     margin-top: 84px; height: 399px;}
+	
+	.teamname {
+    display: inline-block;
+    margin-top: 3px;
+    font-size: 14px;}
+	.marketvalue {
+    float: right;
+    margin-right: 0%;
+    font-size: 15px;
+}
 }
 
 @media screen and (min-width: 400px) {

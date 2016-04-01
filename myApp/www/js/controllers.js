@@ -1,8 +1,8 @@
 
 angular.module('starter.controllers', [])
 
-.controller('loginCtrl', ["$scope", "$ionicPopup", "$state", "$rootScope", "$firebaseAuth",
-	function($scope, $ionicPopup, $state, $rootScope, $firebaseAuth) {
+.controller('loginCtrl', ["$scope", "$ionicPopup", "$state", "$rootScope", "$firebaseAuth", "$ionicHistory",
+	function($scope, $ionicPopup, $state, $rootScope, $firebaseAuth, $ionicHistory) {
 
 		$scope.user={};
 
@@ -18,6 +18,9 @@ angular.module('starter.controllers', [])
 			  $rootScope.check.facebook = authData.facebook.displayName;
 				$rootScope.check.facebookprofileImageURL = authData.facebook.profileImageURL;
 			  console.log("facebook name ", $rootScope.check.facebook);
+				 $ionicHistory.nextViewOptions({
+    disableBack: true
+  });
 				$state.go('app.home');
 			}).catch(function(error) {
 			  console.error("Authentication failed:", error);
