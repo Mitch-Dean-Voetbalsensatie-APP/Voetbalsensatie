@@ -19,13 +19,21 @@ angular.module('starter.controllers', [])
 				$rootScope.check.facebookprofileImageURL = authData.facebook.profileImageURL;
 			  console.log("facebook name ", $rootScope.check.facebook);
 				 $ionicHistory.nextViewOptions({
-    disableBack: true
-  });
+			    disableBack: true
+  												});
+				
 				$state.go('app.home');
 			}).catch(function(error) {
 			  console.error("Authentication failed:", error);
 			});
 	    }
+		
+		$scope.logout=function()
+		{ 
+			$scope.authObj.$authWithOAuthPopup("facebook").then(function(authData) {
+			$state.go('app.home');//switch to home tab
+			
+		});}
 
 		$scope.forgot=function()
 		{
