@@ -85,7 +85,7 @@ button#wachtwoordvergeten {    font-size: 13px;
 		    -ms-transform: rotate(90deg); /* IE 9 */
 		    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
 		    transform: rotate(90deg);
-				margin-top:100px;
+				margin-top:94px;
 				margin-left:-109px;
 		}
 		#pitch:after{
@@ -344,7 +344,7 @@ button#wachtwoordvergeten {    font-size: 13px;
 		  left:0px;
 		}
 @media screen and (max-width: 320px) {
-    #pitch {    zoom: 83%;     margin-top: 93px; height: 399px;}
+    #pitch {    zoom: 83%;     margin-top: 84px; height: 399px;}
 }
 
 @media screen and (min-width: 400px) {
