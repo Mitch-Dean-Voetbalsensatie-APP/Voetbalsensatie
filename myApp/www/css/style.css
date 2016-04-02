@@ -33,7 +33,7 @@ ion-item:nth-child(even) {background: #F0F0F0;}
    }
 
 .ion-ios-person:before {color: #FFCC7B;
-    margin-right: 8px;}
+    margin-right: 13px;}
 
 .ion-ios-gear:before {color: #FFCC7B;
     margin-right: 8px;}
@@ -55,7 +55,7 @@ button#wachtwoordvergeten {    font-size: 13px;
 .list p {font-size: 18px;
     color: #858585;}
 
-.ion-ios-telephone:before {color:#FFCC7B; margin-right: 8px;}
+.ion-ios-telephone:before {color:#FFCC7B; margin-right: 11px;}
 
 .spinner svg {
 	height:70px;
