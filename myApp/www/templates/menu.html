@@ -26,9 +26,7 @@
         <ion-item menu-close href="#/app/competities">
         <p class="ion-ios-football"> Competities</p>
         </ion-item>
-        <ion-item menu-close href="#/app/contact">
-         <p class="ion-ios-telephone"> Contact</p>
-        </ion-item>
+       
         <ion-item menu-close href="#/app/login" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive">
          <p class="ion-ios-person"> Login</p>
         </ion-item>
@@ -36,10 +34,13 @@
          <p class="ion-person-add"> Signup</p>
         </ion-item>
         <ion-item menu-close href="#/app/account" hide-back-button="true" ng-show="check.email||check.facebook">
-         <p class="ion-ios-gear"> Account</p>
+         <p class="ion-ios-person"> Account</p>
         </ion-item>
         <ion-item menu-close href="#/app/voorkeur" hide-back-button="true"ng-show="check.email||check.facebook">
          <p class="ion-ios-gear"> Voorkeuren</p>
+        </ion-item>
+         <ion-item menu-close href="#/app/contact">
+         <p class="ion-ios-telephone"> Contact</p>
         </ion-item>
       </ion-list>
     </ion-content>

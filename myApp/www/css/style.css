@@ -23,7 +23,11 @@ ion-item:nth-child(even) {background: #F0F0F0;}
 .homeimg {    width:100%;
    }
 
+.ion-ios-person:before {color: #FFCC7B;
+    margin-right: 8px;}
 
+.ion-ios-gear:before {color: #FFCC7B;
+    margin-right: 8px;}
 
 .container {padding:9px;}
 .marketvalue {    float: right;

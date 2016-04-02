@@ -21,19 +21,14 @@ angular.module('starter.controllers', [])
 				 $ionicHistory.nextViewOptions({
 			    disableBack: true
   												});
-				
-				$state.go('app.home');
+			$state.go('app.home');
 			}).catch(function(error) {
 			  console.error("Authentication failed:", error);
 			});
+			
 	    }
 		
-		$scope.logout=function()
-		{ 
-			$scope.authObj.$authWithOAuthPopup("facebook").then(function(authData) {
-			$state.go('app.home');//switch to home tab
-			
-		});}
+		
 
 		$scope.forgot=function()
 		{
@@ -60,6 +55,9 @@ angular.module('starter.controllers', [])
 			if (authData) {
 			  $rootScope.check.email= authData.password.email;//for ng show
 			  console.log("Account, U bent ingelogd als:", $rootScope.check.email);
+				 $ionicHistory.nextViewOptions({
+			    disableBack: true
+  												});
 			  $state.go('app.home');//switch to account tab
 			} else {
 			  console.log("U ben uitgelogd!");
@@ -90,17 +88,7 @@ angular.module('starter.controllers', [])
 	    var ref = new Firebase("https://sensatie.firebaseio.com");
 	    $scope.authObj = $firebaseAuth(ref);
 
-	    $scope.facebook=function()
-	    {
-	    	$scope.authObj.$authWithOAuthPopup("facebook").then(function(authData) {
-			  console.log("U bent ingelogd als:", authData);
-			  $rootScope.check = {};
-			  $rootScope.check.facebook = authData.facebook.displayName;
-			  console.log("facebook name ", $rootScope.check.facebook);
-			}).catch(function(error) {
-			  console.error("Authentication failed:", error);
-			});
-	    }
+	   
 
 		$scope.signup=function()
 		{
@@ -142,11 +130,7 @@ angular.module('starter.controllers', [])
 	}
 ])
 
-.controller('homeCtrl', ["$scope",
-	 function($scope) {
 
-	}
-])
 
 .controller('HomeCtrl', function($scope, $ionicPopup,germanyApi) {
 
@@ -166,8 +150,8 @@ angular.module('starter.controllers', [])
 };
 })
 
-.controller('AccountCtrl', ["$scope", "$rootScope", "$state", "$firebaseAuth",
-	function($scope, $rootScope, $state, $firebaseAuth) {
+.controller('AccountCtrl', ["$scope", "$rootScope", "$state", "$firebaseAuth", "$ionicHistory", "$ionicPopup",
+	function($scope, $rootScope, $state, $firebaseAuth, $ionicHistory, $ionicPopup) {
 
 		//database connection
 		var ref = new Firebase("https://sensatie.firebaseio.com");
@@ -190,9 +174,20 @@ angular.module('starter.controllers', [])
 		$scope.logout=function()
 		{
 			$scope.authObj.$unauth();
+						  console.log("U bent uitgelogd ");
+
+				 $ionicHistory.nextViewOptions({
+			    disableBack: true
+  												});
 			$state.go('app.home');//switch to home tab
 			$rootScope.check.email = null;//for ng show
 			$rootScope.check.facebook = null;
+			$ionicPopup.alert({
+		title: 'U bent succesvol uitgelogd',
+		content: '',
+	}).then(function(res) {
+		console.log('Test Alert Box');
+	});
 		}
 	}
 ])
@@ -206,7 +201,7 @@ angular.module('starter.controllers', [])
   }),
   engelandApi.getFixtures().success(function(data){
     $scope.isActive = data.fixtures.filter(function(value) {
-    return value.status !== "FINISHED";
+    return value.status == "IN_PLAY";
     });
   });
 
