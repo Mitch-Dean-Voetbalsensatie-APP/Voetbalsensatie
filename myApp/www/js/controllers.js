@@ -8,6 +8,7 @@ angular.module('starter.controllers', [])
 
 		//database connection
 	    var ref = new Firebase("https://sensatie.firebaseio.com");
+
 	    $scope.authObj = $firebaseAuth(ref);
 
 	    $scope.facebook=function()
@@ -25,10 +26,10 @@ angular.module('starter.controllers', [])
 			}).catch(function(error) {
 			  console.error("Authentication failed:", error);
 			});
-			
+
 	    }
-		
-		
+
+
 
 		$scope.forgot=function()
 		{
@@ -82,13 +83,35 @@ angular.module('starter.controllers', [])
 
 .controller('signupCtrl', ["$scope", "$state", "$rootScope", "$firebaseAuth",
  	function($scope, $state, $rootScope, $firebaseAuth) {
-
+		var isNewUser = true;
+		var ref = new Firebase("https://sensatie.firebaseio.com");
+		ref.onAuth(function(authData) {
+			if (authData && isNewUser) {
+			// save the user's profile into the database so we can list users,
+			// use them in Security and Firebase Rules, and show profiles
+			ref.child("users").child(authData.uid).set({
+			provider: authData.provider,
+			name: getName(authData)
+			});
+		}
+		});
+		// find a suitable name based on the meta info given by each provider
+		function getName(authData) {
+			switch(authData.provider) {
+				case 'password':
+					return authData.password.email.replace(/@.*/, '');
+				case 'twitter':
+					return authData.twitter.displayName;
+				case 'facebook':
+					return authData.facebook.displayName;
+		}
+		}
 		$scope.newUser={};
 
 	    var ref = new Firebase("https://sensatie.firebaseio.com");
-	    $scope.authObj = $firebaseAuth(ref);
+			$scope.authObj = $firebaseAuth(ref);
 
-	   
+
 
 		$scope.signup=function()
 		{
@@ -96,6 +119,7 @@ angular.module('starter.controllers', [])
 			  email: $scope.newUser.email,
 			  password: $scope.newUser.password
 			}).then(function(userData) {
+
 			  console.log("User " + userData.uid + " created successfully!");
 
 			  return $scope.authObj.$authWithPassword({
@@ -103,6 +127,7 @@ angular.module('starter.controllers', [])
 			    password: $scope.newUser.password
 			  });
 			}).then(function(authData) {
+
 			  console.log("U bent ingelogd als:", authData);
 			  $rootScope.check = {};
 
@@ -134,20 +159,7 @@ angular.module('starter.controllers', [])
 
 .controller('HomeCtrl', function($scope, $ionicPopup,germanyApi) {
 
-  // $scope.showMap = true;
-  // $scope.showList = false;
-	germanyApi.getTeams().success(function(data){
-    $scope.teams=data;
-    $scope.league=data.leagueCaption;
-     });
-	$scope.showAlert = function() {
-	$ionicPopup.alert({
-		title: 'Lea',
-		content: '',
-	}).then(function(res) {
-		console.log('Test Alert Box');
-	});
-};
+
 })
 
 .controller('AccountCtrl', ["$scope", "$rootScope", "$state", "$firebaseAuth", "$ionicHistory", "$ionicPopup",
