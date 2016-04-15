@@ -366,8 +366,8 @@ p.teamdate.ng-binding {font-size:9px;}
 
 
 @media screen and (max-width: 320px) {
-    #pitch {    zoom: 83%;     margin-top: 84px; height: 399px;}
-	
+    #pitch {    zoom: 103%;     margin-top: 84px; height: 399px;}
+
 	.teamname {
     display: inline-block;
     margin-top: 3px;
@@ -379,7 +379,8 @@ p.teamdate.ng-binding {font-size:9px;}
 }
 }
 
-@media screen and (min-width: 400px) {
-    #pitch {    zoom: 111%;}
+@media screen and (min-width: 375px) {
+    #pitch {    		    -ms-transform: rotate(0deg); /* IE 9 */
+				    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+				    transform: rotate(0deg);zoom: 111%;}
 }
-

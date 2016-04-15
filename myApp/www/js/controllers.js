@@ -89,11 +89,15 @@ angular.module('starter.controllers', [])
 			if (authData && isNewUser) {
 			ref.child("users").child(authData.uid).set({
 			provider: authData.provider,
-			name: getName(authData),
-			premiereleague:true,
-			spanishleague:true
+			email: authData.password.email,
+			name: getName(authData)
 			});
 		}
+		var messageListRef = new Firebase('https://sensatie.firebaseio.com/users');
+		var newMessageRef = messageListRef.push();
+newMessageRef.set({ 'user_id': 'fred', 'text': 'Yabba Dabba Doo!' });
+// We've appended a new message to the message_list location.
+var path = newMessageRef.toString();
 		});
 
 		function getName(authData) {
@@ -102,8 +106,13 @@ angular.module('starter.controllers', [])
 					return authData.password.email.replace(/@.*/, '');
 				case 'facebook':
 					return authData.facebook.displayName;
+				}
 		}
-		}
+
+
+
+
+
 		$scope.newUser={};
 
 	    var ref = new Firebase("https://sensatie.firebaseio.com");
