@@ -1,7 +1,7 @@
 /* Empty. Add your own CSS if you like */
 
 ion-header-bar.bar-stable.bar.bar-header {
-background-color: #003352;}
+background-color: white;}
 
 .icon-competition{
 	width:30px;
@@ -58,6 +58,8 @@ button#wachtwoordvergeten {    font-size: 13px;
 
 .ion-ios-telephone:before {color:#FFCC7B; margin-right: 11px;}
 
+img.slide1 {width: 100%;}
+
 .spinner svg {
 	height:70px;
 	width:70px;
@@ -66,7 +68,7 @@ button#wachtwoordvergeten {    font-size: 13px;
 	background:none;
 }
 .title-image{
-	width:78%;
+	width: 37%;
 	margin-top:5px;
 }
 .loading-container .loading{
