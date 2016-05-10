@@ -170,12 +170,27 @@ var path = newMessageRef.toString();
 })
 
 .controller('AccountCtrl', ["$scope", "$rootScope", "$state", "$firebaseAuth", "$ionicHistory", "$ionicPopup",
-	function($scope, $rootScope, $state, $firebaseAuth, $ionicHistory, $ionicPopup) {
+	function($scope, $rootScope, $state, $firebaseAuth, $ionicHistory, $ionicPopup, $ionicSlideBoxDelegate) {
+		// Called to navigate to the main app
+	   $scope.startApp = function() {
+	     $state.go('main');
+	   };
+	   $scope.next = function() {
+	     $ionicSlideBoxDelegate.next();
+	   };
+	   $scope.previous = function() {
+	     $ionicSlideBoxDelegate.previous();
+	   };
 
+	   // Called each time the slide changes
+	   $scope.slideChanged = function(index) {
+	     $scope.slideIndex = index;
+	   };
 		//database connection
 		var ref = new Firebase("https://sensatie.firebaseio.com");
 	    $scope.authObj = $firebaseAuth(ref);
 	    $scope.reset={};
+
 
 	    $scope.resetPassword=function()
 	    {

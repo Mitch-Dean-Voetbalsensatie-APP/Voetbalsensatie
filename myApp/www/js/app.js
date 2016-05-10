@@ -179,6 +179,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
     }
   })
 
+  .state('app.ourTeams', {
+    url: '/ourTeams',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ourteams.html',
+            controller: 'HomeCtrl'
+      }
+    }
+  })
+
   .state('app.login', {
     url: '/login',
     views: {

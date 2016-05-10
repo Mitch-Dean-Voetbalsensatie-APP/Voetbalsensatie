@@ -1,44 +1,21 @@
 <ion-view  hide-back-button="true" title='Home'>
-<ion-content id="pitch" ng-controller="HomeCtrl" scroll="false">
-  <!-- <div class="homecontainer">
-  </div> -->
-    <div class="field left">
-        <div class="penalty-area">
-        </div>
-    </div>
-    <div class="field right">
-        <div class="penalty-area">
-        </div>
-    </div>
-    <div class="center-circle"></div>
-  <div class="home-team">
-    <img ng-click="showAlert()" class="player one"src="img/ac-milan.png"/>
-    <img ng-click="showAlert()" class="player two"src="img/Arsenal-icon.png"/>
-    <img ng-click="showAlert()" class="player three"src="img/AS-Roma-icon.png"/>
-    <img ng-click="showAlert()" class="player four"src="img/Atletico-Madrid-icon.png"/>
-    <img ng-click="showAlert()" class="player five"src="img/bayern-icon.png"/>
-    <img class="player six"src="img/Celtic-icon.png"/>
-    <img class="player seven"src="img/Chelsea-icon.png"/>
-    <img class="player eight"src="img/dortmunt-icon.png"/>
-    <img class="player nine"src="img/Everton-FC-icon.png"/>
-    <img class="player ten"src="img/FC-Barcelona-icon.png"/>
-    <img class="player eleven"src="img/Juventus-icon.png"/>
-  </div>
-  <div class="visitor-team">
-    <img class="player one" src="img/Liverpool-FC-icon.png"/>
-    <img class="player two"src="img/Manchester-City-icon.png"/>
-    <img class="player three"src="img/Manchester-United-icon.png"/>
-    <img class="player four"src="img/Newcastle-United-icon.png"/>
-    <img class="player five"src="img/Paris-Saint-Germain-icon.png"/>
-    <img class="player six"src="img/Real-Madrid-icon.png"/>
-    <img class="player seven"src="img/Schalke-04-icon.png"/>
-    <img class="player eight"src="img/Sevilla-icon.png"/>
-    <img class="player nine"src="img/Southampton-FC-icon.png"/>
-    <img class="player ten"src="img/Tottenham-Hotspur-icon.png"/>
-    <img class="player eleven"src="img/Valencia-icon.png"/>
-  </div>
+<ion-content ng-controller="HomeCtrl" scroll="false">
+  <ion-slide-box does-continue="true" auto-play="true" on-slide-changed="slideChanged(index)">
+         <ion-slide>
+           <h3></h3>
+             <img class="slide1" src="img/cristiano-ronaldo.jpg">
+         </ion-slide>
+         <ion-slide>
+           <h3></h3>
+             <img class="slide" src="img/Luis-suarez.jpg">
+         </ion-slide>
+         <ion-slide>
+           <h3></h3>
+             <img class="slide" src="img/Voetbalreizen-Slide-1.jpg">
+         </ion-slide>
+       </ion-slide-box>
 </ion-content>
 <ion-footer-bar align-title="left" class="bar-assertive">
-  <h1 class="title" style="text-align: center;" >Teams die voetbalsensatie aanbieden</h1>
+  <h1 class="title" style="text-align: center;" >Teams die Sensatiereizen aanbieden</h1>
 </ion-footer-bar>
 </ion-view>

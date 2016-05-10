@@ -1,6 +1,19 @@
 <ion-view view-title="Voorkeur">
   </ion-nav-buttons>
-  	<ion-content ng-controller="HomeCtrl">
+  	<ion-content ng-controller="AccountCtrl">
       <ion-toggle ng-model="$root.showList">Show List</ion-toggle>
+      <ul>
+        <li ng-repeat="message in messages">
+          <!-- edit a message -->
+          <input ng-model="message.text" ng-change="messages.$save(message)" />
+          <!-- delete a message -->
+          <button ng-click="messages.$remove(message)">Delete Message</button>
+        </li>
+      </ul>
+      <!-- push a new message onto the array -->
+      <form ng-submit="addMessage()">
+        <input ng-model="newMessageText" />
+        <button type="submit">Add Message</button>
+      </form>
 	</ion-content>
 </ion-view>
