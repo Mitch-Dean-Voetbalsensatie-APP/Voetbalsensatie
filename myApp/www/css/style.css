@@ -68,8 +68,9 @@ img.slide1 {width: 100%;}
 	background:none;
 }
 .title-image{
-	width: 37%;
-	margin-top:5px;
+	  width: 22%;
+    margin-top: 10px;
+
 }
 .loading-container .loading{
 	background:none !important;
