@@ -3965,7 +3965,7 @@ a.subdued {
   .bar.bar-assertive {
     border-color: #0f659d;
     background-color: #0f659d;
-    background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);
+    background-image: linear-gradient(0deg, #0f659d , #0f659d  50%, transparent 50%);
     color: #fff; }
     .bar.bar-assertive .title {
       color: #fff; }
@@ -6737,7 +6737,7 @@ button.item.item-button-right {
 .slider {
   position: relative;
   visibility: hidden;
-  overflow: hidden; }
+  overflow: hidden; height:100%;}
 
 .slider-slides {
   position: relative;

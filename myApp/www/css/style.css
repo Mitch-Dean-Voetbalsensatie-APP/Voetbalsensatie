@@ -58,7 +58,7 @@ button#wachtwoordvergeten {    font-size: 13px;
 
 .ion-ios-telephone:before {color:#FFCC7B; margin-right: 11px;}
 
-img.slide1 {width: 100%;}
+img.slide1 {width: 100%; height:100%;}
 
 .spinner svg {
 	height:70px;
