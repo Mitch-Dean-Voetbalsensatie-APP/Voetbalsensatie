@@ -1628,7 +1628,7 @@
 .ion-ios-body:before {
   content: "";
    color:#0f659d;
-  margin-right:8px; }
+  margin-right:14px; }
 
 .ion-ios-body-outline:before {
   content: ""; }
@@ -2411,7 +2411,9 @@
   content: ""; }
 
 .ion-log-out:before {
-  content: ""; }
+      content: "";
+    transform: rotate(271deg);
+    color: #0f659d;}
 
 .ion-loop:before {
   content: ""; }
