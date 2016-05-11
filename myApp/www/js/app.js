@@ -261,17 +261,40 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
       }
     })
 
-   .state('app.teamfixtures', {
-      url: '/teamfixtures',
+   .state('app.teaminplay', {
+      url: '/teaminplay',
       views: {
         'menuContent': {
-             templateUrl: 'templates/teamfixtures.html',
+             templateUrl: 'templates/teaminplay.html',
 			          controller: 'EnglandCtrl'
 
 
         }
       }
     })
+
+    .state('app.teamfinished', {
+       url: '/teamfinished',
+       views: {
+         'menuContent': {
+              templateUrl: 'templates/teamfinished.html',
+                 controller: 'EnglandCtrl'
+
+
+         }
+       }
+     })
+     .state('app.teamtimed', {
+        url: '/teamtimed',
+        views: {
+          'menuContent': {
+               templateUrl: 'templates/teamtimed.html',
+                  controller: 'EnglandCtrl'
+
+
+          }
+        }
+      })
 
   .state('app.spain', {
       url: '/spain',

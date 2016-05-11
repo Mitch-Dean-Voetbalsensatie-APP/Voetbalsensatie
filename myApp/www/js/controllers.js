@@ -237,8 +237,17 @@ var path = newMessageRef.toString();
     $scope.isActive = data.fixtures.filter(function(value) {
     return value.status == "IN_PLAY";
     });
-  });
-
+  }),
+	engelandApi.getFixtures().success(function(data){
+		$scope.isFinished = data.fixtures.filter(function(value) {
+		return value.status == "FINISHED";
+		});
+	}),
+	engelandApi.getFixtures().success(function(data){
+		$scope.isTimed = data.fixtures.filter(function(value) {
+		return value.status == "TIMED";
+		});
+	});
 })
 
 .controller('engelandteaminfoApi', function($scope,engelandteaminfoApi) {

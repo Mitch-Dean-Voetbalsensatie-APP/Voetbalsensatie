@@ -1,0 +1,13 @@
+<ion-view>
+      <ion-nav-title>
+Programma
+    </ion-nav-title>
+  <ion-content>
+    <ion-list>
+
+      <ion-item ng-repeat="team in isFinished"> <p class="homeawayteam" > {{team.homeTeamName}}{{team.result.goalsHomeTeam}}  - {{team.result.goalsAwayTeam}}{{team.awayTeamName}}  </p> <p class="teamdate">{{team.date}} 
+		   </p> </ion-item>
+
+   </ion-list>
+  </ion-content>
+</ion-view>
