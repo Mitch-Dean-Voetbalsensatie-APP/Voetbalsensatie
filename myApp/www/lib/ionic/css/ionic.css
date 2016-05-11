@@ -3526,9 +3526,10 @@ ion-infinite-scroll {
 .has-tabs-top {
   top: 93px; }
 
-.pagetitles {text-align:center;}
-.containerlogin {padding:22px; background-color: #F0F0F0;     height: 231px;}
-.containerpages {padding:22px; background-color: #F0F0F0;      padding-top: 9px;
+.pagetitles {text-align:center; color:#0f659d; margin-top: -12px;
+}
+.containerlogin {padding:22px; background-color: #F0F0F0;     height: 359px;}
+.containerpages {padding:22px; background-color: #F0F0F0;      padding-top: 29px;
    height: auto;}
 
 
@@ -8531,24 +8532,24 @@ progress {
  * --------------------------------------------------
  */
 .button {
-  border-color: transparent;
-  background-color: #F0F0F0;
-  color: #444;
-  position: relative;
-  display: inline-block;
-  margin: 0;
-  padding: 0 12px;
-  min-width: 52px;
-  min-height: 47px;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 4px;
-  vertical-align: top;
-  text-align: center;
-  text-overflow: ellipsis;
-  font-size: 16px;
-  line-height: 42px;
-  cursor: pointer; }
+     border-color: transparent;
+    background-color: #FFFFFF;
+    color: #444;
+    position: relative;
+    margin-top: 0px !important;
+    display: inline-block;
+    margin: 0;
+    padding: 0 12px;
+    min-width: 52px;
+    min-height: 47px;
+    border-width: 1px;
+    border-style: solid;
+    vertical-align: top;
+    text-align: left;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    line-height: 42px;
+    cursor: pointer; }
   .button:hover {
     color: #444;
     text-decoration: none; }
@@ -8581,7 +8582,7 @@ progress {
     padding-left: .2em; }
   .button.button-block, .button.button-full {
     margin-top: 10px;
-    margin-bottom: 10px; }
+    margin-bottom: 21px; }
   .button.button-light {
     border-color: transparent;
     background-color: #fff;

@@ -45,10 +45,10 @@ ion-item:nth-child(even) {background: #F0F0F0;}
 
 .facebooklogin {width: 15px; margin-right:8px;}
 
-a#geenAccount {    float: left;
-    font-size: 13px;}
+a#geenAccount {    float: left; background:white;
+    font-size: 12px;}
 
-button#wachtwoordvergeten {    font-size: 13px;
+button#wachtwoordvergeten {    font-size: 12px; background:white;
     float: right;}
 
 .ion-person:before {color: white; margin-right:8px;}
@@ -68,13 +68,13 @@ img.slide1 {width: 100%; height:100%;}
 	background:none;
 }
 
-
+.sensatielogopaginas {width:100%;}
 
 a.item.item-icon-left:nth-child(even){
 background:#F0F0F0;
 
 }
-
+label.item.item-input {    margin-bottom: 14px;}
 .socialmediaicons {    height: 40px;
     width: 40px;
     margin: 4px;
