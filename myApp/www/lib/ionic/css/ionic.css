@@ -5236,8 +5236,12 @@ ion-tabs.tabs-color-active-dark .tab-item {
   max-height: 100%;
   width: 275px;
   background-color: #fff; }
-  .menu .scroll-content {
-    z-index: 10; }
+  .menu .scroll-content {    background-image: url(../img/menuback.jpg);
+    z-index: 10;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(240, 240, 240, 0.34);
+    background-position: 62% -16%; }
   .menu .bar-header {
     z-index: 11; }
 
@@ -5658,17 +5662,13 @@ ion-tabs.tabs-color-active-dark .tab-item {
  * --------------------------------------------------
  */
 .item {
-  border-color: #0f659d;
-  background-color: #fff;
-  color: #444;
-  position: relative;
-  z-index: 2;
-  display: block;
-  margin: -1px;
-  padding: 16px;
-  border-width: 1px;
-  border-style: solid;
-  font-size: 16px; }
+ background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: 16px;
+    font-size: 16px; }
   .item h2 {
     margin: 0 0 2px 0;
     font-size: 16px;
@@ -5956,11 +5956,11 @@ button.item.item-complex {
 
 .item-complex .item-content,
 .item-radio .item-content {
-  position: relative;
-  z-index: 2;
-  padding: 16px 49px 16px 16px;
-  border: none;
-  background-color: #fff; }
+     position: relative;
+    z-index: 2;
+    padding: 16px 49px 16px 16px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0); }
 
 a.item-content {
   display: block;
