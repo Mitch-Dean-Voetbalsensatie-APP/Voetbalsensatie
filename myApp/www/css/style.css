@@ -68,6 +68,19 @@ img.slide1 {width: 100%; height:100%;}
 	background:none;
 }
 
+
+
+a.item.item-icon-left:nth-child(even){
+background:#F0F0F0;
+
+}
+
+.socialmediaicons {    height: 40px;
+    width: 40px;
+    margin: 4px;
+    margin-left: 17px;
+    border-radius: 2em;
+    margin-top:  61px;}
 .menuklasse{
 margin-top: 31%;
 }

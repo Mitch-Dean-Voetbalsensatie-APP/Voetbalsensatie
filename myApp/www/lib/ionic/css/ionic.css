@@ -2413,7 +2413,7 @@
 .ion-log-out:before {
       content: "";
     transform: rotate(271deg);
-    color: #0f659d;}
+    color: #0f659d; margin-right:8px;}
 
 .ion-loop:before {
   content: ""; }
@@ -8634,7 +8634,7 @@ progress {
         color: #fff; }
   .button.button-positive {
     border-color: transparent;
-    background-color: #003352;
+    background-color: #0F659D;
     color: #fff; }
     .button.button-positive:hover {
       color: #fff;
