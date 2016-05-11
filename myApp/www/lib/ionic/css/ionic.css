@@ -1626,7 +1626,9 @@
   content: ""; }
 
 .ion-ios-body:before {
-  content: ""; }
+  content: "";
+   color:#0f659d;
+  margin-right:8px; }
 
 .ion-ios-body-outline:before {
   content: ""; }
@@ -1875,7 +1877,8 @@
   content: ""; }
 
 .ion-ios-football:before {
-  content: ""; }
+  content: "";
+ }
 
 .ion-ios-football-outline:before {
   content: ""; }
@@ -2089,7 +2092,7 @@
 
 .ion-ios-person:before {
   content: "";
-  color: #FFCC7B;
+  color: #0f659d;
   margin-right: 8px; }
 
 .ion-ios-person-outline:before {
@@ -2505,7 +2508,7 @@
 
 .ion-person-add:before {
   content: "";
-  color: #FFCC7B;
+  color: #0f659d;
   margin-right: 8px; }
 
 .ion-person-stalker:before {
@@ -3941,7 +3944,7 @@ a.subdued {
     background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
     color: #444; }
     .bar.bar-stable .title {
-      color: white; }
+      color: #0f659d; }
     .bar.bar-stable.bar-footer {
       background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
   .bar.bar-positive {
@@ -5655,7 +5658,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
  * --------------------------------------------------
  */
 .item {
-  border-color: #FF9D00;
+  border-color: #0f659d;
   background-color: #fff;
   color: #444;
   position: relative;
