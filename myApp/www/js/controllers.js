@@ -247,16 +247,100 @@ var path = newMessageRef.toString();
 		$scope.isTimed = data.fixtures.filter(function(value) {
 		return value.status == "TIMED";
 		});
+	}),
+	engelandApi.getTeam().success(function(data){
+		$scope.teams=data;
+		$scope.loader=true;
 	});
 })
 
-.controller('engelandteaminfoApi', function($scope,engelandteaminfoApi) {
-  engelandteaminfoApi.getTeam().success(function(data){
-    $scope.teams=data;
-		$scope.loader=true;
-     });
+.controller('SpainCtrl', function($scope,spainApi) {
 
+	spainApi.getLeague().success(function(data){
+    $scope.teams=data;
+    $scope.league=data.leagueCaption;
+  }),
+  spainApi.getFixtures().success(function(data){
+    $scope.isActive = data.fixtures.filter(function(value) {
+    return value.status == "IN_PLAY";
+    });
+  }),
+	spainApi.getFixtures().success(function(data){
+		$scope.isFinished = data.fixtures.filter(function(value) {
+		return value.status == "FINISHED";
+		});
+	}),
+	spainApi.getFixtures().success(function(data){
+		$scope.isTimed = data.fixtures.filter(function(value) {
+		return value.status == "TIMED";
+		});
+	}),
+	spainApi.getTeam().success(function(data){
+		$scope.teams=data;
+		$scope.loader=true;
+	});
 })
+
+.controller('ItalyCtrl', function($scope,italyApi) {
+
+	italyApi.getLeague().success(function(data){
+    $scope.teams=data;
+    $scope.league=data.leagueCaption;
+  }),
+  italyApi.getFixtures().success(function(data){
+    $scope.isActive = data.fixtures.filter(function(value) {
+    return value.status == "IN_PLAY";
+    });
+  }),
+	italyApi.getFixtures().success(function(data){
+		$scope.isFinished = data.fixtures.filter(function(value) {
+		return value.status == "FINISHED";
+		});
+	}),
+	italyApi.getFixtures().success(function(data){
+		$scope.isTimed = data.fixtures.filter(function(value) {
+		return value.status == "TIMED";
+		});
+	}),
+	italyApi.getTeam().success(function(data){
+		$scope.teams=data;
+		$scope.loader=true;
+	});
+})
+
+.controller('GermanyCtrl', function($scope,germanyApi) {
+
+	germanyApi.getLeague().success(function(data){
+    $scope.teams=data;
+    $scope.league=data.leagueCaption;
+  }),
+  germanyApi.getFixtures().success(function(data){
+    $scope.isActive = data.fixtures.filter(function(value) {
+    return value.status == "IN_PLAY";
+    });
+  }),
+	germanyApi.getFixtures().success(function(data){
+		$scope.isFinished = data.fixtures.filter(function(value) {
+		return value.status == "FINISHED";
+		});
+	}),
+	germanyApi.getFixtures().success(function(data){
+		$scope.isTimed = data.fixtures.filter(function(value) {
+		return value.status == "TIMED";
+		});
+	}),
+	germanyApi.getTeam().success(function(data){
+		$scope.teams=data;
+		$scope.loader=true;
+	});
+})
+// .controller('engelandteaminfoApi', function($scope,engelandteaminfoApi) {
+//   engelandteaminfoApi.getTeam().success(function(data){
+//     $scope.teams=data;
+// 		$scope.loader=true;
+//      });
+//
+// })
 
 // .controller('engelandfixturesApi', function($scope,engelandfixturesApi) {
 //   engelandfixturesApi.getTeam().success(function(data){
@@ -268,51 +352,59 @@ var path = newMessageRef.toString();
 
 // })
 
-.controller('SpainCtrl', function($scope,spainApi, $ionicLoading, $timeout) {
+// spainApi.getTeams().success(function(data){
+// 	$ionicLoading.show({
+// 		content: '<ion-spinner class="spinner-energized"></ion-spinner>',
+// 		animation: 'fade-in',
+// 		hideOnStageChange: true,
+// 		showBackdrop: false,
+// 		maxWidth: 300,
+// 		showDelay: 0
+// 	 });
+// $timeout(function () {
+// 		$ionicLoading.hide();
+// 		$scope.teams=data;
+// 		$scope.league=data.leagueCaption;
+// 	}, 700);
+// }),
+// spainApi.getFixtures().success(function(data){
+// 	$scope.isActive = data.fixtures.filter(function(value) {
+// 	return value.status == "IN_PLAY";
+// 	});
+// }),
+// spainApi.getFixtures().success(function(data){
+// 	$scope.isFinished = data.fixtures.filter(function(value) {
+// 	return value.status == "FINISHED";
+// 	});
+// }),
+// spainApi.getFixtures().success(function(data){
+// 	$scope.isTimed = data.fixtures.filter(function(value) {
+// 	return value.status == "TIMED";
+// 	});
+// }),
+// spainApi.getTeam().success(function(data){
+// 	$scope.teams=data;
+// 	$scope.loader=true;
+// });
 
-  spainApi.getTeams().success(function(data){
-		$ionicLoading.show({
-		 	content: '<ion-spinner class="spinner-energized"></ion-spinner>',
-		 	animation: 'fade-in',
-			hideOnStageChange: true,
-		 	showBackdrop: false,
-		 	maxWidth: 300,
-		 	showDelay: 0
-		 });
-	$timeout(function () {
-			$ionicLoading.hide();
-			$scope.teams=data;
-			$scope.league=data.leagueCaption;
-		}, 700);
-    });
-})
+// .controller('ItalyCtrl', function($scope,italyApi,$ionicLoading,$timeout) {
+//
+//   italyApi.getTeams().success(function(data){
+// 		$ionicLoading.show({
+// 			content: 'Loading',
+// 			animation: 'fade-in',
+// 			showBackdrop: true,
+// 			maxWidth: 300,
+// 			showDelay: 0
+// 		 });
+// 	$timeout(function () {
+// 	 		$ionicLoading.hide();
+// 	    $scope.teams=data;
+// 	    $scope.league=data.leagueCaption;
+// 		}, 700);
+//     });
+// })
 
-.controller('ItalyCtrl', function($scope,italyApi,$ionicLoading,$timeout) {
-
-  italyApi.getTeams().success(function(data){
-		$ionicLoading.show({
-			content: 'Loading',
-			animation: 'fade-in',
-			showBackdrop: true,
-			maxWidth: 300,
-			showDelay: 0
-		 });
-	$timeout(function () {
-	 		$ionicLoading.hide();
-	    $scope.teams=data;
-	    $scope.league=data.leagueCaption;
-		}, 700);
-    });
-})
-
-.controller('GermanyCtrl', function($scope,germanyApi) {
-
-  germanyApi.getTeams().success(function(data){
-    $scope.teams=data;
-    $scope.league=data.leagueCaption;
-     });
-
-})
 
 .controller('DutchCtrl', function($scope,dutchApi) {
 

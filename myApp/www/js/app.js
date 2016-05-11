@@ -43,6 +43,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
                   return data;
                 });
            },
+           getTeam: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/398/teams',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           },
 
         }
      })
@@ -63,26 +72,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
 //         }
 //      })
 
-.factory('engelandteaminfoApi', function($http) {
-
-        return {
-           getTeam: function(){
-              return $http({
-                  url:'http://www.football-data.org/v1/soccerseasons/398/teams',
-                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
-                  method: 'GET'
-              }).success(function(data){
-                  return data;
-                });
-           }
-
-        }
-     })
+// .factory('engelandteaminfoApi', function($http) {
+//
+//         return {
+//            getTeam: function(){
+//               return $http({
+//                   url:'http://www.football-data.org/v1/soccerseasons/398/teams',
+//                   headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+//                   method: 'GET'
+//               }).success(function(data){
+//                   return data;
+//                 });
+//            }
+//
+//         }
+//      })
 
 .factory('spainApi', function($http) {
 
         return {
-           getTeams: function(){
+           getLeague: function(){
               return $http({
                   url:'http://www.football-data.org/v1/soccerseasons/399/leagueTable',
                   headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
@@ -90,7 +99,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
               }).success(function(data){
                   return data;
                 });
-           }
+           },
+          getFixtures: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/399/fixtures',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           },
+           getTeam: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/399/teams',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           },
 
         }
      })
@@ -98,7 +125,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
 .factory('italyApi', function($http) {
 
         return {
-           getTeams: function(){
+           getLeague: function(){
               return $http({
                   url:'http://www.football-data.org/v1/soccerseasons/401/leagueTable',
                   headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
@@ -106,7 +133,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
               }).success(function(data){
                   return data;
                 });
-           }
+           },
+          getFixtures: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/401/fixtures',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           },
+           getTeam: function(){
+              return $http({
+                  url:'http://www.football-data.org/v1/soccerseasons/401/teams',
+                  headers: { 'X-Auth-Token': '68e5abb8860b467dba8e4c28f41ab20c' },
+                  method: 'GET'
+              }).success(function(data){
+                  return data;
+                });
+           },
 
         }
      })
@@ -254,7 +299,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
       views: {
         'menuContent': {
              templateUrl: 'templates/teaminfo.html',
-			          controller: 'engelandteaminfoApi'
+			       controller: 'EnglandCtrl'
 
 
         }
@@ -301,21 +346,58 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
       views: {
         'menuContent': {
              templateUrl: 'templates/leaguetables.html',
-			controller: 'SpainCtrl'
+			             controller: 'SpainCtrl'
 
         }
       }
     })
 
-.state('app.spainoptions', {
-      url: '/spainoptions',
-      views: {
-        'menuContent': {
-             templateUrl: 'templates/spainoptions.html',
+    .state('app.teaminfospain', {
+        url: '/teaminfospain',
+        views: {
+          'menuContent': {
+               templateUrl: 'templates/teaminfo.html',
+  			       controller: 'SpainCtrl'
 
+
+          }
         }
-      }
-    })
+      })
+
+     .state('app.teaminplayspain', {
+        url: '/teaminplayspain',
+        views: {
+          'menuContent': {
+               templateUrl: 'templates/teaminplay.html',
+  			          controller: 'SpainCtrl'
+
+
+          }
+        }
+      })
+
+      .state('app.teamfinishedspain', {
+         url: '/teamfinishedspain',
+         views: {
+           'menuContent': {
+                templateUrl: 'templates/teamfinished.html',
+                   controller: 'SpainCtrl'
+
+
+           }
+         }
+       })
+       .state('app.teamtimedspain', {
+          url: '/teamtimedspain',
+          views: {
+            'menuContent': {
+                 templateUrl: 'templates/teamtimed.html',
+                    controller: 'SpainCtrl'
+
+
+            }
+          }
+        })
 
   .state('app.italy', {
       url: '/italy',
@@ -327,6 +409,52 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
         }
       }
     })
+    .state('app.teaminfoitaly', {
+        url: '/teaminfoitaly',
+        views: {
+          'menuContent': {
+               templateUrl: 'templates/teaminfo.html',
+               controller: 'ItalyCtrl'
+
+
+          }
+        }
+      })
+
+     .state('app.teaminplayitaly', {
+        url: '/teaminplayitaly',
+        views: {
+          'menuContent': {
+               templateUrl: 'templates/teaminplay.html',
+                  controller: 'ItalyCtrl'
+
+
+          }
+        }
+      })
+
+      .state('app.teamfinisheditaly', {
+         url: '/teamfinisheditaly',
+         views: {
+           'menuContent': {
+                templateUrl: 'templates/teamfinished.html',
+                   controller: 'ItalyCtrl'
+
+
+           }
+         }
+       })
+       .state('app.teamtimeditaly', {
+          url: '/teamtimeditaly',
+          views: {
+            'menuContent': {
+                 templateUrl: 'templates/teamtimed.html',
+                    controller: 'ItalyCtrl'
+
+
+            }
+          }
+        })
 
   .state('app.germany', {
       url: '/germany',
@@ -338,6 +466,52 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
         }
       }
     })
+    .state('app.teaminfogermany', {
+        url: '/teaminfogermany',
+        views: {
+          'menuContent': {
+               templateUrl: 'templates/teaminfo.html',
+               controller: 'GermanyCtrl'
+
+
+          }
+        }
+      })
+
+     .state('app.teaminplaygermany', {
+        url: '/teaminplaygermany',
+        views: {
+          'menuContent': {
+               templateUrl: 'templates/teaminplay.html',
+                  controller: 'GermanyCtrl'
+
+
+          }
+        }
+      })
+
+      .state('app.teamfinishedgermany', {
+         url: '/teamfinishedgermany',
+         views: {
+           'menuContent': {
+                templateUrl: 'templates/teamfinished.html',
+                   controller: 'GermanyCtrl'
+
+
+           }
+         }
+       })
+       .state('app.teamtimedgermany', {
+          url: '/teamtimedgermany',
+          views: {
+            'menuContent': {
+                 templateUrl: 'templates/teamtimed.html',
+                    controller: 'GermanyCtrl'
+
+
+            }
+          }
+        })
 
   .state('app.dutch', {
       url: '/dutch',
@@ -370,6 +544,34 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
         }
       }
     })
+    .state('app.italyoptions', {
+        url: '/italyoptions',
+        views: {
+          'menuContent': {
+               templateUrl: 'templates/italyoptions.html',
+
+          }
+        }
+      })
+
+    .state('app.spainoptions', {
+          url: '/spainoptions',
+          views: {
+            'menuContent': {
+                 templateUrl: 'templates/spainoptions.html',
+
+            }
+          }
+        })
+    .state('app.germanyoptions', {
+          url: '/germanyoptions',
+          views: {
+            'menuContent': {
+                  templateUrl: 'templates/germanyoptions.html',
+
+            }
+          }
+        })
 
 
 
