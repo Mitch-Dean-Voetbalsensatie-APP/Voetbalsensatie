@@ -118,7 +118,7 @@ margin-top: 31%;
 				background: linear-gradient(-90deg, #003352, #D3D3D1, #003352);
 		    width: 590px;
 		    height: 380px;
-		    position: absolute;;
+		    position: absolute;
 		    -ms-transform: rotate(90deg); /* IE 9 */
 		    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
 		    transform: rotate(90deg);
@@ -399,10 +399,4 @@ p.teamdate.ng-binding {font-size:9px;}
     margin-right: 0%;
     font-size: 15px;
 }
-}
-
-@media screen and (min-width: 375px) {
-    #pitch {    		    -ms-transform: rotate(0deg); /* IE 9 */
-				    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-				    transform: rotate(0deg);zoom: 111%;}
 }
