@@ -45,11 +45,16 @@ ion-item:nth-child(even) {background: #F0F0F0;}
 
 .facebooklogin {width: 15px; margin-right:8px;}
 
-a#geenAccount {    float: left; background:white;
-    font-size: 12px;}
+a#geenAccount {       float: left;
+    background: #67B8FF;
+    font-size: 12px;
+    color: white;
+    padding: 0 15px;}
 
-button#wachtwoordvergeten {    font-size: 12px; background:white;
-    float: right;}
+button#wachtwoordvergeten {  font-size: 12px;
+    color: white;
+    background: #860808;
+    float: right; padding: 0 15px;}
 
 .ion-person:before {color: white; margin-right:8px;}
 
