@@ -67,8 +67,7 @@ angular.module('starter.controllers', [])
 			  console.error("Authentication failed:", error);
 		  		//error messages
 			   var alertPopup = $ionicPopup.alert({
-			     title: 'Inlog problemen!',
-			     template: error
+			     title: 'De gegeven gebruiker bestaat niet',
 			   });
 			   alertPopup.then(function(res) {
 			     console.log('Alert closed');
@@ -88,16 +87,17 @@ angular.module('starter.controllers', [])
 		ref.onAuth(function(authData) {
 			if (authData && isNewUser) {
 			ref.child("users").child(authData.uid).set({
-			provider: authData.provider,
 			email: authData.password.email,
-			name: getName(authData)
-			});
+			name: getName(authData),
+			"competities":{
+			premiereleague:true,
+			primeradivision:true,
+			seriea:true,
+			eredivisie:true,
+			bundesliga:true,
+			lique1:true }
+		});
 		}
-		var messageListRef = new Firebase('https://sensatie.firebaseio.com/users');
-		var newMessageRef = messageListRef.push();
-newMessageRef.set({ 'user_id': 'fred', 'text': 'Yabba Dabba Doo!' });
-// We've appended a new message to the message_list location.
-var path = newMessageRef.toString();
 		});
 
 		function getName(authData) {
@@ -408,18 +408,54 @@ var path = newMessageRef.toString();
 
 .controller('DutchCtrl', function($scope,dutchApi) {
 
-  dutchApi.getTeams().success(function(data){
+	dutchApi.getLeague().success(function(data){
     $scope.teams=data;
     $scope.league=data.leagueCaption;
-     });
-
+  }),
+  dutchApi.getFixtures().success(function(data){
+    $scope.isActive = data.fixtures.filter(function(value) {
+    return value.status == "IN_PLAY";
+    });
+  }),
+	dutchApi.getFixtures().success(function(data){
+		$scope.isFinished = data.fixtures.filter(function(value) {
+		return value.status == "FINISHED";
+		});
+	}),
+	dutchApi.getFixtures().success(function(data){
+		$scope.isTimed = data.fixtures.filter(function(value) {
+		return value.status == "TIMED";
+		});
+	}),
+	dutchApi.getTeam().success(function(data){
+		$scope.teams=data;
+		$scope.loader=true;
+	});
 })
 
 .controller('FranceCtrl', function($scope,franceApi) {
 
-  franceApi.getTeams().success(function(data){
+	franceApi.getLeague().success(function(data){
     $scope.teams=data;
     $scope.league=data.leagueCaption;
-   });
-
+  }),
+  franceApi.getFixtures().success(function(data){
+    $scope.isActive = data.fixtures.filter(function(value) {
+    return value.status == "IN_PLAY";
+    });
+  }),
+	franceApi.getFixtures().success(function(data){
+		$scope.isFinished = data.fixtures.filter(function(value) {
+		return value.status == "FINISHED";
+		});
+	}),
+	franceApi.getFixtures().success(function(data){
+		$scope.isTimed = data.fixtures.filter(function(value) {
+		return value.status == "TIMED";
+		});
+	}),
+	franceApi.getTeam().success(function(data){
+		$scope.teams=data;
+		$scope.loader=true;
+	});
 });
