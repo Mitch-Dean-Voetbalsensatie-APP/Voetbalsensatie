@@ -24,13 +24,27 @@ ion-item:nth-child(even) {background: #F0F0F0;}
 .homeimg {    width:100%;
    }
 
-.contactimg {width: 100%;
-    padding: 22px;}
+button#uitloggen{        float: left;
+    background: #67B8FF;
+    font-size: 13px;
+    color: white;
+    padding: 0 15px;}
+
+.containeraccount {padding: 22px;
+	margin-top:-20px;
+    background-color: #F0F0F0;
+    height: 274px;}
+
+.contactimg {    width: 100%;
+    padding: 22px;
+    height: 250px;
+    object-fit: cover; }
 .contact-container {  padding: 22px;
     background-color: #F0F0F0;
     height: auto;
     margin: 22px;
     margin-bottom: 0px;
+	margin-top: 0px;
    }
 
 .ion-ios-person:before {color: #0f659d;
