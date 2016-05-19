@@ -249,7 +249,7 @@ angular.module('starter.controllers', [])
 		});
 	}),
 	engelandApi.getTeam().success(function(data){
-		$scope.teams=data;
+		$scope.team=data;
 		$scope.loader=true;
 	});
 })
@@ -276,7 +276,7 @@ angular.module('starter.controllers', [])
 		});
 	}),
 	spainApi.getTeam().success(function(data){
-		$scope.teams=data;
+		$scope.team=data;
 		$scope.loader=true;
 	});
 })
@@ -303,7 +303,7 @@ angular.module('starter.controllers', [])
 		});
 	}),
 	italyApi.getTeam().success(function(data){
-		$scope.teams=data;
+		$scope.team=data;
 		$scope.loader=true;
 	});
 })
@@ -330,7 +330,7 @@ angular.module('starter.controllers', [])
 		});
 	}),
 	germanyApi.getTeam().success(function(data){
-		$scope.teams=data;
+		$scope.team=data;
 		$scope.loader=true;
 	});
 })
@@ -428,7 +428,7 @@ angular.module('starter.controllers', [])
 		});
 	}),
 	dutchApi.getTeam().success(function(data){
-		$scope.teams=data;
+		$scope.team=data;
 		$scope.loader=true;
 	});
 })
@@ -455,7 +455,7 @@ angular.module('starter.controllers', [])
 		});
 	}),
 	franceApi.getTeam().success(function(data){
-		$scope.teams=data;
+		$scope.team=data;
 		$scope.loader=true;
 	});
 });
