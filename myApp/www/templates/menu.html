@@ -44,8 +44,8 @@
          <ion-item menu-close href="#/app/contact">
          <p class="ion-ios-telephone"> Contact</p>
         </ion-item>
-          <ion-item menu-close href="#/app/contact">
-         <p class="ion-log-out"> Uitloggen</p>
+          <ion-item menu-close href="#/app/home" ng-show="check.email||check.facebook">
+         <p class="ion-log-out" ng-click="logout()"> Uitloggen </p>
         </ion-item>
       </ion-list>
       <div class="socialmedia">
