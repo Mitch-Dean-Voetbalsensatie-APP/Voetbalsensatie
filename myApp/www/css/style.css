@@ -12,8 +12,7 @@ background-color: white;}
 	border-radius:2em;
 }
 
-td { border: 1px solid #4E8CF6;}
-
+td { border: 1px solid #C9C9C9;}
 .position {float:left; margin-right:6px;}
 
 
@@ -94,7 +93,7 @@ img.slide1 {width: 100%; height:100%;}
 }
 
 td.leegveld {
-    width: 70%;
+    width: 54%;
 }
 
 td.grotevanvakjes {width: 26px;
@@ -104,7 +103,7 @@ td.grotevanvakjes {width: 26px;
 
 .itemsbuiten {padding:0px;}
 
-.clubnamen {font-size:13px;}
+.clubnamen {font-size:11px;}
 
 .positie {float:left; margin-right:9px;}
 table {
@@ -119,9 +118,9 @@ th, td {
 
 tr:nth-child(even){background-color: #f2f2f2}
 
-td.grotevanvakjes.ng-binding {    width: 26px;
-    font-size: 12px;
-    padding: 4px;
+td.grotevanvakjes.ng-binding {     width: 29px;
+    font-size: 10px;
+    padding: 0px;
     text-align: center;}
 
 .sensatielogopaginas {width:100%;}
