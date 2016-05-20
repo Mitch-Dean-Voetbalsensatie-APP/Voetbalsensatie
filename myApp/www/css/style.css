@@ -12,11 +12,15 @@ background-color: white;}
 	border-radius:2em;
 }
 
+td { border: 1px solid #4E8CF6;}
+
+.position {float:left; margin-right:6px;}
+
 
 ion-item:nth-child(even) {background: #F0F0F0;}
 
 .logoclub {    height: 24px;
-    margin-right: 16px; width: 23px; display:inline-block; float:left;}
+    margin-right: 8px; width: 23px; display:inline-block; float:left;}
 
 .points {display:inline-block; float: right; margin-right: 2%; margin-top:3px;}
 .teamname {display:inline-block; margin-top:3px; color:#939393; }
@@ -46,6 +50,8 @@ button#uitloggen{        float: left;
     margin-bottom: 0px;
 	margin-top: 0px;
    }
+
+p.teamnaamp.ng-binding {font-size:13px;}
 
 .ion-ios-person:before {color: #0f659d;
     margin-right: 13px;}
@@ -86,6 +92,37 @@ img.slide1 {width: 100%; height:100%;}
   fill: #003352;
 	background:none;
 }
+
+td.leegveld {
+    width: 70%;
+}
+
+td.grotevanvakjes {width: 26px;
+    font-size: 12px;
+   
+    text-align: center;}
+
+.itemsbuiten {padding:0px;}
+
+.clubnamen {font-size:13px;}
+
+.positie {float:left; margin-right:9px;}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+td.grotevanvakjes.ng-binding {    width: 26px;
+    font-size: 12px;
+    padding: 4px;
+    text-align: center;}
 
 .sensatielogopaginas {width:100%;}
 

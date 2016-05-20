@@ -3,10 +3,42 @@
 		  {{league}}
     </ion-nav-title>
   <ion-content>
-    <ion-list>
+    <ion-list class="ranglijst" >
+  <table><tr>
+  <td class="leegveld" ></td>
+   <td class="grotevanvakjes">A</td>
+   <td class="grotevanvakjes">P</td>
+   <td class="grotevanvakjes">G</td>
+   <td class="grotevanvakjes">W</td>
+   <td class="grotevanvakjes">V</td>
+   <td class="grotevanvakjes">G</td>
+  </tr></table>
 
-      <ion-item  ng-repeat="t in teams.standing"><img class="logoclub" ng-src="{{t.crestURI}}"> <div class="teamname"> <p> {{t.teamName}}  </p></div>  <div class="points"> <p>{{t.points}} </p></div></ion-item>
+      <ion-item class="itemsbuiten"  ng-repeat="t in teams.standing">
+      
+      
+      
 
+   
+   
+   <div style="overflow-x:auto;">
+  <table>
+   
+    <tr>
+      <td class="grotevanvakjes">  {{t.position}} </td>
+      <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.teamName}}</td>
+      <td class="grotevanvakjes">{{t.playedGames}} </td>
+      <td class="grotevanvakjes">{{t.points}}</td>
+      <td class="grotevanvakjes" >{{t.goals}}</td>
+      <td class="grotevanvakjes">{{t.wins}}</td>
+      <td class="grotevanvakjes">{{t.draws}}</td>
+       <td class="grotevanvakjes">{{t.losses}}</td>
+    </tr>
+  
+   
+  </table>
+</div>
+   </ion-item>
    </ion-list>
   </ion-content>
 </ion-view>
