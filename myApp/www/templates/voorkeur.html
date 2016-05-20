@@ -1,8 +1,9 @@
 <ion-view view-title="Voorkeur">
   </ion-nav-buttons>
-  	<ion-content ng-controller="AccountCtrl">
-      <ion-toggle ng-model="$root.showList">Show List</ion-toggle>
-<ion-item ng-repeat="user in Users"> {{user.Users}} </ion-item>
+  	<ion-content ng-controller="HomeCtrl">
+    
 
+	
+	<pre >{{ profile | json }}</pre>
 	</ion-content>
 </ion-view>

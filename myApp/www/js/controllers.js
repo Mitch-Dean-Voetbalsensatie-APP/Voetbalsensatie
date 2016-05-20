@@ -164,10 +164,14 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('HomeCtrl', function($scope, $ionicPopup,germanyApi) {
-
-
-})
+.controller('HomeCtrl',  ["$scope", "$firebaseObject",
+  function($scope, $firebaseObject) {
+    var ref = new Firebase("https://sensatie.firebaseio.com");
+    // download physicsmarie's profile data into a local object
+    // all server changes are applied in realtime
+    $scope.profile = $firebaseObject(ref.child('sensatie').child('users'));
+  }
+])
 
 .controller('AccountCtrl', ["$scope", "$rootScope", "$state", "$firebaseAuth", "$ionicHistory", "$ionicPopup",
 	function($scope, $rootScope, $state, $firebaseAuth, $ionicHistory, $ionicPopup, $ionicSlideBoxDelegate) {
