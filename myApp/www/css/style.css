@@ -100,6 +100,16 @@ td.marktwaardeblok.ng-binding {
     width: 40%;
     font-size: 11px;}
 
+td.clubnamengespeeld.ng-binding {
+       font-size: 9px;
+    padding: 0px;
+    width: 32%;
+    padding-left: 8px}
+
+td.datumgespeeld.ng-binding {
+    font-size: 8px;
+}
+
 td.grotevanvakjes {width: 26px;
     font-size: 12px;
    
