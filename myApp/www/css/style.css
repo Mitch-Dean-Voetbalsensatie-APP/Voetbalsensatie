@@ -62,6 +62,12 @@ p.teamnaamp.ng-binding {font-size:13px;}
 .marketvalue {    float: right;
     margin-right: 0%; color:#939393;}
 
+.menutitel {    text-align: center;
+    margin: 0 auto;
+    color: #0D5F8E;
+    font-size: 24px;
+    font-weight: 700;}
+
 .facebooklogin {width: 15px; margin-right:8px;}
 
 a#geenAccount {       float: left;
