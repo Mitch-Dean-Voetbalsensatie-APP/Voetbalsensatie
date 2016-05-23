@@ -1,12 +1,38 @@
 <ion-view>
       <ion-nav-title>
-Programma
+Gespeeld
     </ion-nav-title>
   <ion-content>
-    <ion-list>
+   <ion-list class="ranglijst" >
 
-      <ion-item ng-repeat="team in isFinished"> <p class="homeawayteam" > {{team.homeTeamName}}{{team.result.goalsHomeTeam}}  - {{team.result.goalsAwayTeam}}{{team.awayTeamName}}  </p> <p class="teamdate">{{team.date}} 
-		   </p> </ion-item>
+     <ion-item class="itemsbuiten" ng-repeat="team in isFinished">
+     
+      
+       
+         <div style="overflow-x:auto;">
+  <table>
+   
+    <tr>
+    
+      <td class="clubnamen" > {{team.homeTeamName}}</td>
+      <td class="grotevanvakjes">{{team.result.goalsHomeTeam}} </td>
+       <td class="grotevanvakjes"> - </td>
+      
+      <td class="grotevanvakjes">{{team.result.goalsAwayTeam}}</td>
+      <td class="clubnamen" >{{team.awayTeamName}} </td>
+      <td class="grotevanvakjes">{{team.date}} </td>
+      
+    </tr>
+  
+   
+  </table>
+</div>
+         
+          
+		   
+		   
+		   
+		   </ion-item>
 
    </ion-list>
   </ion-content>

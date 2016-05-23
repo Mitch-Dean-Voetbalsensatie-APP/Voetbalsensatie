@@ -96,6 +96,10 @@ td.leegveld {
     width: 54%;
 }
 
+td.marktwaardeblok.ng-binding {
+    width: 40%;
+    font-size: 11px;}
+
 td.grotevanvakjes {width: 26px;
     font-size: 12px;
    
