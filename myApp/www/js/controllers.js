@@ -1,6 +1,7 @@
 
 angular.module('starter.controllers', [])
 
+
 .controller('loginCtrl', ["$scope", "$ionicPopup", "$state", "$rootScope", "$firebaseAuth", "$ionicHistory",
 	function($scope, $ionicPopup, $state, $rootScope, $firebaseAuth, $ionicHistory) {
 
@@ -162,16 +163,24 @@ angular.module('starter.controllers', [])
 	}
 ])
 
+.controller('HomeCtrl',function($scope, $ionicPopup, $timeout) {
 
+	$scope.showAlert = function() {
+	var alertPopup = $ionicPopup.alert({
+		title: 'Stand',
+		template: '<p>{{t.position}}</p><div ng-repeat="t in teams.standing"></div>'
+	});
+};
+})
 
-.controller('HomeCtrl',  ["$scope", "$firebaseObject",
-  function($scope, $firebaseObject) {
-    var ref = new Firebase("https://sensatie.firebaseio.com");
-    // download physicsmarie's profile data into a local object
-    // all server changes are applied in realtime
-    $scope.profile = $firebaseObject(ref.child('sensatie').child('users'));
-  }
-])
+// .controller('HomeCtrl',  ["$scope", "$firebaseObject",
+//   function($scope, $firebaseObject) {
+//     var ref = new Firebase("https://sensatie.firebaseio.com");
+//     // download physicsmarie's profile data into a local object
+//     // all server changes are applied in realtime
+//     $scope.profile = $firebaseObject(ref.child('sensatie').child('users'));
+//   }
+// ])
 
 .controller('AccountCtrl', ["$scope", "$rootScope", "$state", "$firebaseAuth", "$ionicHistory", "$ionicPopup",
 	function($scope, $rootScope, $state, $firebaseAuth, $ionicHistory, $ionicPopup, $ionicSlideBoxDelegate) {
@@ -459,6 +468,87 @@ angular.module('starter.controllers', [])
 		});
 	}),
 	franceApi.getTeam().success(function(data){
+		$scope.team=data;
+		$scope.loader=true;
+	});
+})
+
+.controller('PortugalCtrl', function($scope,portugalApi) {
+
+	portugalApi.getLeague().success(function(data){
+    $scope.teams=data;
+    $scope.league=data.leagueCaption;
+  }),
+  portugalApi.getFixtures().success(function(data){
+    $scope.isActive = data.fixtures.filter(function(value) {
+    return value.status == "IN_PLAY";
+    });
+  }),
+	portugalApi.getFixtures().success(function(data){
+		$scope.isFinished = data.fixtures.filter(function(value) {
+		return value.status == "FINISHED";
+		});
+	}),
+	portugalApi.getFixtures().success(function(data){
+		$scope.isTimed = data.fixtures.filter(function(value) {
+		return value.status == "TIMED";
+		});
+	}),
+	portugalApi.getTeam().success(function(data){
+		$scope.team=data;
+		$scope.loader=true;
+	});
+})
+
+.controller('ChampionsCtrl', function($scope,championsApi) {
+
+	championsApi.getLeague().success(function(data){
+    $scope.teams=data;
+    $scope.league=data.leagueCaption;
+  }),
+  championsApi.getFixtures().success(function(data){
+    $scope.isActive = data.fixtures.filter(function(value) {
+    return value.status == "IN_PLAY";
+    });
+  }),
+	championsApi.getFixtures().success(function(data){
+		$scope.isFinished = data.fixtures.filter(function(value) {
+		return value.status == "FINISHED";
+		});
+	}),
+	championsApi.getFixtures().success(function(data){
+		$scope.isTimed = data.fixtures.filter(function(value) {
+		return value.status == "TIMED";
+		});
+	}),
+	championsApi.getTeam().success(function(data){
+		$scope.team=data;
+		$scope.loader=true;
+	});
+})
+
+.controller('EUCtrl', function($scope,euApi) {
+
+	euApi.getLeague().success(function(data){
+    $scope.teams=data;
+    $scope.league=data.leagueCaption;
+  }),
+  euApi.getFixtures().success(function(data){
+    $scope.isActive = data.fixtures.filter(function(value) {
+    return value.status == "IN_PLAY";
+    });
+  }),
+	euApi.getFixtures().success(function(data){
+		$scope.isFinished = data.fixtures.filter(function(value) {
+		return value.status == "FINISHED";
+		});
+	}),
+	euApi.getFixtures().success(function(data){
+		$scope.isTimed = data.fixtures.filter(function(value) {
+		return value.status == "TIMED";
+		});
+	}),
+	euApi.getTeam().success(function(data){
 		$scope.team=data;
 		$scope.loader=true;
 	});

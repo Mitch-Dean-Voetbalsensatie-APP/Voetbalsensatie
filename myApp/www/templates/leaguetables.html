@@ -15,27 +15,27 @@
   </tr></table>
 
       <ion-item class="itemsbuiten"  ng-repeat="t in teams.standing">
-      
-      
-      
 
-   
-   
+
+
+
+
+
    <div style="overflow-x:auto;">
   <table>
-   
+
     <tr>
       <td class="grotevanvakjes">  {{t.position}} </td>
       <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.teamName}}</td>
-      <td class="grotevanvakjes">{{t.playedGames}} </td>
+      <td style="border-right:1px solid:" class="grotevanvakjes">{{t.playedGames}} </td>
       <td class="grotevanvakjes">{{t.points}}</td>
       <td class="grotevanvakjes" >{{t.goals}}</td>
       <td class="grotevanvakjes">{{t.wins}}</td>
       <td class="grotevanvakjes">{{t.draws}}</td>
        <td class="grotevanvakjes">{{t.losses}}</td>
     </tr>
-  
-   
+
+
   </table>
 </div>
    </ion-item>
