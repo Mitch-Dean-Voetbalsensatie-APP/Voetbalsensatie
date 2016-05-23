@@ -212,7 +212,7 @@ margin-top: 31%;
 		    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
 		    transform: rotate(90deg);
 				margin-top:94px;
-				margin-left:-109px;
+				margin-left:-107px;
 		}
 		#pitch:after{
 		  content: "";
@@ -477,7 +477,10 @@ p.teamdate.ng-binding {font-size:9px;}
 
 
 @media screen and (max-width: 320px) {
-    #pitch {    zoom: 103%;     margin-top: 84px; height: 399px;}
+    #pitch {   zoom: 85%;
+    margin-top: 91px;
+    height: 399px;
+    margin-left: -115px;}
 
 	.teamname {
     display: inline-block;
@@ -488,4 +491,16 @@ p.teamdate.ng-binding {font-size:9px;}
     margin-right: 0%;
     font-size: 15px;
 }
+}
+
+
+@media screen and (min-width: 413px){
+
+
+#pitch {    zoom: 112%;
+    margin-left: -110px;}
+
+
+
+
 }

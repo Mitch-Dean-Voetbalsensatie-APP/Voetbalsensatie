@@ -52,6 +52,10 @@ angular.module('starter.controllers', [])
 			  console.log("U bent ingelogd als:", authData);
 
 			  $rootScope.check = {};
+					$ionicPopup.alert({
+			title: 'U bent succesvol ingelogd', 
+					
+					});
 
 			var authData = $scope.authObj.$getAuth();
 			if (authData) {
@@ -81,8 +85,8 @@ angular.module('starter.controllers', [])
 	}
 ])
 
-.controller('signupCtrl', ["$scope", "$state", "$rootScope", "$firebaseAuth",
- 	function($scope, $state, $rootScope, $firebaseAuth) {
+.controller('signupCtrl', ["$scope", "$state",  "$rootScope", "$ionicPopup", "$firebaseAuth",
+ 	function($scope, $state, $rootScope, $ionicPopup, $firebaseAuth) {
 		var isNewUser = true;
 		var ref = new Firebase("https://sensatie.firebaseio.com");
 		ref.onAuth(function(authData) {
@@ -138,6 +142,10 @@ angular.module('starter.controllers', [])
 
 			  console.log("U bent ingelogd als:", authData);
 			  $rootScope.check = {};
+				$ionicPopup.alert({
+			title: 'Uw account is aangemaakt en u bent gelijk ingelogd!', 
+					
+					});
 
 			var authData = $scope.authObj.$getAuth();
 			if (authData) {
@@ -150,9 +158,10 @@ angular.module('starter.controllers', [])
 			}).catch(function(error) {
 			  console.error("Error: ", error);
 			  //error messages
-			   var alertPopup = $ionicPopup.alert({
-			     title: 'Signup Error',
-			     template: error
+			 var alertPopup = $ionicPopup.alert({
+			     title: 'Er is iets fout gegaan, let op de volgende punten:',
+			      subTitle: '-email adress kan in gebruik zijn <br> -een van de velden is niet ingevuld',
+				   okText: 'Probeer opnieuw',
 			   });
 			   alertPopup.then(function(res) {
 			     console.log('Alert closed');
