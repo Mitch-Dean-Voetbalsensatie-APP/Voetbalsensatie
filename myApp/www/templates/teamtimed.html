@@ -5,9 +5,33 @@ Programma
   <ion-content>
     <ion-list>
 
-      <ion-item ng-repeat="team in isTimed"> <p class="homeawayteam" > {{team.homeTeamName}} - {{team.awayTeamName}}  </p> <p class="teamdate"> {{team.result}} 
-		   </p> </ion-item>
+     <ion-item class="itemsbuiten" ng-repeat="team in isFinished">
+     
+      
+       
+         <div style="overflow-x:auto;">
+  <table>
+   
+    <tr>
+    
+      <td class="clubnamenkomend" > {{team.homeTeamName}}  - {{team.awayTeamName}}</td>
+     
+       
+      <td class="datumgespeeld2">{{team.date}} </td>
+      
+    </tr>
+  
+   
+  </table>
+</div>
+         
+          
+		   
+		   
+		   
+		   </ion-item>
 
    </ion-list>
   </ion-content>
 </ion-view>
+s

@@ -93,8 +93,12 @@ img.slide1 {width: 100%; height:100%;}
 }
 
 td.leegveld {
-    width: 54%;
+    width: 61%;
 }
+
+td.clubnamenkomend.ng-binding {
+    font-size: 11px;
+    width: 70%;}
 
 td.marktwaardeblok.ng-binding {
     width: 40%;
@@ -108,6 +112,10 @@ td.clubnamengespeeld.ng-binding {
 
 td.datumgespeeld.ng-binding {
     font-size: 8px;
+}
+
+td.datumgespeeld2.ng-binding {
+    font-size: 10px;
 }
 
 td.grotevanvakjes {width: 26px;
@@ -130,10 +138,15 @@ th, td {
     padding: 8px;
 }
 
+td.grotevanvakjesstreep {
+    font-size: 10px;
+    padding: 3px;
+    text-align: center;}
+
 tr:nth-child(even){background-color: #f2f2f2}
 
-td.grotevanvakjes.ng-binding {     width: 29px;
-    font-size: 10px;
+ td.grotevanvakjes.ng-binding {
+    font-size: 9px;
     padding: 0px;
     text-align: center;}
 
