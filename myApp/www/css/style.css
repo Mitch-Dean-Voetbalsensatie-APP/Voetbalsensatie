@@ -75,7 +75,7 @@ button#wachtwoordvergeten {  font-size: 12px;
     background: #860808;
     float: right; padding: 0 15px;}
 
-.ion-person:before {color: white; margin-right:8px;}
+.ion-person:before {color: #0f659d; margin-right:8px;}
 
 .list p {font-size: 18px;
     color: #858585;}
@@ -127,7 +127,7 @@ td.datumgespeeld2.ng-binding {
 
 td.grotevanvakjes {width: 26px;
     font-size: 12px;
-   
+
     text-align: center;}
 
 .itemsbuiten {padding:0px;}
@@ -186,7 +186,7 @@ margin-top: 31%;
 .ion-home:before {color:#0f659d; margin-right: 8px;}
 #username {margin-left: 13px;
     margin-top: 6px;
-    font-size: 16px; color:white;}
+    font-size: 16px; color:#858585;}
 
 
 

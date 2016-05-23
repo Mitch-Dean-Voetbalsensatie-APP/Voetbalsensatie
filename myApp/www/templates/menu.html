@@ -16,7 +16,8 @@
   </ion-side-menu-content>
   <ion-side-menu side="left">
   <ion-header-bar class="bar-stable">
-    <p  ng-show="check.email||check.facebook"  id="username" class="ion-person">{{ check.email }} {{ check.facebook }}</p>
+    <p ng-show="check.email||check.facebook"  id="username" class="ion-person">{{ check.email }} {{ check.facebook }}</p>
+    <p ng-hide="check.email||check.facebook">Menu</p>
     </ion-header-bar>
     <ion-content>
       <ion-list >
@@ -49,7 +50,7 @@
         </ion-item>
       </ion-list>
       <div class="socialmedia">
-      	
+
       	<img class="socialmediaicons" src="img/facebook.jpg" alt="">
       	<img class="socialmediaicons" src="img/twitter.jpg" alt="">
       	<img class="socialmediaicons" src="img/instagram.jpg" alt="">
