@@ -1,9 +1,16 @@
 <ion-view view-title="Voorkeur">
   </ion-nav-buttons>
-  	<ion-content ng-controller="HomeCtrl">
+  	<ion-content ng-controller="accountCrtl">
     
 
-	
-	<pre >{{ profile | json }}</pre>
+
+    
+  <div class="col-xs-4 text-center" ng-repeat="user in $users | unique:'users'">
+            
+    <h2>{{ user.competities }}</h2>
+    
+    
+    
+    
 	</ion-content>
 </ion-view>

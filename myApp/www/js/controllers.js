@@ -85,23 +85,27 @@ angular.module('starter.controllers', [])
 	}
 ])
 
-.controller('signupCtrl', ["$scope", "$state",  "$rootScope", "$ionicPopup", "$firebaseAuth",
- 	function($scope, $state, $rootScope, $ionicPopup, $firebaseAuth) {
+.controller('signupCtrl', ["$scope", "$state",  "$rootScope", "$ionicPopup", "$firebaseAuth", "$firebase", "$firebaseObject",
+ 	function($scope, $state, $rootScope, $ionicPopup, $firebaseAuth, $firebase, $firebaseObject) {
 		var isNewUser = true;
 		var ref = new Firebase("https://sensatie.firebaseio.com");
+		var syncObject = $firebaseObject(ref);
+ 
+  syncObject.$bindTo($scope, "users");
 		ref.onAuth(function(authData) {
 			if (authData && isNewUser) {
 			ref.child("users").child(authData.uid).set({
-			email: authData.password.email,
-			name: getName(authData),
-			"competities":{
-			premiereleague:true,
-			primeradivision:true,
-			seriea:true,
-			eredivisie:true,
-			bundesliga:true,
-			lique1:true }
-		});
+     email: authData.password.email,
+      name: getName(authData),
+      "competities":{
+      premiereleague:true,
+      primeradivision:true,
+      seriea:true,
+      eredivisie:true,
+      bundesliga:true,
+      lique1:true }
+    }); 
+				
 		}
 		});
 
@@ -171,6 +175,23 @@ angular.module('starter.controllers', [])
 		}
 	}
 ])
+
+
+.controller('accountCrtl', ["$scope", "$state",  "$rootScope", "$ionicPopup", "$firebaseAuth", "$firebase", "$firebaseObject",
+ 	function($scope, $state, $rootScope, $ionicPopup, $firebaseAuth, $firebase, $firebaseObject) {
+		var isNewUser = true;
+		var ref = new Firebase("https://sensatie.firebaseio.com/users");
+		
+		//var syncObject = $firebaseObject(ref);
+ 
+		//syncObject.$bindTo($scope, "days");
+		$scope.$users = $firebaseObject(ref);
+		 console.log($scope.$users);
+		
+
+}
+						   ])
+
 
 .controller('HomeCtrl',function($scope, $ionicPopup, $timeout) {
 
