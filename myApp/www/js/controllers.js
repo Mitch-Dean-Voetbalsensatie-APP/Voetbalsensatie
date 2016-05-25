@@ -104,8 +104,9 @@ angular.module('starter.controllers', [])
       eredivisie:true,
       bundesliga:true,
       lique1:true }
-    }); 
 				
+    }); 
+	
 		}
 		});
 
@@ -182,11 +183,17 @@ angular.module('starter.controllers', [])
 		var isNewUser = true;
 		var ref = new Firebase("https://sensatie.firebaseio.com/users");
 		
-		//var syncObject = $firebaseObject(ref);
- 
-		//syncObject.$bindTo($scope, "days");
+		
+		var authData = $scope.authObj.$getAuth();
+
+if (authData) {
+  console.log("Logged in as:", authData.uid);
+} else {
+  console.log("Logged out");
+}
 		$scope.$users = $firebaseObject(ref);
 		 console.log($scope.$users);
+		
 		
 
 }

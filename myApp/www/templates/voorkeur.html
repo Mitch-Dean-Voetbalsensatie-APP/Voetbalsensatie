@@ -5,11 +5,9 @@
 
 
     
-  <div class="col-xs-4 text-center" ng-repeat="user in $users | unique:'users'">
+  <div class="col-xs-4 text-center"  ng-repeat="user in $users">
             
-    <h2>{{ user.competities }}</h2>
-    
-    
+    <h2>{{ user.name }}</h2>
     
     
 	</ion-content>
