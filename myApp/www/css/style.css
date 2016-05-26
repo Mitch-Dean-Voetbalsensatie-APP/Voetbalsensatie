@@ -476,6 +476,14 @@ margin-top: 31%;
 		  left:0px;
 		}
 
+
+button#buttonemail {
+    width: 100%;
+}
+
+input#inputemail {
+    margin-bottom: 17px;
+}
 .homeawayteam {float:left;}
 .teamdate {float: right; }
 p.homeawayteam.ng-binding {font-size:9px;}

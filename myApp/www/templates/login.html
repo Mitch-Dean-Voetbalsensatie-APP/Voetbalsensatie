@@ -1,5 +1,5 @@
 <ion-view view-title="Inloggen" hide-back-button="true">
-  	<ion-content>	<img class="sensatielogopaginas" src="img/sensatielogoo.jpg" alt="">
+  	<ion-content ng-controller="PopupCtrl">	<img class="sensatielogopaginas" src="img/sensatielogoo.jpg" alt="">
 	  <h4 class="pagetitles" >Log in met</h4>
 	 
 
@@ -19,7 +19,10 @@
       <button class="button button-block button-positive"ng-click="login()">Inloggen</button>
       	  <a id="geenAccount" class="button button-clear button-positive" href="#/app/signup">Nog geen Account?</a>
 
-	  <button id="wachtwoordvergeten" class="button button-clear button-assertive" ng-click="forgot()">Wachtwoord vergeten?</button>
+	  <button id="wachtwoordvergeten" class="button button-clear button-assertive" ng-click="showPopup()">Wachtwoord vergeten?</button>
+	  
+	    
 	  </div>
+	 
 	</ion-content>
 </ion-view>
