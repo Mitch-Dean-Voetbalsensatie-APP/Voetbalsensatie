@@ -199,6 +199,76 @@ if (authData) {
 						   ])
 
 
+
+.controller('PopupCtrl',function($scope, $ionicPopup, $timeout, $firebaseAuth, $firebase, $firebaseObject) {
+var isNewUser = true;
+		var ref = new Firebase("https://sensatie.firebaseio.com");
+		
+		
+	var authData = $scope.authObj.$getAuth();
+ // Triggered on a button click, or some other target
+ $scope.showPopup = function() {
+   $scope.data = {}
+   
+   $scope.forgot=function()
+		{
+			$scope.authObj.$resetPassword({
+			  email: $scope.user.email
+			}).then(function() {
+			  console.log("Wachtwoord reset is gelukt!");
+			}).catch(function(error) {
+			  console.error("Error: ", error);
+			});
+	   
+	   $timeout(function() {
+		   
+		   if ($scope.user.email){
+   myPopup.close(); //close the popup after 10 seconds for some reason
+		   } }, 1000);
+	   
+	   
+		}
+   
+   
+   
+    $scope.resetPassword=function()
+	    {
+	    	$scope.authObj.$changePassword({
+			  email: $rootScope.check.email,
+			  oldPassword: $scope.reset.oldPassword,
+			  newPassword: $scope.reset.newPassword
+			}).then(function() {
+			  console.log("Password changed successfully!");
+			}).catch(function(error) {
+			  console.error("Error: ", error);
+			});
+	    }
+	
+	
+
+   // An elaborate, custom popup
+   var myPopup = $ionicPopup.show({
+     template: '<input type="email" id="inputemail"  ng-model="user.email">'  +
+      						'<button id="buttonemail" class="button ng-binding button-positive" ng-click="forgot();">Stuur Email</button>',
+     title: 'Enter uw email adress',
+     subTitle: 'U krijgt een email van ons toegestuurd met een nieuw wachtwoord',
+     scope: $scope,
+     buttons: [
+       { text: 'Cancel' }
+     
+     ]
+   });
+		 
+
+   };
+
+  
+})
+
+
+
+
+
 .controller('HomeCtrl',function($scope, $ionicPopup, $timeout) {
 
 	$scope.milaanAlert = function() {
