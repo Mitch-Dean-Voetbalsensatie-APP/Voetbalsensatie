@@ -53,8 +53,8 @@ angular.module('starter.controllers', [])
 
 			  $rootScope.check = {};
 					$ionicPopup.alert({
-			title: 'U bent succesvol ingelogd', 
-					
+			title: 'U bent succesvol ingelogd',
+
 					});
 
 			var authData = $scope.authObj.$getAuth();
@@ -90,7 +90,7 @@ angular.module('starter.controllers', [])
 		var isNewUser = true;
 		var ref = new Firebase("https://sensatie.firebaseio.com");
 		var syncObject = $firebaseObject(ref);
- 
+
   syncObject.$bindTo($scope, "users");
 		ref.onAuth(function(authData) {
 			if (authData && isNewUser) {
@@ -104,9 +104,9 @@ angular.module('starter.controllers', [])
       eredivisie:true,
       bundesliga:true,
       lique1:true }
-				
-    }); 
-	
+
+    });
+
 		}
 		});
 
@@ -148,8 +148,8 @@ angular.module('starter.controllers', [])
 			  console.log("U bent ingelogd als:", authData);
 			  $rootScope.check = {};
 				$ionicPopup.alert({
-			title: 'Uw account is aangemaakt en u bent gelijk ingelogd!', 
-					
+			title: 'Uw account is aangemaakt en u bent gelijk ingelogd!',
+
 					});
 
 			var authData = $scope.authObj.$getAuth();
@@ -182,8 +182,7 @@ angular.module('starter.controllers', [])
  	function($scope, $state, $rootScope, $ionicPopup, $firebaseAuth, $firebase, $firebaseObject) {
 		var isNewUser = true;
 		var ref = new Firebase("https://sensatie.firebaseio.com/users");
-		
-		
+
 		var authData = $scope.authObj.$getAuth();
 
 if (authData) {
@@ -191,10 +190,10 @@ if (authData) {
 } else {
   console.log("Logged out");
 }
-		$scope.$users = $firebaseObject(ref);
-		 console.log($scope.$users);
-		
-		
+		$scope.authData = $firebaseObject(ref);
+		 console.log($scope.authData);
+
+
 
 }
 						   ])
@@ -202,12 +201,118 @@ if (authData) {
 
 .controller('HomeCtrl',function($scope, $ionicPopup, $timeout) {
 
-	$scope.showAlert = function() {
+	$scope.milaanAlert = function() {
 	var alertPopup = $ionicPopup.alert({
-		title: 'Stand',
-		template: '<p>{{t.position}}</p><div ng-repeat="t in teams.standing"></div>'
+		title: 'AC-Milaan'
 	});
+},
+	$scope.arsenalAlert = function() {
+	var alertPopup = $ionicPopup.alert({
+		title: 'Arsenal'
+	});
+},
+	$scope.altheticoAlert = function() {
+	var alertPopup = $ionicPopup.alert({
+		title: 'Athletico Madrid'
+	});
+	},
+	$scope.romaAlert = function() {
+	var alertPopup = $ionicPopup.alert({
+		title: 'AS Roma'
+	});
+	},
+	$scope.bayernAlert = function() {
+	var alertPopup = $ionicPopup.alert({
+		title: 'Bayern Munchen'
+	});
+	},
+	$scope.celticAlert = function() {
+	var alertPopup = $ionicPopup.alert({
+		title: 'Celtic'
+	});
+	},
+	$scope.evertonAlert = function() {
+	var alertPopup = $ionicPopup.alert({
+		title: 'Everton'
+	});
+},
+$scope.dortmundAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Dortmund'
+});
+},
+$scope.chelseaAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Chelsea'
+});
+},
+$scope.juventusAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Juventus'
+});
+},
+$scope.barcelonaAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Barcelona'
+});
+},
+$scope.valenciaAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Valencia'
+});
+},
+$scope.tottenhamAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Tottenham'
+});
+},
+$scope.leicesterAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Leicester'
+});
+},
+$scope.realmadridAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Real Madrid'
+});
+},
+$scope.southamptonAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Southampton'
+});
+},
+$scope.sevillaAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Sevilla'
+});
+},
+$scope.manchesteruAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Manchester United'
+});
+},
+$scope.manchestercAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Manchester City'
+});
+},
+$scope.parisAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Paris Saint Germain'
+});
+},
+$scope.newcastleAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Newcastle'
+});
+},
+$scope.liverpoolAlert = function() {
+var alertPopup = $ionicPopup.alert({
+	title: 'Liverpool'
+});
 };
+
+
 })
 
 // .controller('HomeCtrl',  ["$scope", "$firebaseObject",

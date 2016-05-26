@@ -1,5 +1,6 @@
 <ion-view  hide-back-button="true" title='Onze Teams'>
 <ion-content id="pitch" ng-controller="HomeCtrl" scroll="false">
+
   <!-- <div class="homecontainer">
   </div> -->
     <div class="field left">
@@ -9,33 +10,36 @@
     <div class="field right">
         <div class="penalty-area">
         </div>
+
     </div>
     <div class="center-circle"></div>
+    <!-- <div ng-repeat="t in teams.standing"> -->
+    <!-- </div> -->
   <div class="home-team">
-    <img ng-click="showAlert()" class="player one"src="img/ac-milan.png"/>
-    <img ng-click="showAlert()" class="player two"src="img/Arsenal-icon.png"/>
-    <img ng-click="showAlert()" class="player three"src="img/AS-Roma-icon.png"/>
-    <img ng-click="showAlert()" class="player four"src="img/Atletico-Madrid-icon.png"/>
-    <img ng-click="showAlert()" class="player five"src="img/bayern-icon.png"/>
-    <img class="player six"src="img/Celtic-icon.png"/>
-    <img class="player seven"src="img/Chelsea-icon.png"/>
-    <img class="player eight"src="img/dortmunt-icon.png"/>
-    <img class="player nine"src="img/Everton-FC-icon.png"/>
-    <img class="player ten"src="img/FC-Barcelona-icon.png"/>
-    <img class="player eleven"src="img/Juventus-icon.png"/>
+    <img ng-click="milaanAlert()" class="player one"src="img/ac-milan.png"/></img>
+    <img ng-click="arsenalAlert()" class="player two"src="img/Arsenal-icon.png"/>
+    <img ng-click="romaAlert()" class="player three"src="img/AS-Roma-icon.png"/>
+    <img ng-click="altheticoAlert()" class="player four"src="img/Atletico-Madrid-icon.png"/>
+    <img ng-click="bayernAlert()" class="player five"src="img/bayern-icon.png"/>
+    <img ng-click="celticAlert()"class="player six"src="img/Celtic-icon.png"/>
+    <img ng-click="chelseaAlert()"class="player seven"src="img/Chelsea-icon.png"/>
+    <img ng-click="dortmundAlert()"class="player eight"src="img/dortmunt-icon.png"/>
+    <img ng-click="evertonAlert()"class="player nine"src="img/Everton-FC-icon.png"/>
+    <img ng-click="barcelonaAlert()"class="player ten"src="img/FC-Barcelona-icon.png"/>
+    <img ng-click="juventusAlert()"class="player eleven"src="img/Juventus-icon.png"/>
   </div>
   <div class="visitor-team">
-    <img class="player one" src="img/Liverpool-FC-icon.png"/>
-    <img class="player two"src="img/Manchester-City-icon.png"/>
-    <img class="player three"src="img/Manchester-United-icon.png"/>
-    <img class="player four"src="img/Newcastle-United-icon.png"/>
-    <img class="player five"src="img/Paris-Saint-Germain-icon.png"/>
-    <img class="player six"src="img/Real-Madrid-icon.png"/>
-    <img class="player seven"src="img/Schalke-04-icon.png"/>
-    <img class="player eight"src="img/Sevilla-icon.png"/>
-    <img class="player nine"src="img/Southampton-FC-icon.png"/>
-    <img class="player ten"src="img/Tottenham-Hotspur-icon.png"/>
-    <img class="player eleven"src="img/Valencia-icon.png"/>
+    <img ng-click="liverpoolAlert()"class="player one" src="img/Liverpool-FC-icon.png"/>
+    <img ng-click="manchestercAlert()"class="player two"src="img/Manchester-City-icon.png"/>
+    <img ng-click="manchesteruAlert()"class="player three"src="img/Manchester-United-icon.png"/>
+    <img ng-click="newcastleAlert()"class="player four"src="img/Newcastle-United-icon.png"/>
+    <img ng-click="parisAlert()"class="player five"src="img/Paris-Saint-Germain-icon.png"/>
+    <img ng-click="realmadridAlert()"class="player six"src="img/Real-Madrid-icon.png"/>
+    <img ng-click="leicesterAlert()"class="player seven"src="img/Leicester.png"/>
+    <img ng-click="sevillaAlert()"class="player eight"src="img/Sevilla-icon.png"/>
+    <img ng-click="southamptonAlert()"class="player nine"src="img/Southampton-FC-icon.png"/>
+    <img ng-click="tottenhamAlert()"class="player ten"src="img/Tottenham-Hotspur-icon.png"/>
+    <img ng-click="valenciaAlert()"class="player eleven"src="img/Valencia-icon.png"/>
   </div>
 </ion-content>
 <ion-footer-bar align-title="left" class="bar-assertive">
