@@ -103,7 +103,10 @@ angular.module('starter.controllers', [])
       seriea:true,
       eredivisie:true,
       bundesliga:true,
-      lique1:true }
+			primeira:true,
+      lique1:true,
+		  champions:true,
+		  ek:true }
 
     });
 
@@ -188,6 +191,8 @@ angular.module('starter.controllers', [])
 		$scope.authData = authData;
 		$scope.reloadPage = function(){window.location.reload();}
 		$scope.authdata = $firebaseObject(ref.child('users').child(authData.uid));
+		$scope.showMap = true;
+    $scope.showList = false;
  }
 ])
 
@@ -196,13 +201,13 @@ angular.module('starter.controllers', [])
 .controller('PopupCtrl',function($scope, $ionicPopup, $timeout, $firebaseAuth, $firebase, $firebaseObject) {
 var isNewUser = true;
 		var ref = new Firebase("https://sensatie.firebaseio.com");
-		
-		
+
+
 	var authData = $scope.authObj.$getAuth();
  // Triggered on a button click, or some other target
  $scope.showPopup = function() {
    $scope.data = {}
-   
+
    $scope.forgot=function()
 		{
 			$scope.authObj.$resetPassword({
@@ -212,18 +217,18 @@ var isNewUser = true;
 			}).catch(function(error) {
 			  console.error("Error: ", error);
 			});
-	   
+
 	   $timeout(function() {
-		   
+
 		   if ($scope.user.email){
    myPopup.close(); //close the popup after 10 seconds for some reason
 		   } }, 1000);
-	   
-	   
+
+
 		}
-   
-   
-   
+
+
+
     $scope.resetPassword=function()
 	    {
 	    	$scope.authObj.$changePassword({
@@ -236,8 +241,8 @@ var isNewUser = true;
 			  console.error("Error: ", error);
 			});
 	    }
-	
-	
+
+
 
    // An elaborate, custom popup
    var myPopup = $ionicPopup.show({
@@ -248,14 +253,14 @@ var isNewUser = true;
      scope: $scope,
      buttons: [
        { text: 'Cancel' }
-     
+
      ]
    });
-		 
+
 
    };
 
-  
+
 })
 
 

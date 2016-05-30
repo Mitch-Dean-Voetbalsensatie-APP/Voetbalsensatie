@@ -1,8 +1,8 @@
 <ion-view view-title="Competities">
-  <ion-content ng-controller="HomeCtrl">
+  <ion-content ng-controller="VoorkeurCrtl">
     <div class="list">
 
-<a class="item item-icon-left" href="#/app/englandoptions">
+<a ng-if"$root.showlist" class="item item-icon-left" href="#/app/englandoptions">
     <i class="icon"><img class="icon-competition" ng-src="img/premierleague.png"></i>
     Premier League
   </a>
