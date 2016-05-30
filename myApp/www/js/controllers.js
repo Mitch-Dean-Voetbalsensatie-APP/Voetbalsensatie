@@ -178,25 +178,18 @@ angular.module('starter.controllers', [])
 ])
 
 
-.controller('accountCrtl', ["$scope", "$state",  "$rootScope", "$ionicPopup", "$firebaseAuth", "$firebase", "$firebaseObject",
+.controller('VoorkeurCrtl', ["$scope", "$state","$rootScope", "$ionicPopup", "$firebaseAuth", "$firebase","$firebaseObject",
  	function($scope, $state, $rootScope, $ionicPopup, $firebaseAuth, $firebase, $firebaseObject) {
-		var isNewUser = true;
-		var ref = new Firebase("https://sensatie.firebaseio.com/users");
-
-		var authData = $scope.authObj.$getAuth();
-
-if (authData) {
-  console.log("Logged in as:", authData.uid);
-} else {
-  console.log("Logged out");
-}
-		$scope.authData = $firebaseObject(ref);
-		 console.log($scope.authData);
-
-
-
-}
-						   ])
+		var ref = new Firebase("https://sensatie.firebaseio.com");
+    var authData = ref.getAuth();
+    if (authData) {
+    console.log("Authenticated user with uid:", authData.password);
+    }
+		$scope.authData = authData;
+		$scope.reloadPage = function(){window.location.reload();}
+		$scope.authdata = $firebaseObject(ref.child('users').child(authData.uid));
+ }
+])
 
 
 
@@ -238,7 +231,7 @@ var isNewUser = true;
 			  oldPassword: $scope.reset.oldPassword,
 			  newPassword: $scope.reset.newPassword
 			}).then(function() {
-			  console.log("Password changed successfully!");
+			  console.log("Paaassword changed successfully!");
 			}).catch(function(error) {
 			  console.error("Error: ", error);
 			});
@@ -424,8 +417,17 @@ var alertPopup = $ionicPopup.alert({
 			  oldPassword: $scope.reset.oldPassword,
 			  newPassword: $scope.reset.newPassword
 			}).then(function() {
+				$state.go('app.home');
+				$ionicPopup.alert({
+			title: 'Uw wachtwoord is succesvol gewijzigd',
+
+					});
 			  console.log("Password changed successfully!");
 			}).catch(function(error) {
+				$ionicPopup.alert({
+			title: 'U heeft niet de juiste gegevens ingevoerd',
+
+					});
 			  console.error("Error: ", error);
 			});
 	    }

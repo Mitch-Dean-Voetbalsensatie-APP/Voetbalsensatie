@@ -405,7 +405,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
     views: {
       'menuContent': {
         templateUrl: 'templates/voorkeur.html',
-        controller: 'accountCrtl'
+        controller: 'VoorkeurCrtl'
       }
     }
   })

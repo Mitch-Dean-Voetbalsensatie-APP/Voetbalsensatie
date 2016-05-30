@@ -10,8 +10,8 @@
    <td class="grotevanvakjes">P</td>
    <td class="grotevanvakjes">G</td>
    <td class="grotevanvakjes">W</td>
-   <td class="grotevanvakjes">V</td>
    <td class="grotevanvakjes">G</td>
+   <td class="grotevanvakjes">V</td>
   </tr></table>
 
       <ion-item class="itemsbuiten"  ng-repeat="t in teams.standing">
@@ -30,11 +30,22 @@
       <td class="grotevanvakjes">{{t.draws}}</td>
        <td class="grotevanvakjes">{{t.losses}}</td>
     </tr>
-
+    
+    
 
   </table>
+ 
+
 </div>
+   
+    
    </ion-item>
    </ion-list>
+   <p class="aantal">A = Aantal gespeelde wedstrijden</p>
+   <p class="aantal">P = Aantal behaalde punten deze competitie</p>
+   <p class="aantal">G = Aantal goals gemaakt</p>
+   <p class="aantal">W = Aantal gewonnen wedstrijden</p>
+   <p class="aantal">G = Aantal gelijk gespeelde wedstrijden </p>
+   <p class="aantal">V = Aantal verloren wedstrijden</p>
   </ion-content>
 </ion-view>
