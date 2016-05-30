@@ -1,10 +1,9 @@
 <ion-view view-title="Voorkeur">
   </ion-nav-buttons>
   	<ion-content ng-controller="VoorkeurCrtl">
-      <button  ng-click="reloadPage();">Reset</button>
-      <h5>Dit zijn de voorkeurinstellingen van:{{authData.password.email}}</h5>
+           <h5>Dit zijn de voorkeurinstellingen van:{{authData.password.email}}</h5>
       <div>
-        <ion-toggle ng-model="$root.showlist" ng-model="authdata.competities.premiereleague" ng-change="authdata.$save()" toggle-class="toggle-calm">Premiere League</ion-toggle>
+        <ion-toggle ng-model="authdata.competities.premiereleague" ng-change="authdata.$save()" toggle-class="toggle-calm">Premiere League</ion-toggle>
         <ion-toggle ng-model="authdata.competities.primeradivision" ng-change="authdata.$save()" toggle-class="toggle-calm">Primera Division</ion-toggle>
         <ion-toggle ng-model="authdata.competities.seria" ng-change="authdata.$save()" toggle-class="toggle-calm">Serie A</ion-toggle>
         <ion-toggle ng-model="authdata.competities.bundesliga" ng-change="authdata.$save()" toggle-class="toggle-calm">Bundesliga</ion-toggle>

@@ -193,8 +193,7 @@ angular.module('starter.controllers', [])
 		$scope.reloadPage = function(){window.location.reload();}
 */
 		$scope.authdata = $firebaseObject(ref.child('users').child(authData.uid));
-		$scope.showMap = true;
-    $scope.showList = false;
+		
  }
 ])
 
