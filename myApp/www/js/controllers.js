@@ -189,7 +189,9 @@ angular.module('starter.controllers', [])
     console.log("Authenticated user with uid:", authData.password);
     }
 		$scope.authData = authData;
+/*
 		$scope.reloadPage = function(){window.location.reload();}
+*/
 		$scope.authdata = $firebaseObject(ref.child('users').child(authData.uid));
 		$scope.showMap = true;
     $scope.showList = false;
@@ -448,6 +450,7 @@ var alertPopup = $ionicPopup.alert({
 			$state.go('app.home');//switch to home tab
 			$rootScope.check.email = null;//for ng show
 			$rootScope.check.facebook = null;
+			document.location.reload(true);
 			$ionicPopup.alert({
 		title: 'U bent succesvol uitgelogd',
 		content: '',
