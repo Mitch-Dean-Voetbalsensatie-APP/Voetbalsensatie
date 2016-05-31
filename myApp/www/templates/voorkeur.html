@@ -1,11 +1,11 @@
 <ion-view view-title="Voorkeur">
   </ion-nav-buttons>
   	<ion-content ng-controller="VoorkeurCrtl">
-           <h5>Dit zijn de voorkeurinstellingen van:{{authData.password.email}}</h5>
+           <h5 class="titelvoorkeur">Kies hier welke teams u wilt zien</h5>
       <div>
-        <ion-toggle ng-model="authdata.competities.premiereleague" ng-change="authdata.$save()" toggle-class="toggle-calm">Premiere League</ion-toggle>
+      <ion-toggle ng-model="authdata.competities.premiereleague" ng-change="authdata.$save()" toggle-class="toggle-calm"> <img class="icon-competition" ng-src="img/premierleague.png"> &nbsp;&nbsp;  Premiere League</ion-toggle>
         <ion-toggle ng-model="authdata.competities.primeradivision" ng-change="authdata.$save()" toggle-class="toggle-calm">Primera Division</ion-toggle>
-        <ion-toggle ng-model="authdata.competities.seria" ng-change="authdata.$save()" toggle-class="toggle-calm">Serie A</ion-toggle>
+        <ion-toggle ng-model="authdata.competities.seria" ng-change="authdata.$save()" toggle-class="toggle-calm"><img class="icon-competition" ng-src="img/ligabvva.png">&nbsp;&nbsp;Serie A</ion-toggle>
         <ion-toggle ng-model="authdata.competities.bundesliga" ng-change="authdata.$save()" toggle-class="toggle-calm">Bundesliga</ion-toggle>
         <ion-toggle ng-model="authdata.competities.primeira" ng-change="authdata.$save()" toggle-class="toggle-calm">Primeira Liga</ion-toggle>
         <ion-toggle ng-model="authdata.competities.eredivisie" ng-change="authdata.$save()" toggle-class="toggle-calm">Eredivisie</ion-toggle>

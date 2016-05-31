@@ -18,6 +18,15 @@ td { border: 1px solid #C9C9C9;}
 
 ion-item:nth-child(even) {background: #F0F0F0;}
 
+ion-item#whitemenu {
+    background-color: white;
+}
+ion-item#greymenu{
+background: #F0F0F0;
+
+
+
+}
 .logoclub {    height: 24px;
     margin-right: 8px; width: 23px; display:inline-block; float:left;}
 
@@ -76,6 +85,8 @@ a#geenAccount {       float: left;
     color: white;
     padding: 0 15px;}
 
+.ramos {margin-left:-8px;}
+
 button#wachtwoordvergeten {  font-size: 12px;
     color: white;
     background: #860808;
@@ -84,7 +95,16 @@ button#wachtwoordvergeten {  font-size: 12px;
 .ion-person:before {color: #0f659d; margin-right:8px;}
 
 .list p {font-size: 18px;
-    color: #858585;}
+    color: #858585;
+    height: 21px;
+    width: 100%;
+    padding-left: 2px;}
+
+h5.titelvoorkeur {
+    text-align: center;
+    font-size: 17px;
+    color: #0f659d;
+}
 
 .ion-ios-telephone:before {color:#0f659d; margin-right: 11px;}
 

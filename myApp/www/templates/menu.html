@@ -24,31 +24,32 @@
         <ion-item  class="menuklasse" menu-close href="#/app/home">
         <p class="icon menu-icon ion-home"> Home </p>
         </ion-item>
+        
         <ion-item menu-close href="#/app/competities" ng-hide="check.email||check.facebook">
         <p class="ion-ios-football"> Competities</p>
         </ion-item>
-         <ion-item menu-close href="#/app/competitieinlog" ng-show="check.email||check.facebook">
+         <ion-item id="greymenu" menu-close href="#/app/competitieinlog" ng-show="check.email||check.facebook">
         <p class="ion-ios-football">Mijn competities</p>
         </ion-item>
-        <ion-item menu-close href="#/app/ourTeams">
+        <ion-item id="whitemenu" menu-close href="#/app/ourTeams">
         <p class="ion-ios-body">Onze Teams</p>
         </ion-item>
-        <ion-item menu-close href="#/app/login" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive">
+        <ion-item id="greymenu" menu-close href="#/app/login" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive">
          <p class="ion-ios-person"> Inloggen</p>
         </ion-item>
-        <ion-item menu-close href="#/app/signup" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive">
+        <ion-item  id="whitemenu" menu-close href="#/app/signup" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive">
          <p class="ion-person-add"> Registreren</p>
         </ion-item>
-        <ion-item menu-close href="#/app/account" hide-back-button="true" ng-show="check.email||check.facebook">
+        <ion-item id="greymenu" menu-close href="#/app/account" hide-back-button="true" ng-show="check.email||check.facebook">
          <p class="ion-ios-person"> Account</p>
         </ion-item>
-        <ion-item menu-close href="#/app/voorkeur" hide-back-button="true"ng-show="check.email||check.facebook">
+        <ion-item id="whitemenu" menu-close href="#/app/voorkeur" hide-back-button="true"ng-show="check.email||check.facebook">
          <p class="ion-ios-gear"> Voorkeuren</p>
         </ion-item>
-         <ion-item menu-close href="#/app/contact">
+         <ion-item id="greymenu" menu-close href="#/app/contact">
          <p class="ion-ios-telephone"> Contact</p>
         </ion-item>
-          <ion-item menu-close href="#/app/home" ng-show="check.email||check.facebook">
+          <ion-item id="whitemenu" menu-close href="#/app/home" ng-show="check.email||check.facebook">
          <p class="ion-log-out" ng-click="logout()"> Uitloggen </p>
         </ion-item>
       </ion-list>
