@@ -437,6 +437,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
         }
       }
     })
+  
+  
+    .state('app.competitieinlog', {
+      url: '/competitieinlog',
+      views: {
+        'menuContent': {
+             templateUrl: 'templates/competitieinlog.html',
+
+        }
+      }
+    })
 
   .state('app.england', {
       url: '/england',

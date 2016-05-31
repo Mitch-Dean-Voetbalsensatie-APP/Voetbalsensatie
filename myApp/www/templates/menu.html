@@ -24,8 +24,11 @@
         <ion-item  class="menuklasse" menu-close href="#/app/home">
         <p class="icon menu-icon ion-home"> Home </p>
         </ion-item>
-        <ion-item menu-close href="#/app/competities">
+        <ion-item menu-close href="#/app/competities" ng-hide="check.email||check.facebook">
         <p class="ion-ios-football"> Competities</p>
+        </ion-item>
+         <ion-item menu-close href="#/app/competitieinlog" ng-show="check.email||check.facebook">
+        <p class="ion-ios-football">Mijn competities</p>
         </ion-item>
         <ion-item menu-close href="#/app/ourTeams">
         <p class="ion-ios-body">Onze Teams</p>
