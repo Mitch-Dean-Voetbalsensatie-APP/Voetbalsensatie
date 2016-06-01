@@ -85,8 +85,8 @@ angular.module('starter.controllers', [])
 	}
 ])
 
-.controller('signupCtrl', ["$scope", "$state",  "$rootScope", "$ionicPopup", "$firebaseAuth", "$firebase", "$firebaseObject",
- 	function($scope, $state, $rootScope, $ionicPopup, $firebaseAuth, $firebase, $firebaseObject) {
+.controller('signupCtrl', ["$scope", "$state",  "$rootScope", "$ionicPopup", "$firebaseAuth", "$firebase", "$firebaseObject","$ionicHistory",
+ 	function($scope, $state, $rootScope, $ionicPopup, $firebaseAuth, $firebase, $firebaseObject,$ionicHistory) {
 		var isNewUser = true;
 		var ref = new Firebase("https://sensatie.firebaseio.com");
 		var syncObject = $firebaseObject(ref);
@@ -159,6 +159,9 @@ angular.module('starter.controllers', [])
 			if (authData) {
 			  $rootScope.check.email= authData.password.email;//for ng show
 			  console.log("Account, Logged in as:", $rootScope.check.email);
+				$ionicHistory.nextViewOptions({
+				 disableBack: true
+												 });
 			  $state.go('app.home');//switch to account tab
 			} else {
 			  console.log("Logged out");
@@ -193,7 +196,7 @@ angular.module('starter.controllers', [])
 		$scope.reloadPage = function(){window.location.reload();}
 */
 		$scope.authdata = $firebaseObject(ref.child('users').child(authData.uid));
-		
+
  }
 ])
 
