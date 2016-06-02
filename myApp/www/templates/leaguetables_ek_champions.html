@@ -1,0 +1,149 @@
+<ion-view side-menu-content drag-content="false">
+      <ion-nav-title>
+		  {{league}}
+    </ion-nav-title>
+  <ion-content>
+    <ion-list class="ranglijst" >
+        <table>
+          <tr>
+             <td class="leegveld" ></td>
+             <td class="grotevanvakjes">P</td>
+             <td class="grotevanvakjes">G</td>
+             <td class="grotevanvakjes">W</td>
+             <td class="grotevanvakjes">D</td>
+          </tr>
+         </table>
+      <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.A">
+   <div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <td class="grotevanvakjes">{{t.group}}</td>
+      <td class="grotevanvakjes">{{t.rank}}</td>
+      <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
+      <td class="grotevanvakjes">{{t.points}}</td>
+      <td class="grotevanvakjes" >{{t.goals}}</td>
+      <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
+      <td class="grotevanvakjes">{{t.goalsDifference}}</td>
+    </tr>
+  </table>
+</div>
+   </ion-item>
+ </br>
+   <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.B">
+      <div style="overflow-x:auto;">
+         <table>
+             <tr>
+               <td class="grotevanvakjes">{{t.group}}</td>
+               <td class="grotevanvakjes">{{t.rank}}</td>
+               <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
+               <td class="grotevanvakjes">{{t.points}}</td>
+               <td class="grotevanvakjes" >{{t.goals}}</td>
+               <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
+               <td class="grotevanvakjes">{{t.goalsDifference}}</td>
+             </tr>
+        </table>
+      </div>
+  </ion-item>
+</br>
+  <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.C">
+     <div style="overflow-x:auto;">
+        <table>
+            <tr>
+              <td class="grotevanvakjes">{{t.group}}</td>
+              <td class="grotevanvakjes">{{t.rank}}</td>
+              <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
+              <td class="grotevanvakjes">{{t.points}}</td>
+              <td class="grotevanvakjes" >{{t.goals}}</td>
+              <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
+              <td class="grotevanvakjes">{{t.goalsDifference}}</td>
+            </tr>
+       </table>
+     </div>
+ </ion-item>
+</br>
+  <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.D">
+     <div style="overflow-x:auto;">
+        <table>
+            <tr>
+              <td class="grotevanvakjes">{{t.group}}</td>
+              <td class="grotevanvakjes">{{t.rank}}</td>
+              <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
+              <td class="grotevanvakjes">{{t.points}}</td>
+              <td class="grotevanvakjes" >{{t.goals}}</td>
+              <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
+              <td class="grotevanvakjes">{{t.goalsDifference}}</td>
+            </tr>
+       </table>
+     </div>
+ </ion-item>
+</br>
+  <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.E">
+     <div style="overflow-x:auto;">
+        <table>
+            <tr>
+              <td class="grotevanvakjes">{{t.group}}</td>
+              <td class="grotevanvakjes">{{t.rank}}</td>
+              <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
+              <td class="grotevanvakjes">{{t.points}}</td>
+              <td class="grotevanvakjes" >{{t.goals}}</td>
+              <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
+              <td class="grotevanvakjes">{{t.goalsDifference}}</td>
+            </tr>
+       </table>
+     </div>
+ </ion-item>
+</br>
+  <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.F">
+     <div style="overflow-x:auto;">
+        <table>
+            <tr>
+              <td class="grotevanvakjes">{{t.group}}</td>
+              <td class="grotevanvakjes">{{t.rank}}</td>
+              <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
+              <td class="grotevanvakjes">{{t.points}}</td>
+              <td class="grotevanvakjes" >{{t.goals}}</td>
+              <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
+              <td class="grotevanvakjes">{{t.goalsDifference}}</td>
+            </tr>
+       </table>
+     </div>
+ </ion-item>
+</br>
+  <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.G">
+     <div style="overflow-x:auto;">
+        <table>
+            <tr>
+              <td class="grotevanvakjes">{{t.group}}</td>
+              <td class="grotevanvakjes">{{t.rank}}</td>
+              <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
+              <td class="grotevanvakjes">{{t.points}}</td>
+              <td class="grotevanvakjes" >{{t.goals}}</td>
+              <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
+              <td class="grotevanvakjes">{{t.goalsDifference}}</td>
+            </tr>
+       </table>
+     </div>
+ </ion-item>
+</br>
+  <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.H">
+     <div style="overflow-x:auto;">
+        <table>
+            <tr>
+              <td class="grotevanvakjes">{{t.group}}</td>
+              <td class="grotevanvakjes">{{t.rank}}</td>
+              <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
+              <td class="grotevanvakjes">{{t.points}}</td>
+              <td class="grotevanvakjes" >{{t.goals}}</td>
+              <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
+              <td class="grotevanvakjes">{{t.goalsDifference}}</td>
+            </tr>
+       </table>
+     </div>
+ </ion-item>
+   </ion-list>
+   <p class="aantal">P = Aantal behaalde punten van een Land</p>
+   <p class="aantal">G = Aantal goals gemaakt</p>
+   <p class="aantal">W = Aantal goals die er zijn gemaakt van de tegenstander</p>
+   <p class="aantal">D = Aantal verschil van goals </p>
+  </ion-content>
+</ion-view>

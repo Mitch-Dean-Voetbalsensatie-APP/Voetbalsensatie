@@ -437,8 +437,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
         }
       }
     })
-  
-  
+
+
     .state('app.competitieinlog', {
       url: '/competitieinlog',
       views: {
@@ -826,7 +826,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
                   url: '/champions',
                   views: {
                     'menuContent': {
-                         templateUrl: 'templates/leaguetables.html',
+                         templateUrl: 'templates/leaguetables_ek_champions.html',
                          controller: 'ChampionsCtrl'
                     }
                   }
@@ -874,7 +874,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
                         url: '/eu',
                         views: {
                           'menuContent': {
-                               templateUrl: 'templates/leaguetables.html',
+                               templateUrl: 'templates/leaguetables_ek_champions.html',
                                controller: 'EUCtrl'
                           }
                         }
