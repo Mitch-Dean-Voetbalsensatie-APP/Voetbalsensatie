@@ -154,14 +154,14 @@ angular.module('starter.controllers', [])
 			title: 'Uw account is aangemaakt en u bent gelijk ingelogd!',
 
 					});
+					$ionicHistory.nextViewOptions({
+					 disableBack: true
+													 });
 
 			var authData = $scope.authObj.$getAuth();
 			if (authData) {
 			  $rootScope.check.email= authData.password.email;//for ng show
 			  console.log("Account, Logged in as:", $rootScope.check.email);
-				$ionicHistory.nextViewOptions({
-				 disableBack: true
-												 });
 			  $state.go('app.home');//switch to account tab
 			} else {
 			  console.log("Logged out");
