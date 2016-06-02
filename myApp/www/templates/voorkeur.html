@@ -3,15 +3,43 @@
   	<ion-content ng-controller="VoorkeurCrtl">
            <h5 class="titelvoorkeur">Kies hier welke teams u wilt zien</h5>
       <div>
-      <ion-toggle ng-model="authdata.competities.premiereleague" ng-change="authdata.$save()" toggle-class="toggle-calm"> <img class="icon-competition" ng-src="img/premierleague.png"> &nbsp;&nbsp;  Premiere League</ion-toggle>
-        <ion-toggle ng-model="authdata.competities.primeradivision" ng-change="authdata.$save()" toggle-class="toggle-calm">Primera Division</ion-toggle>
-        <ion-toggle ng-model="authdata.competities.seria" ng-change="authdata.$save()" toggle-class="toggle-calm"><img class="icon-competition" ng-src="img/ligabvva.png">&nbsp;&nbsp;Serie A</ion-toggle>
-        <ion-toggle ng-model="authdata.competities.bundesliga" ng-change="authdata.$save()" toggle-class="toggle-calm">Bundesliga</ion-toggle>
-        <ion-toggle ng-model="authdata.competities.primeira" ng-change="authdata.$save()" toggle-class="toggle-calm">Primeira Liga</ion-toggle>
-        <ion-toggle ng-model="authdata.competities.eredivisie" ng-change="authdata.$save()" toggle-class="toggle-calm">Eredivisie</ion-toggle>
-        <ion-toggle ng-model="authdata.competities.lique1" ng-change="authdata.$save()" toggle-class="toggle-calm">Lique 1</ion-toggle>
-        <ion-toggle ng-model="authdata.competities.champions" ng-change="authdata.$save()" toggle-class="toggle-calm">Champions League</ion-toggle>
-        <ion-toggle ng-model="authdata.competities.ek" ng-change="authdata.$save()" toggle-class="toggle-calm">EK Frankrijk 2016</ion-toggle>
+      
+		  <ion-toggle ng-model="authdata.competities.premiereleague" ng-change="authdata.$save()" toggle-class="toggle-calm"> 
+			<img id="voorkeurimg" class="icon-competition" ng-src="img/premierleague.png"> &nbsp;&nbsp;  Premiere League
+		  </ion-toggle>
+			
+		  <ion-toggle ng-model="authdata.competities.primeradivision" ng-change="authdata.$save()" toggle-class="toggle-calm">  
+				<img id="voorkeurimg" class="icon-competition" ng-src="img/ligabvva.png"> &nbsp;&nbsp; Primera Division
+		  </ion-toggle>
+						
+		  <ion-toggle ng-model="authdata.competities.seria" ng-change="authdata.$save()" toggle-class="toggle-calm">
+				<img id="voorkeurimg" class="icon-competition" ng-src="img/seriea.png"> &nbsp;&nbsp; Serie A
+		  </ion-toggle>
+					
+		  <ion-toggle ng-model="authdata.competities.bundesliga" ng-change="authdata.$save()" toggle-class="toggle-calm"> 
+				<img id="voorkeurimg" class="icon-competition" ng-src="img/bundesliga.png"> &nbsp;&nbsp; Bundesliga
+		  </ion-toggle>
+	
+		  <ion-toggle ng-model="authdata.competities.primeira" ng-change="authdata.$save()" toggle-class="toggle-calm"> 
+				<img id="voorkeurimg" class="icon-competition" ng-src="img/ligaportugal.png"> &nbsp;&nbsp; Primeira Liga
+		  </ion-toggle>
+			
+		  <ion-toggle ng-model="authdata.competities.eredivisie" ng-change="authdata.$save()" toggle-class="toggle-calm"> 
+				<img id="voorkeurimg" class="icon-competition" ng-src="img/eredivisie.png"> &nbsp;&nbsp; Eredivisie
+		  </ion-toggle>
+			
+		  <ion-toggle ng-model="authdata.competities.lique1" ng-change="authdata.$save()" toggle-class="toggle-calm"> 
+				<img id="voorkeurimg" class="icon-competition" ng-src="img/lique1.png"> &nbsp;&nbsp; Lique 1
+		  </ion-toggle>
+			
+		  <ion-toggle ng-model="authdata.competities.champions" ng-change="authdata.$save()" toggle-class="toggle-calm">
+				<img id="voorkeurimg" class="icon-competition" ng-src="img/champions.png"> &nbsp;&nbsp; Champions League
+		  </ion-toggle>
+			
+		  <ion-toggle ng-model="authdata.competities.ek" ng-change="authdata.$save()" toggle-class="toggle-calm"> 
+				<img id="voorkeurimg" class="icon-competition" ng-src="img/EU2016.png"> &nbsp;&nbsp; EK Frankrijk 2016
+		  </ion-toggle>
+      
       </div>
 	</ion-content>
 </ion-view>

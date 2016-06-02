@@ -87,6 +87,10 @@ a#geenAccount {       float: left;
 
 .ramos {margin-left:-8px;}
 
+img#voorkeurimg {
+    vertical-align: middle;
+}
+
 button#wachtwoordvergeten {  font-size: 12px;
     color: white;
     background: #860808;
