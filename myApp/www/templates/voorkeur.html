@@ -3,6 +3,7 @@
   	<ion-content ng-controller="VoorkeurCrtl">
            <h5 class="titelvoorkeur">Kies hier welke teams u wilt zien</h5>
       <div>
+
       
 		  <ion-toggle ng-model="authdata.competities.premiereleague" ng-change="authdata.$save()" toggle-class="toggle-calm"> 
 			<img id="voorkeurimg" class="icon-competition" ng-src="img/premierleague.png"> &nbsp;&nbsp;  Premiere League
@@ -40,6 +41,7 @@
 				<img id="voorkeurimg" class="icon-competition" ng-src="img/EU2016.png"> &nbsp;&nbsp; EK Frankrijk 2016
 		  </ion-toggle>
       
+
       </div>
 	</ion-content>
 </ion-view>
