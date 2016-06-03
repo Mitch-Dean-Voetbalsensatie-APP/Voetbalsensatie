@@ -826,7 +826,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
                   url: '/champions',
                   views: {
                     'menuContent': {
-                         templateUrl: 'templates/leaguetables_ek_champions.html',
+                         templateUrl: 'templates/leaguetables_champions.html',
                          controller: 'ChampionsCtrl'
                     }
                   }
@@ -874,7 +874,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
                         url: '/eu',
                         views: {
                           'menuContent': {
-                               templateUrl: 'templates/leaguetables_ek_champions.html',
+                               templateUrl: 'templates/leaguetables_ek.html',
                                controller: 'EUCtrl'
                           }
                         }

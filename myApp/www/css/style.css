@@ -91,6 +91,17 @@ img#voorkeurimg {
     vertical-align: middle;
 }
 
+
+.ekvak {padding: 0px;
+    text-align: center;
+    width: 6% !important;}
+h3.titlepoule {
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    color: #0F659D;
+}
+
 button#wachtwoordvergeten {  font-size: 12px;
     color: white;
     background: #860808;
@@ -134,7 +145,7 @@ td.groenvakjes.ng-binding {
     text-align: center;}
 
 td.leegveld {
-    width: 61%;
+    width: 69%;
 }
 
 td.clubnamenkomend.ng-binding {
