@@ -4,36 +4,25 @@ angular.module('starter.controllers', [])
 
 .controller('loginCtrl', ["$scope", "$ionicPopup", "$state", "$rootScope", "$firebaseAuth", "$ionicHistory",
 	function($scope, $ionicPopup, $state, $rootScope, $firebaseAuth, $ionicHistory) {
-
 		$scope.user={};
-
-		//database connection
 	    var ref = new Firebase("https://sensatie.firebaseio.com");
-
 	    $scope.authObj = $firebaseAuth(ref);
-
-	    $scope.facebook=function()
-	    {
+	    $scope.facebook=function(){
 	    	$scope.authObj.$authWithOAuthPopup("facebook").then(function(authData) {
 			  console.log("U bent ingelogd als:", authData);
 			  $rootScope.check = {};
 			  $rootScope.check.facebook = authData.facebook.displayName;
 				$rootScope.check.facebookprofileImageURL = authData.facebook.profileImageURL;
 			  console.log("facebook name ", $rootScope.check.facebook);
-				 $ionicHistory.nextViewOptions({
-			    disableBack: true
-  												});
-			$state.go('app.home');
-			}).catch(function(error) {
+					$ionicHistory.nextViewOptions({
+				  disableBack: true
+	  			});
+				$state.go('app.home');
+				}).catch(function(error) {
 			  console.error("Authentication failed:", error);
-			});
-
-	    }
-
-
-
-		$scope.forgot=function()
-		{
+		});
+}
+		$scope.forgot=function(){
 			$scope.authObj.$resetPassword({
 			  email: $scope.user.email
 			}).then(function() {
@@ -42,21 +31,16 @@ angular.module('starter.controllers', [])
 			  console.error("Error: ", error);
 			});
 		}
-
-		$scope.login=function()
-		{
+		$scope.login=function(){
 			$scope.authObj.$authWithPassword({
 			  email: $scope.user.email,
 			  password: $scope.user.password
-			}).then(function(authData) {
+			}).then(function(authData){
 			  console.log("U bent ingelogd als:", authData);
-
 			  $rootScope.check = {};
 					$ionicPopup.alert({
-			title: 'U bent succesvol ingelogd',
-
-					});
-
+							title: 'U bent succesvol ingelogd',
+			});
 			var authData = $scope.authObj.$getAuth();
 			if (authData) {
 			  $rootScope.check.email= authData.password.email;//for ng show
@@ -77,11 +61,9 @@ angular.module('starter.controllers', [])
 			   alertPopup.then(function(res) {
 			     console.log('Alert closed');
 			   });
-
 			});
 			console.log($scope.user.email + " and " + $scope.user.password);
 		}
-
 	}
 ])
 
@@ -90,29 +72,25 @@ angular.module('starter.controllers', [])
 		var isNewUser = true;
 		var ref = new Firebase("https://sensatie.firebaseio.com");
 		var syncObject = $firebaseObject(ref);
-
   syncObject.$bindTo($scope, "users");
-		ref.onAuth(function(authData) {
-			if (authData && isNewUser) {
-			ref.child("users").child(authData.uid).set({
-     email: authData.password.email,
-      name: getName(authData),
-      "competities":{
-      premiereleague:true,
-      primeradivision:true,
-      seriea:true,
-      eredivisie:true,
-      bundesliga:true,
-			primeira:true,
-      lique1:true,
-		  champions:true,
-		  ek:true }
-
-    });
-
+			ref.onAuth(function(authData) {
+				if (authData && isNewUser) {
+				ref.child("users").child(authData.uid).set({
+	     email: authData.password.email,
+	      name: getName(authData),
+	      "competities":{
+	      premiereleague:true,
+	      primeradivision:true,
+	      seriea:true,
+	      eredivisie:true,
+	      bundesliga:true,
+				primeira:true,
+	      lique1:true,
+			  champions:true,
+			  ek:true }
+    	});
 		}
-		});
-
+ });
 		function getName(authData) {
 			switch(authData.provider) {
 				case 'password':
@@ -120,19 +98,10 @@ angular.module('starter.controllers', [])
 				case 'facebook':
 					return authData.facebook.displayName;
 				}
-		}
-
-
-
-
-
+		 }
 		$scope.newUser={};
-
 	    var ref = new Firebase("https://sensatie.firebaseio.com");
 			$scope.authObj = $firebaseAuth(ref);
-
-
-
 		$scope.signup=function()
 		{
 			$scope.authObj.$createUser({
@@ -182,8 +151,6 @@ angular.module('starter.controllers', [])
 		}
 	}
 ])
-
-
 .controller('VoorkeurCrtl', ["$scope", "$state","$rootScope", "$ionicPopup", "$firebaseAuth", "$firebase","$firebaseObject",
  	function($scope, $state, $rootScope, $ionicPopup, $firebaseAuth, $firebase, $firebaseObject) {
 		var ref = new Firebase("https://sensatie.firebaseio.com");
@@ -445,14 +412,13 @@ var alertPopup = $ionicPopup.alert({
 		{
 			$scope.authObj.$unauth();
 						  console.log("U bent uitgelogd ");
-
+										document.location.reload(true);
 				 $ionicHistory.nextViewOptions({
 			    disableBack: true
-  												});
-			$state.go('app.home');//switch to home tab
+  												});//switch to home tab
 			$rootScope.check.email = null;//for ng show
 			$rootScope.check.facebook = null;
-			document.location.reload(true);
+			$state.go('app.home');
 			$ionicPopup.alert({
 		title: 'U bent succesvol uitgelogd',
 		content: '',

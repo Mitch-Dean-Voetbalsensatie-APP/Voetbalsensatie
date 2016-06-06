@@ -1,8 +1,6 @@
 <ion-side-menus >
   <ion-side-menu-content>
     <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
@@ -11,6 +9,7 @@
       <a ng-show="check.email" href="#/app/account" class="button button-clear button-light">Account</a>
       <a ng-show="check.facebook" href="#/app/account" class="button button-clear button-light"><img class="facebook-icon" ng-src="{{ check.facebookprofileImageURL }}"> </a>
       </ion-nav-buttons>
+      <ion-nav-back-button class="button-clear"></ion-nav-back-button>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
@@ -24,7 +23,6 @@
         <ion-item  class="menuklasse" menu-close href="#/app/home">
         <p class="icon menu-icon ion-home"> Home </p>
         </ion-item>
-
         <ion-item menu-close href="#/app/competities" ng-hide="check.email||check.facebook">
         <p class="ion-ios-football"> Competities</p>
         </ion-item>

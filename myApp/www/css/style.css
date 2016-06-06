@@ -1,130 +1,171 @@
-/* Empty. Add your own CSS if you like */
-
 ion-header-bar.bar-stable.bar.bar-header {
-background-color: white;}
-
+	background-color: white;
+}
+.iphone5_testing{
+	overflow: hidden;
+}
 .icon-competition{
 	width:30px;
 }
-
+.league-title{
+	font-size:11px;
+}
+.back-text{
+	font-size:13px;
+}
 .facebook-icon{
 	height:35px;
 	border-radius:2em;
 }
-
-td { border: 1px solid #C9C9C9;}
-.position {float:left; margin-right:6px;}
-
-
-ion-item:nth-child(even) {background: #F0F0F0;}
-
+td {
+	border: 1px solid #C9C9C9;
+}
+.position {
+	float:left;
+	margin-right:6px;
+}
+ion-item:nth-child(even) {
+	background: #F0F0F0;
+}
 ion-item#whitemenu {
-    background-color: white;
+  background-color: white;
 }
 ion-item#greymenu{
-background: #F0F0F0;
-
-
-
+	background: #F0F0F0;
 }
-.logoclub {    height: 24px;
-    margin-right: 8px; width: 23px; display:inline-block; float:left;}
-
-.points {display:inline-block; float: right; margin-right: 2%; margin-top:3px;}
-.teamname {display:inline-block; margin-top:3px; color:#939393; }
-
-.homeimg {    width:100%;
-   }
-
-button#uitloggen{        float: left;
-    background: #67B8FF;
-    font-size: 13px;
-    color: white;
-    padding: 0 15px;}
-
-.containeraccount {padding: 22px;
+.logoclub {
+	height: 24px;
+  margin-right: 8px;
+	width: 23px;
+	display:inline-block;
+	float:left;
+}
+.points {
+	display:inline-block;
+	float: right;
+	margin-right: 2%;
+	margin-top:3px;
+}
+.teamname {
+	display:inline-block;
+	margin-top:3px;
+	color:#939393;
+}
+.homeimg {
+	width:100%;
+}
+button#uitloggen{
+	float: left;
+  background: #67B8FF;
+  font-size: 13px;
+  color: white;
+  padding: 0 15px;
+}
+.containeraccount {
+	padding: 22px;
 	margin-top:-20px;
-    background-color: #F0F0F0;
-    height: 274px;}
-
-.contactimg {    width: 100%;
-    padding: 22px;
-    height: 250px;
-    object-fit: cover; }
-.contact-container {  padding: 22px;
-    background-color: #F0F0F0;
-    height: auto;
-    margin: 22px;
-    margin-bottom: 0px;
+  background-color: #F0F0F0;
+  height: 274px;
+}
+.contactimg {
+	width: 100%;
+  padding: 22px;
+  height: 250px;
+  object-fit: cover;
+}
+.contact-container {
+	padding: 22px;
+  background-color: #F0F0F0;
+  height: auto;
+  margin: 22px;
+  margin-bottom: 0px;
 	margin-top: 0px;
-   }
-
-p.teamnaamp.ng-binding {font-size:13px;}
-
-.ion-ios-person:before {color: #0f659d;
-    margin-right: 13px;}
-
-.ion-ios-gear:before {color: #0f659d;
-    margin-right: 8px;}
-
-.container {padding:9px;}
-.marketvalue {    float: right;
-    margin-right: 0%; color:#939393;}
-
-.menutitel {    text-align: center;
-    margin: 0 auto;
-    color: #0D5F8E;
-    font-size: 24px;
-    font-weight: 700;}
-
-.facebooklogin {width: 15px; margin-right:8px;}
-
-a#geenAccount {       float: left;
-    background: #67B8FF;
-    font-size: 12px;
-    color: white;
-    padding: 0 15px;}
-
-.ramos {margin-left:-8px;}
-
+}
+p.teamnaamp.ng-binding {
+	font-size:13px;
+}
+.ion-ios-person:before {
+	color: #0f659d;
+  margin-right: 13px;
+}
+.ion-ios-gear:before {
+	color: #0f659d;
+  margin-right: 8px;
+}
+.container {
+	padding:9px;
+}
+.marketvalue {
+	float: right;
+  margin-right: 0%;
+	color:#939393;
+}
+.menutitel {
+	text-align: center;
+  margin: 0 auto;
+	margin-top:10px;
+  color: #0D5F8E;
+  font-size: 18px;
+}
+.facebooklogin {
+	width: 15px;
+	margin-right:8px;
+}
+a#geenAccount {
+	float: left;
+  background: #67B8FF;
+  font-size: 12px;
+  color: white;
+  padding: 0 4px;
+}
+.ramos {
+	margin-left:-8px;
+}
 img#voorkeurimg {
-    vertical-align: middle;
+  vertical-align: middle;
 }
-
-
-.ekvak {padding: 0px;
-    text-align: center;
-    width: 6% !important;}
+.ekvak {
+	padding: 0px;
+  text-align: center;
+  width: 6% !important;
+}
 h3.titlepoule {
-    font-size: 16px;
-    padding: 0px;
-    margin: 0px;
-    color: #0F659D;
+  font-size: 16px;
+  padding: 0px;
+  margin: 0px;
+  color: #0F659D;
 }
-
-button#wachtwoordvergeten {  font-size: 12px;
-    color: white;
-    background: #860808;
-    float: right; padding: 0 15px;}
-
-.ion-person:before {color: #0f659d; margin-right:8px;}
-
-.list p {font-size: 18px;
-    color: #858585;
-    height: 21px;
-    width: 100%;
-    padding-left: 2px;}
-
+button#wachtwoordvergeten {
+	font-size: 12px;
+  color: white;
+  background: #860808;
+  float: right;
+	padding: 0 4px;
+}
+.ion-person:before {
+	color: #0f659d;
+	margin-right:8px;
+}
+.list p {
+	font-size: 18px;
+  color: #858585;
+  height: 21px;
+  width: 100%;
+  padding-left: 2px;
+}
 h5.titelvoorkeur {
-    text-align: center;
-    font-size: 17px;
-    color: #0f659d;
+  text-align: center;
+  font-size: 17px;
+  color: #0f659d;
 }
-
-.ion-ios-telephone:before {color:#0f659d; margin-right: 11px;}
-
-img.slide1 {width: 100%; height:100%;}
-
+.ion-ios-telephone:before {
+	color:#0f659d;
+	margin-right: 11px;
+}
+img.slide1 {
+	width: 100%;
+	height:100%;
+}
 .spinner svg {
 	height:70px;
 	width:70px;
@@ -132,409 +173,407 @@ img.slide1 {width: 100%; height:100%;}
   fill: #003352;
 	background:none;
 }
-
-p.aantal {font-size: 11px;
-    margin: 0px 0 1px;}
-
-td.groenvakjes.ng-binding {
-       font-size: 10px;
-       color: #444;
-    background-color: rgba(115, 255, 115, 0.47);
-    width: 24px;
-    padding: 0px;
-    text-align: center;}
-
-td.leegveld {
-    width: 69%;
+p.aantal {
+	font-size: 11px;
+  margin: 0px 0 1px;
 }
-
+td.groenvakjes.ng-binding {
+  font-size: 10px;
+  color: #444;
+  background-color: rgba(115, 255, 115, 0.47);
+  width: 24px;
+  padding: 0px;
+  text-align: center;
+}
+td.leegveld {
+  width: 69%;
+}
 td.clubnamenkomend.ng-binding {
-    font-size: 11px;
-    width: 70%;}
-
+  font-size: 11px;
+  width: 70%;
+}
 td.marktwaardeblok.ng-binding {
-    width: 40%;
-    font-size: 11px;}
-
+  width: 40%;
+  font-size: 11px;
+}
 td.clubnamengespeeld.ng-binding {
-       font-size: 9px;
-    padding: 0px;
-    width: 32%;
-    padding-left: 8px}
+  font-size: 9px;
+  padding: 0px;
+  width: 32%;
+  padding-left: 8px}
 
 td.datumgespeeld.ng-binding {
-    font-size: 8px;
+  font-size: 8px;
 }
-
 td.datumgespeeld2.ng-binding {
-    font-size: 10px;
+  font-size: 10px;
 }
-
-td.grotevanvakjes {width: 26px;
-    font-size: 12px;
-
-    text-align: center;}
-
-.itemsbuiten {padding:0px;}
-
-.clubnamen {font-size:11px;}
-
-.positie {float:left; margin-right:9px;}
+td.grotevanvakjes {
+	width: 26px;
+  font-size: 12px;
+  text-align: center;
+}
+.itemsbuiten {
+	padding:0px;
+}
+.clubnamen {
+	font-size:11px;
+	overflow: hidden;
+}
+.positie {
+	float:left;
+	margin-right:9px;
+}
 table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
-
 th, td {
-    text-align: left;
-    padding: 8px;
+  text-align: left;
+  padding: 8px;
 }
-
 td.grotevanvakjesstreep {
-    font-size: 10px;
-    padding: 3px;
-    text-align: center;}
-
-tr:nth-child(even){background-color: #f2f2f2}
-
+  font-size: 10px;
+  padding: 3px;
+  text-align: center;
+}
+tr:nth-child(even){
+	background-color: #f2f2f2
+}
  td.grotevanvakjes.ng-binding {
-    font-size: 9px;
-    padding: 0px;
-    text-align: center;}
-
-.sensatielogopaginas {width:100%;}
-
+  font-size: 9px;
+  padding: 0px;
+  text-align: center;
+}
+.sensatielogopaginas {
+	width:100%;
+}
 a.item.item-icon-left:nth-child(even){
-background:#F0F0F0;
-
+	background:#F0F0F0;
 }
-label.item.item-input {    margin-bottom: 14px;}
-.socialmediaicons {    height: 40px;
-    width: 40px;
-    margin: 4px;
-    margin-left: 17px;
-    border-radius: 2em;
-    margin-top:  61px;}
+label.item.item-input {
+  margin-bottom: 14px;
+}
+.socialmediaicons {
+	height: 40px;
+  width: 40px;
+  margin: 4px;
+  margin-left: 17px;
+  border-radius: 2em;
+  margin-top:  61px;
+}
 .menuklasse{
-margin-top: 31%;
+	margin-top: 31%;
 }
-
 .title-image{
-	      width: 18%;
-    margin-top: 5px;
-    max-width: 22%;
+	width: 18%;
+  margin-top: 10px;
+  max-width: 22%;
 }
 .loading-container .loading{
 	background:none !important;
 }
-.ion-ios-football:before { color: #0f659d; margin-right: 8px;}
-.ion-home:before {color:#0f659d; margin-right: 8px;}
-#username {margin-left: 13px;
-    margin-top: 6px;
-    font-size: 16px; color:#858585;}
+.ion-ios-football:before {
+	color: #0f659d;
+	margin-right: 8px;
+}
+.ion-home:before {
+	color:#0f659d;
+	margin-right: 8px;
+}
+#username {
+	margin-left: 13px;
+  margin-top: 10px;
+  font-size: 16px;
+	color:#858585;
+}
+#pitch{
+	background: linear-gradient(-90deg, #003352, #D3D3D1, #003352);
+	width: 590px;
+	height: 380px;
+	position: absolute;
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	margin-top:94px;
+	margin-left:-107px;
+}
+#pitch:after{
+	content: "";
+	border-left: 1px solid white;
+	position: absolute;
+  top :20px;
+	left :295px;
+  display:block;
+  height:340px;
+}
+#pitch:before{
+	content: "";
+	border: 1px solid white;
+  position: absolute;
+  top :20px;
+  left :20px;
+  display:block;
+  width: 550px;
+	height:340px;
+}
+.center-circle{
+	position: absolute;
+	top: 145px;
+	left: 250px;
+  width: 90px;
+	height: 90px;
+	border: 1px solid white;
+	border-radius: 50%;
+}
+.center-circle:after{
+  position: absolute;
+	top: 43px;
+	left: 43px;
+	width: 1px;
+	height: 1px;
+	background-color:white;
+	content:"";
+	border:1px solid white;
+}
+.penalty-area{
+	position: absolute;
+	height: 140px;
+  width: 80px;
+	top: 120px;
+	border: 1px solid white;
+}
+.left .penalty-area{
+	left: 20px;
+	border-left: 0;
+}
+.right .penalty-area{
+	right: 19px;
+	border-right: 0;
+}
 
-
-
-    /*.background.scroll-content {
-      background: url('../img/voetbalveld.png') no-repeat;
-     background: url('../img/voetbalveld.png') no-repeat;
-    z-index: 9999;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin-bottom: 49px;
-    background-position: center;
-    }*/
-
-		#pitch{
-				background: linear-gradient(-90deg, #003352, #D3D3D1, #003352);
-		    width: 590px;
-		    height: 380px;
-		    position: absolute;
-		    -ms-transform: rotate(90deg); /* IE 9 */
-		    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-		    transform: rotate(90deg);
-				margin-top:94px;
-				margin-left:-107px;
-		}
-		#pitch:after{
-		  content: "";
-		  border-left: 1px solid white;
-		  position: absolute;
-		  top :20px;
-		  left :295px;
-		  display:block;
-		  height:340px;
-		}
-
-		#pitch:before{
-		  content: "";
-		  border: 1px solid white;
-		  position: absolute;
-		  top :20px;
-		  left :20px;
-		  display:block;
-		  width: 550px;
-		  height:340px;
-		}
-
-		.center-circle{
-		    position: absolute;
-		    top: 145px;
-		    left: 250px;
-		    width: 90px;
-		    height: 90px;
-		    border: 1px solid white;
-		    border-radius: 50%;
-		}
-		.center-circle:after{
-		    position: absolute;
-		    top: 43px;
-		    left: 43px;
-		    width: 1px;
-		    height: 1px;
-		    background-color:white;
-		    content:"";
-		    border:1px solid white;
-		}
-
-		.penalty-area{
-		    position: absolute;
-		    height: 140px;
-		    width: 80px;
-		    top: 120px;
-		    border: 1px solid white;
-		}
-
-		.left .penalty-area{
-		    left: 20px;
-		    border-left: 0;
-		}
-
-		.right .penalty-area{
-		    right: 19px;
-		    border-right: 0;
-		}
-
-		.penalty-area:before{
-		    position: absolute;
-		    height: 70px;
-		    width: 35px;
-		    top: 35px;
-		    border: 1px solid white;
-		    content:"";
-		}
-		.left .penalty-area:before{
-		   left:0px;
-		  border-left:0;
-		}
-		.right .penalty-area:before{
-		   right:0px;
-		  border-right:0;
-		}
-
-		.penalty-area:after{
-		    position: absolute;
-		    height: 2px;
-		    width: 2px;
-		    top: 70px;
-		    background-color:white;
-		    content:"";
-		}
-		.left .penalty-area:after{
-		    right:15px;
-		}
-		.right .penalty-area:after{
-		    left:15px;
-		}
-
-		.player{
-		  position:absolute;
-		  width:50px;
-		  height:50px;
-		}
-		.player:after{
-		  font-size:10px;
-		  position:absolute;
-		  left:3px;
-		}
-		.home-team .player{
-		  background:transparent;
-			-ms-transform: rotate(-90deg); /* IE 9 */
-	    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-	    transform: rotate(-90deg);
-		}
-		.home-team .player.one{
-		  top:165px;
-		  left:20px;
-		  background:transparent;
-		}
-		.home-team .player.one:after{
-		}
-		.home-team .player.two{
-		      top: 284px;
-    left: 81px;
-		}
-		.home-team .player.two:after{
-		}
-		.home-team .player.three{
-		top: 46px;
-    left: 78px;
-		}
-		.home-team .player.three:after{
-		}
-		.home-team .player.four{
-		    top: 165px;
-    left: 86px;
-		}
-		.home-team .player.four:after{
-		}
-		.home-team .player.five{
-		      top: 66px;
-    left: 239px;
-		}
-		.home-team .player.five:after{
-		}
-		.home-team .player.six{
-		      top: 304px;
-    left: 160px;
-		}
-		.home-team .player.six:after{
-		}
-		.home-team .player.seven{
-		top: 28px;
-    left: 160px;
-		}
-		.home-team .player.seven:after{
-		}
-		.home-team .player.eight{
-		  top: 114px;
-    left: 160px;
-		}
-		.home-team .player.eight:after{
-		}
-		.home-team .player.nine{
-		      top: 215px;
-    left: 160px;
-		}
-		.home-team .player.nine:after{
-		}
-		.home-team .player.ten{
-		          top: 165px;
-    left: 240px;
-		}
-		.home-team .player.ten:after{
-		  left:0px;
-		}
-		.home-team .player.eleven{
-		     top: 265px;
-    left: 240px;
-		}
-		.home-team .player.eleven:after{
-		  left:0px;
-		}
-		.visitor-team .player{
-		  background:transparent;
-			-ms-transform: rotate(-90deg); /* IE 9 */
-	    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-	    transform: rotate(-90deg);
-		}
-		.visitor-team .player:after{
-		  color:white;
-		}
-		.visitor-team .player.one{
-		    top: 167px;
-    right: 20px;
-		  background:transparent;
-		}
-		.visitor-team .player.one:after{
-		  color:red;
-		}
-		.visitor-team .player.two{
-		  top: 284px;
-    right: 80px;
-		}
-		.visitor-team .player.two:after{
-		}
-		.visitor-team .player.three{
-		  top: 28px;
-    right: 161px;
-		}
-		.visitor-team .player.three:after{
-		}
-		.visitor-team .player.four{
-		 top: 46px;
-    right: 80px;
-		}
-		.visitor-team .player.four:after{
-		}
-		.visitor-team .player.five{
-		      top: 166px;
-    right: 86px;
-		}
-		.visitor-team .player.five:after{
-		}
-		.visitor-team .player.six{
-		      top: 304px;
-    right: 160px;
-		}
-		.visitor-team .player.six:after{
-		}
-		.visitor-team .player.seven{
-		     top: 66px;
-    right: 238px;
-		}
-		.visitor-team .player.seven:after{
-		}
-		.visitor-team .player.eight{
-		 top: 114px;
-    right: 160px;
-		}
-		.visitor-team .player.eight:after{
-		}
-		.visitor-team .player.nine{
-		 top: 215px;
-    right: 160px;
-		}
-		.visitor-team .player.nine:after{
-		}
-		.visitor-team .player.ten{
-		 top: 162px;
-    right: 240px;
-		}
-		.visitor-team .player.ten:after{
-		  left:0px;
-		}
-		.visitor-team .player.eleven{
-		    top: 265px;
-    right: 238px;
-		}
-		.visitor-team .player.eleven:after{
-		  left:0px;
-		}
-
-
+.penalty-area:before{
+	position: absolute;
+  height: 70px;
+	width: 35px;
+	top: 35px;
+	border: 1px solid white;
+	content:"";
+}
+.left .penalty-area:before{
+	left:0px;
+	border-left:0;
+}
+.right .penalty-area:before{
+  right:0px;
+	border-right:0;
+}
+.penalty-area:after{
+	position: absolute;
+	height: 2px;
+	width: 2px;
+  top: 70px;
+	background-color:white;
+  content:"";
+}
+.left .penalty-area:after{
+	right:15px;
+}
+.right .penalty-area:after{
+	left:15px;
+}
+.player{
+	position:absolute;
+	width:50px;
+	height:50px;
+}
+.player:after{
+	font-size:10px;
+	position:absolute;
+	left:3px;
+}
+.home-team .player{
+	background:transparent;
+	-ms-transform: rotate(-90deg); /* IE 9 */
+	-webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+	transform: rotate(-90deg);
+}
+.home-team .player.one{
+	top:165px;
+	left:20px;
+	background:transparent;
+}
+.home-team .player.one:after{
+}
+.home-team .player.two{
+	top: 284px;
+  left: 81px;
+}
+.home-team .player.two:after{
+}
+.home-team .player.three{
+  top: 46px;
+  left: 78px;
+}
+.home-team .player.three:after{
+}
+.home-team .player.four{
+	top: 165px;
+  left: 86px;
+}
+.home-team .player.four:after{
+}
+.home-team .player.five{
+	top: 66px;
+  left: 239px;
+}
+.home-team .player.five:after{
+}
+.home-team .player.six{
+	top: 304px;
+  left: 160px;
+}
+.home-team .player.six:after{
+}
+.home-team .player.seven{
+  top: 28px;
+  left: 160px;
+}
+.home-team .player.seven:after{
+}
+.home-team .player.eight{
+	top: 114px;
+  left: 160px;
+}
+.home-team .player.eight:after{
+}
+.home-team .player.nine{
+	top: 215px;
+  left: 160px;
+}
+.home-team .player.nine:after{
+}
+.home-team .player.ten{
+	top: 165px;
+  left: 240px;
+}
+.home-team .player.ten:after{
+  left:0px;
+}
+.home-team .player.eleven{
+	top: 265px;
+  left: 240px;
+}
+.home-team .player.eleven:after{
+	left:0px;
+}
+.visitor-team .player{
+	background:transparent;
+	-ms-transform: rotate(-90deg); /* IE 9 */
+	-webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+	transform: rotate(-90deg);
+}
+.visitor-team .player:after{
+	color:white;
+}
+.visitor-team .player.one{
+	top: 167px;
+  right: 20px;
+	background:transparent;
+}
+.visitor-team .player.one:after{
+	color:red;
+}
+.visitor-team .player.two{
+  top: 284px;
+  right: 80px;
+}
+.visitor-team .player.two:after{
+}
+.visitor-team .player.three{
+	top: 28px;
+  right: 161px;
+}
+.visitor-team .player.three:after{
+}
+.visitor-team .player.four{
+	top: 46px;
+  right: 80px;
+}
+.visitor-team .player.four:after{
+}
+.visitor-team .player.five{
+	top: 166px;
+  right: 86px;
+}
+.visitor-team .player.five:after{
+}
+.visitor-team .player.six{
+	top: 304px;
+  right: 160px;
+}
+.visitor-team .player.six:after{
+}
+.visitor-team .player.seven{
+	top: 66px;
+  right: 238px;
+}
+.visitor-team .player.seven:after{
+}
+.visitor-team .player.eight{
+	top: 114px;
+  right: 160px;
+}
+.visitor-team .player.eight:after{
+}
+.visitor-team .player.nine{
+  top: 215px;
+  right: 160px;
+}
+.visitor-team .player.nine:after{
+}
+.visitor-team .player.ten{
+	top: 162px;
+  right: 240px;
+}
+.visitor-team .player.ten:after{
+	left:0px;
+}
+.visitor-team .player.eleven{
+	top: 265px;
+  right: 238px;
+}
+.visitor-team .player.eleven:after{
+	left:0px;
+}
+buttons buttons-left header-item{
+	display:none;
+}
 button#buttonemail {
-    width: 100%;
+  width: 100%;
 }
-
 input#inputemail {
-    margin-bottom: 17px;
+  margin-bottom: 17px;
 }
-.homeawayteam {float:left;}
-.teamdate {float: right; }
-p.homeawayteam.ng-binding {font-size:9px;}
-p.teamdate.ng-binding {font-size:9px;}
-
-
-@media screen and (max-width: 320px) {
-    #pitch {   zoom: 85%;
+.homeawayteam {
+	float:left;
+}
+.teamdate {
+	float: right;
+}
+p.homeawayteam.ng-binding {
+	font-size:9px;
+}
+p.teamdate.ng-binding {
+	font-size:9px;
+}
+@media only screen and (min-width:250px) and (max-width: 350px)   {
+    #pitch {
+		zoom: 85%;
     margin-top: 91px;
     height: 399px;
-    margin-left: -115px;}
-
+    margin-left: -115px;
+	}
 	.teamname {
     display: inline-block;
     margin-top: 3px;
@@ -543,17 +582,44 @@ p.teamdate.ng-binding {font-size:9px;}
     float: right;
     margin-right: 0%;
     font-size: 15px;
+	}
+	img.slide1{
+		object-fit: cover;
+	}
+	td.grotevanvakjes{
+		font-size:11px;
+	}
+	.clubnamen{
+		font-size:9px;
+	}
+	.ramos{
+		width:104%;
+	}
+	td.clubnamengespeeld.ng-binding{
+		width:31%;
+		font-size:7px;
+	}
+	.ekvak{
+		padding:6px;
+		width: 4% !important;
+	}
+	.bar.bar-assertive .title{
+		font-size:11px;
+	}
+	.bar.bar-stable .title{
+		font-size:13px;
+	}
+	.button:after{
+		display:none;
+	}
+	.menu .scroll-content{
+		background-size:80%;
+		background-color:white;
+	}
 }
-}
-
-
 @media screen and (min-width: 413px){
-
-
-#pitch {    zoom: 112%;
-    margin-left: -110px;}
-
-
-
-
+	#pitch {
+		zoom: 112%;
+	  margin-left: -110px;
+	}
 }

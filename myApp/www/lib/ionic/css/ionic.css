@@ -4070,7 +4070,8 @@ a.subdued {
       margin-right: 5px;
       padding: 0;
       white-space: nowrap;
-      font-weight: 400; }
+      font-weight: 400;
+     }
     .bar .button.back-button.active, .bar .button.back-button.activated, .bar button.back-button.active, .bar button.back-button.activated {
       opacity: 0.2; }
   .bar .button-bar > .button,
@@ -4145,7 +4146,8 @@ a.subdued {
     background: none;
     box-shadow: none;
     color: #387EF5;
-    font-size: 17px; }
+    font-size: 17px;
+   }
   .bar-stable .button.button-icon {
     border-color: transparent;
     background: none; }

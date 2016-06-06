@@ -23,7 +23,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
 })
 
 .factory('engelandApi', function($http) {
-
         return {
            getLeague: function(){
               return $http({
@@ -326,7 +325,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
              }
           })
 
-          .factory('euApi', function($http) {
+.factory('euApi', function($http) {
 
                   return {
                      getLeague: function(){
@@ -911,7 +910,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
                             url: '/teamtimedeu',
                             views: {
                               'menuContent': {
-                                   templateUrl: 'templates/teamtimed.html',
+                                   templateUrl: 'templates/teamtimedek.html',
                                       controller: 'EUCtrl'
 
 

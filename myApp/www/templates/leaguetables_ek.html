@@ -1,6 +1,6 @@
-<ion-view side-menu-content drag-content="false">
+<ion-view>
       <ion-nav-title>
-		  {{league}}
+		  <p class="league-title">{{league}}</p>
     </ion-nav-title>
   <ion-content>
     <ion-list class="ranglijst" >
@@ -10,22 +10,22 @@
              <td class="ekvak">P</td>
              <td class="ekvak">G</td>
              <td class="ekvak">W</td>
-              
+
           </tr>
          </table>
-       
+
       <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.A">
    <div style="overflow-x:auto;">
-   
+
   <table>
     <tr>
-       
-      <td class="grotevanvakjes">{{t.rank}}</td>
+
+      <td id="grotevanvakjes" class="grotevanvakjes">{{t.rank}}</td>
       <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
       <td class="grotevanvakjes">{{t.points}}</td>
       <td class="grotevanvakjes" >{{t.goals}}</td>
       <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
-       
+
     </tr>
   </table>
 </div>
@@ -37,22 +37,22 @@
              <td class="ekvak">P</td>
              <td class="ekvak">G</td>
              <td class="ekvak">W</td>
-              
+
           </tr>
          </table>
-         
-         
+
+
    <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.B">
       <div style="overflow-x:auto;">
          <table>
              <tr>
-                
-               <td class="grotevanvakjes">{{t.rank}}</td>
-               <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
-               <td class="grotevanvakjes">{{t.points}}</td>
-               <td class="grotevanvakjes" >{{t.goals}}</td>
-               <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
-                
+
+               <td id="grotevanvakjes" class="grotevanvakjes">{{t.rank}}</td>
+               <td id="grotevanvakjes" class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
+               <td id="grotevanvakjes" class="grotevanvakjes">{{t.points}}</td>
+               <td id="grotevanvakjes" class="grotevanvakjes" >{{t.goals}}</td>
+               <td id="grotevanvakjes" class="grotevanvakjes">{{t.goalsAgainst}}</td>
+
              </tr>
         </table>
       </div>
@@ -64,22 +64,22 @@
              <td class="ekvak">P</td>
              <td class="ekvak">G</td>
              <td class="ekvak">W</td>
-              
+
           </tr>
          </table>
-         
-         
+
+
   <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.C">
      <div style="overflow-x:auto;">
         <table>
             <tr>
-               
+
               <td class="grotevanvakjes">{{t.rank}}</td>
               <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
               <td class="grotevanvakjes">{{t.points}}</td>
               <td class="grotevanvakjes" >{{t.goals}}</td>
               <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
-               
+
             </tr>
        </table>
      </div>
@@ -91,21 +91,21 @@
              <td class="ekvak">P</td>
              <td class="ekvak">G</td>
              <td class="ekvak">W</td>
-              
+
           </tr>
          </table>
-  
+
   <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.D">
      <div style="overflow-x:auto;">
         <table>
             <tr>
-               
+
               <td class="grotevanvakjes">{{t.rank}}</td>
               <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
               <td class="grotevanvakjes">{{t.points}}</td>
               <td class="grotevanvakjes" >{{t.goals}}</td>
               <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
-               
+
             </tr>
        </table>
      </div>
@@ -117,21 +117,21 @@
              <td class="ekvak">P</td>
              <td class="ekvak">G</td>
              <td class="ekvak">W</td>
-              
+
           </tr>
          </table>
-  
+
   <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.E">
      <div style="overflow-x:auto;">
         <table>
             <tr>
-               
+
               <td class="grotevanvakjes">{{t.rank}}</td>
               <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
               <td class="grotevanvakjes">{{t.points}}</td>
               <td class="grotevanvakjes" >{{t.goals}}</td>
               <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
-               
+
             </tr>
        </table>
      </div>
@@ -143,27 +143,27 @@
              <td class="ekvak">P</td>
              <td class="ekvak">G</td>
              <td class="ekvak">W</td>
-              
+
           </tr>
          </table>
-		
+
   <ion-item class="itemsbuiten"  ng-repeat="t in teams.standings.F">
      <div style="overflow-x:auto;">
         <table>
             <tr>
-               
+
               <td class="grotevanvakjes">{{t.rank}}</td>
               <td class="clubnamen" > <img class="logoclub" ng-src="{{t.crestURI}}"> {{t.team}}</td>
               <td class="grotevanvakjes">{{t.points}}</td>
               <td class="grotevanvakjes" >{{t.goals}}</td>
               <td class="grotevanvakjes">{{t.goalsAgainst}}</td>
-               
+
             </tr>
        </table>
      </div>
  </ion-item>
 <br>
-  
+
 
    </ion-list>
    <p class="aantal">P = Aantal behaalde punten</p>
