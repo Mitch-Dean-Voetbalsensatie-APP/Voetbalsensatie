@@ -140,7 +140,7 @@ angular.module('starter.controllers', [])
 			  //error messages
 			 var alertPopup = $ionicPopup.alert({
 			     title: 'Er is iets fout gegaan, let op de volgende punten:',
-			      subTitle: '-email adress kan in gebruik zijn <br> -een van de velden is niet ingevuld',
+			      subTitle: '-email adress kan in gebruik zijn <br> -een van de velden is niet ingevuld <br> -uw wachtwoord moet minimaal 5 karakters lang zijn',
 				   okText: 'Probeer opnieuw',
 			   });
 			   alertPopup.then(function(res) {
@@ -185,8 +185,10 @@ var isNewUser = true;
 			  email: $scope.user.email
 			}).then(function() {
 			  console.log("Wachtwoord reset is gelukt!");
+				$scope.rightEmail = 'Er is een email verzonden!';
 			}).catch(function(error) {
 			  console.error("Error: ", error);
+				$scope.wrongEmail = 'U heeft geen juist email adress ingevoerd';
 			});
 
 	   $timeout(function() {
@@ -393,6 +395,9 @@ var alertPopup = $ionicPopup.alert({
 			  oldPassword: $scope.reset.oldPassword,
 			  newPassword: $scope.reset.newPassword
 			}).then(function() {
+				$ionicHistory.nextViewOptions({
+				  disableBack: true
+	  			});
 				$state.go('app.home');
 				$ionicPopup.alert({
 			title: 'Uw wachtwoord is succesvol gewijzigd',

@@ -9,6 +9,9 @@
 	    <H4 style="     text-align: center;
     margin-top: -6px;     color: #0F659D;
     margin-bottom: 11px;" >OF</h4>
+    
+    <p ng-hide="rightEmail">{{wrongEmail}}</p>
+    <p >{{rightEmail}}</p>
 	   <label class="item item-input">
         <input type="email" ng-model="user.email" placeholder="Email:">
       </label>
