@@ -197,13 +197,16 @@ td.marktwaardeblok.ng-binding {
   font-size: 11px;
 }
 td.clubnamengespeeld.ng-binding {
-  font-size: 9px;
+  font-size: 8px;
   padding: 0px;
   width: 32%;
-  padding-left: 8px}
+  padding-left: 8px;
+	overflow: hidden;
+}
 
 td.datumgespeeld.ng-binding {
   font-size: 8px;
+	padding:4px;
 }
 td.datumgespeeld2.ng-binding {
   font-size: 10px;
