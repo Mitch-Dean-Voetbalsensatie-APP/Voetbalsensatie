@@ -1,33 +1,20 @@
-<ion-view  view-title="Account" >
-  	<ion-content> <img class="sensatielogopaginas" src="img/sensatielogoo.jpg" alt="">
-	  
-		<span ng-show="check.email">
-	<h4 class="pagetitles" > Welkom {{ check.email }}!</h4>
-		</span>
+<ion-view view-title="Account">
+    <ion-content> <img class="sensatielogopaginas" src="img/sensatielogoo.jpg" alt="">
+        <span ng-show="check.email"><h4 class="pagetitles" > Welkom {{ check.email }}!</h4></span>
+        <br>
+        <div class="containeraccount">
+            <h4>Verander hier uw wachtwoord</h4>
 
-<br>
-	
-	  		   
-		<div class="containeraccount">
-<h4 >Verander hier uw wachtwoord</h4>
-	  	
+            <label class="item item-input">
+                <input type="password" ng-model="reset.oldPassword" placeholder="Oud wachtwoord:">
+            </label>
 
-	  	 <label class="item item-input">
-        <input type="password" ng-model="reset.oldPassword" placeholder="Oud wachtwoord:">
-      </label>
+            <label class="item item-input">
+                <input type="password" ng-model="reset.newPassword" placeholder="Nieuw wachtwoord:">
+            </label>
+            <button id="uitloggen" class="button button-clear button-positive" ng-click="logout()">Uitloggen</button>
 
-	 
-	  	 <label class="item item-input">
-        <input type="password" ng-model="reset.newPassword" placeholder="Nieuw wachtwoord:">
-      </label>
-	  		  	<button id="uitloggen" class="button button-clear button-positive" ng-click="logout()">Uitloggen</button>
-
-
-	  	<button  id="wachtwoordvergeten" class="button button-clear button-assertive" ng-click="resetPassword()">Reset wachtwoord</button>
-
-	  	<!--<h1>Upgrade account</h1>-->
-
-
-	  	</div>
-	</ion-content>
+            <button id="wachtwoordvergeten" class="button button-clear button-assertive" ng-click="resetPassword()">Reset wachtwoord</button>
+        </div>
+    </ion-content>
 </ion-view>

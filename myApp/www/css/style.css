@@ -4,6 +4,12 @@ ion-header-bar.bar-stable.bar.bar-header {
 .iphone5_testing{
 	overflow: hidden;
 }
+.login_of{
+	text-align: center;
+	margin-top: -6px;
+	color: #0F659D;
+	margin-bottom: 11px;
+}
 .icon-competition{
 	width:30px;
 }

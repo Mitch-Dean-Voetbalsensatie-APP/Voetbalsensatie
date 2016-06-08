@@ -1,41 +1,31 @@
 <ion-view>
-      <ion-nav-title>
-Programma
+    <ion-nav-title>
+        Programma
     </ion-nav-title>
-  <ion-content>
-    <img class="ramos" src="img/ramosnoinfocom.jpg">
-    <ion-list>
+    <ion-content>
+        <img class="ramos" src="img/ramosnoinfocom.jpg">
+        <ion-list>
 
-     <ion-item class="itemsbuiten" ng-repeat="team in isTimed">
+            <ion-item class="itemsbuiten" ng-repeat="team in isTimed">
 
+                <div style="overflow-x:auto;">
+                    <table>
 
+                        <tr>
+                            <td class="clubnamenkomend"> {{team.homeTeamName}} - {{team.awayTeamName}}</td>
 
+                            <td class="datumgespeeld2">{{team.date}} </td>
 
-         <div style="overflow-x:auto;">
-  <table>
+                        </tr>
 
-    <tr>
-      <td class="clubnamenkomend" > {{team.homeTeamName}}  - {{team.awayTeamName}}</td>
+                    </table>
+                </div>
 
+            </ion-item>
 
-      <td class="datumgespeeld2">{{team.date}} </td>
-
-    </tr>
-
-
-  </table>
-</div>
-
-
-
-
-
-		   </ion-item>
-
-   </ion-list>
-  </ion-content>
+        </ion-list>
+    </ion-content>
     <ion-footer-bar align-title="left" class="bar-assertive">
-  <h1 class="title" style="text-align: center;" > Competities weer vanaf september</h1>
-</ion-footer-bar>
+        <h1 class="title" style="text-align: center;"> Competities weer vanaf september</h1>
+    </ion-footer-bar>
 </ion-view>
-

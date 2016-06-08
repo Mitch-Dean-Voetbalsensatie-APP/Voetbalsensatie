@@ -1,36 +1,27 @@
 <ion-view>
-      <ion-nav-title>
-Programma
+    <ion-nav-title>
+        Programma
     </ion-nav-title>
-  <ion-content>
-    <ion-list>
+    <ion-content>
+        <ion-list>
 
-     <ion-item class="itemsbuiten" ng-repeat="team in isTimed">
+            <ion-item class="itemsbuiten" ng-repeat="team in isTimed">
 
+                <div style="overflow-x:auto;">
+                    <table>
 
+                        <tr>
+                            <td class="clubnamenkomend"> {{team.homeTeamName}} - {{team.awayTeamName}}</td>
 
+                            <td class="datumgespeeld2">{{team.date}} </td>
 
-         <div style="overflow-x:auto;">
-  <table>
+                        </tr>
 
-    <tr>
-      <td class="clubnamenkomend" > {{team.homeTeamName}}  - {{team.awayTeamName}}</td>
+                    </table>
+                </div>
 
+            </ion-item>
 
-      <td class="datumgespeeld2">{{team.date}} </td>
-
-    </tr>
-
-
-  </table>
-</div>
-
-
-
-
-
-		   </ion-item>
-
-   </ion-list>
-  </ion-content>
+        </ion-list>
+    </ion-content>
 </ion-view>

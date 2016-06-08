@@ -1,62 +1,62 @@
-<ion-side-menus >
-  <ion-side-menu-content >
-    <ion-nav-bar class="bar-stable">
-      <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-        </button>
-      </ion-nav-buttons>
-      <ion-nav-buttons side="right">
-      <a ng-show="check.email" href="#/app/account" class="button button-clear button-light">Account</a>
-      <a ng-show="check.facebook" href="#/app/account" class="button button-clear button-light"><img class="facebook-icon" ng-src="{{ check.facebookprofileImageURL }}"> </a>
-      </ion-nav-buttons>
-      <ion-nav-back-button class="button-clear"></ion-nav-back-button>
-    </ion-nav-bar>
-    <ion-nav-view name="menuContent"></ion-nav-view>
-  </ion-side-menu-content>
-  <ion-side-menu side="left">
-  <ion-header-bar class="bar-stable">
-    <p ng-show="check.email||check.facebook"  id="username" class="ion-person">{{ check.email }} {{ check.facebook }}</p>
-    <p ng-hide="check.email||check.facebook" class="menutitel">Menu</p>
-    </ion-header-bar>
-    <ion-content>
-      <ion-list >
-        <ion-item  class="menuklasse" menu-close href="#/app/home">
-        <p class="icon menu-icon ion-home"> Home </p>
-        </ion-item>
-        <ion-item menu-close href="#/app/competities" ng-hide="check.email||check.facebook">
-        <p class="ion-ios-football"> Competities</p>
-        </ion-item>
-         <ion-item id="greymenu" menu-close href="#/app/competitieinlog" ng-show="check.email||check.facebook">
-        <p class="ion-ios-football">Mijn competities</p>
-        </ion-item>
-        <ion-item id="whitemenu" menu-close href="#/app/ourTeams">
-        <p class="ion-ios-body">Onze Teams</p>
-        </ion-item>
-        <ion-item id="greymenu" menu-close href="#/app/login" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive">
-         <p class="ion-ios-person"> Inloggen</p>
-        </ion-item>
-        <ion-item  id="whitemenu" menu-close href="#/app/signup" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive">
-         <p class="ion-person-add"> Registreren</p>
-        </ion-item>
-        <ion-item id="greymenu" menu-close href="#/app/account" hide-back-button="true" ng-show="check.email||check.facebook">
-         <p class="ion-ios-person"> Account</p>
-        </ion-item>
-        <ion-item id="whitemenu" menu-close href="#/app/voorkeur" hide-back-button="true"ng-show="check.email||check.facebook">
-         <p class="ion-ios-gear"> Voorkeuren</p>
-        </ion-item>
-         <ion-item id="greymenu" menu-close href="#/app/contact">
-         <p class="ion-ios-telephone"> Contact</p>
-        </ion-item>
-          <ion-item id="whitemenu" menu-close href="#/app/home" ng-show="check.email||check.facebook">
-         <p class="ion-log-out" ng-click="logout()"> Uitloggen </p>
-        </ion-item>
-      </ion-list>
-      <div class="socialmedia">
-      	<a onclick="window.open('https://www.facebook.com/sensatiereizen')"><img class="socialmediaicons" src="img/facebook.jpg" alt=""></a>
-      	<a onclick="window.open('https://twitter.com/voetbalsensatie')"><img class="socialmediaicons" src="img/twitter.jpg" alt="">
-      	<a onclick="window.open('http://www.instagram.com')"><img class="socialmediaicons" src="img/instagram.jpg" alt="">
-		    <a onclick="window.open('https://www.linkedin.com/company/voetbalsensatie')"><img class="socialmediaicons" src="img/linked.jpg" alt="">
-      </div>
-    </ion-content>
-  </ion-side-menu>
+<ion-side-menus>
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <a ng-show="check.email" href="#/app/account" class="button button-clear button-light">Account</a>
+                <a ng-show="check.facebook" href="#/app/account" class="button button-clear button-light"><img class="facebook-icon" ng-src="{{ check.facebookprofileImageURL }}"> </a>
+            </ion-nav-buttons>
+            <ion-nav-back-button class="button-clear">Opties</ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-header-bar class="bar-stable">
+            <p ng-show="check.email||check.facebook" id="username" class="ion-person">{{ check.email }} {{ check.facebook }}</p>
+            <p ng-hide="check.email||check.facebook" class="menutitel">Menu</p>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list>
+                <ion-item class="menuklasse" menu-close href="#/app/home">
+                    <p class="icon menu-icon ion-home"> Home </p>
+                </ion-item>
+                <ion-item menu-close href="#/app/competities" ng-hide="check.email||check.facebook">
+                    <p class="ion-ios-football"> Competities</p>
+                </ion-item>
+                <ion-item id="greymenu" menu-close href="#/app/competitieinlog" ng-show="check.email||check.facebook">
+                    <p class="ion-ios-football">Mijn competities</p>
+                </ion-item>
+                <ion-item id="whitemenu" menu-close href="#/app/ourTeams">
+                    <p class="ion-ios-body">Onze Teams</p>
+                </ion-item>
+                <ion-item id="greymenu" menu-close href="#/app/login" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive">
+                    <p class="ion-ios-person"> Inloggen</p>
+                </ion-item>
+                <ion-item id="whitemenu" menu-close href="#/app/signup" hide-back-button="true" ng-hide="check.email||check.facebook" class="tabs-icon-top tabs-positive">
+                    <p class="ion-person-add"> Registreren</p>
+                </ion-item>
+                <ion-item id="greymenu" menu-close href="#/app/account" hide-back-button="true" ng-show="check.email||check.facebook">
+                    <p class="ion-ios-person"> Account</p>
+                </ion-item>
+                <ion-item id="whitemenu" menu-close href="#/app/voorkeur" hide-back-button="true" ng-show="check.email||check.facebook">
+                    <p class="ion-ios-gear"> Voorkeuren</p>
+                </ion-item>
+                <ion-item id="greymenu" menu-close href="#/app/contact">
+                    <p class="ion-ios-telephone"> Contact</p>
+                </ion-item>
+                <ion-item id="whitemenu" menu-close href="#/app/home" ng-show="check.email||check.facebook">
+                    <p class="ion-log-out" ng-click="logout()"> Uitloggen </p>
+                </ion-item>
+            </ion-list>
+            <div class="socialmedia">
+                <a onclick="window.open('https://www.facebook.com/sensatiereizen')"><img class="socialmediaicons" src="img/facebook.jpg" alt=""></a>
+                <a onclick="window.open('https://twitter.com/voetbalsensatie')"><img class="socialmediaicons" src="img/twitter.jpg" alt="">
+                    <a onclick="window.open('http://www.instagram.com')"><img class="socialmediaicons" src="img/instagram.jpg" alt="">
+                        <a onclick="window.open('https://www.linkedin.com/company/voetbalsensatie')"><img class="socialmediaicons" src="img/linked.jpg" alt="">
+            </div>
+        </ion-content>
+    </ion-side-menu>
 </ion-side-menus>

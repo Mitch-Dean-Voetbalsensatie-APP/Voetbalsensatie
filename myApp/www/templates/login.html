@@ -1,31 +1,20 @@
 <ion-view view-title="Inloggen" hide-back-button="true">
-  	<ion-content ng-controller="PopupCtrl">	<img class="sensatielogopaginas" src="img/sensatielogoo.jpg" alt="">
-	  <h4 class="pagetitles" >Log in met</h4>
-	 
-
-	   
-	   <div class="containerlogin">
-	    <button class="button button-block"ng-click="facebook()"><img class="facebooklogin" ng-src="img/facebooklogin.png" alt="">Facebook</button>
-	    <H4 style="     text-align: center;
-    margin-top: -6px;     color: #0F659D;
-    margin-bottom: 11px;" >OF</h4>
-    
-    <p ng-hide="rightEmail">{{wrongEmail}}</p>
-    <p >{{rightEmail}}</p>
-	   <label class="item item-input">
-        <input type="email" ng-model="user.email" placeholder="Email:">
-      </label>
-      <label class="item item-input">
-        <input type="password" ng-model="user.password" placeholder="Wachtwoord:">
-      </label>
-
-      <button class="button button-block button-positive"ng-click="login()">Inloggen</button>
-      	  <a id="geenAccount" class="button button-clear button-positive" href="#/app/signup">Nog geen Account?</a>
-
-	  <button id="wachtwoordvergeten" class="button button-clear button-assertive" ng-click="showPopup()">Wachtwoord vergeten?</button>
-	  
-	    
-	  </div>
-	 
-	</ion-content>
+    <ion-content ng-controller="PopupCtrl"> <img class="sensatielogopaginas" src="img/sensatielogoo.jpg" alt="">
+        <h4 class="pagetitles">Log in met</h4>
+        <div class="containerlogin">
+            <button class="button button-block" ng-click="facebook()"><img class="facebooklogin" ng-src="img/facebooklogin.png" alt="">Facebook</button>
+            <H4 class="login_of">OF</h4>
+            <p ng-hide="rightEmail">{{wrongEmail}}</p>
+            <p>{{rightEmail}}</p>
+            <label class="item item-input">
+                <input type="email" ng-model="user.email" placeholder="Email:">
+            </label>
+            <label class="item item-input">
+                <input type="password" ng-model="user.password" placeholder="Wachtwoord:">
+            </label>
+            <button class="button button-block button-positive" ng-click="login()">Inloggen</button>
+            <a id="geenAccount" class="button button-clear button-positive" href="#/app/signup">Nog geen Account?</a>
+            <button id="wachtwoordvergeten" class="button button-clear button-assertive" ng-click="showPopup()">Wachtwoord vergeten?</button>
+        </div>
+    </ion-content>
 </ion-view>
