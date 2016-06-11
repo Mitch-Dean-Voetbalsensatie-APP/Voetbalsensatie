@@ -64,7 +64,7 @@ angular.module('starter.controllers', [])
         }
     }
 ])
-//This is the Sighnup controlller that has the following functions: newuser//
+//This is the Signup controlller that has the following function: newuser//
 .controller('signupCtrl', ["$scope", "$state", "$rootScope", "$ionicPopup", "$firebaseAuth", "$firebase", "$firebaseObject", "$ionicHistory",
         function($scope, $state, $rootScope, $ionicPopup, $firebaseAuth, $firebase, $firebaseObject, $ionicHistory) {
             var isNewUser = true;
@@ -167,7 +167,7 @@ angular.module('starter.controllers', [])
         }
     ])
 
-//this is the pop up controller that
+//this is the pop up controller that will show the popups 
 .controller('PopupCtrl', function($scope, $ionicPopup, $timeout, $firebaseAuth, $firebase, $firebaseObject) {
     var isNewUser = true;
     var ref = new Firebase("https://sensatie.firebaseio.com");
@@ -203,7 +203,7 @@ angular.module('starter.controllers', [])
                 oldPassword: $scope.reset.oldPassword,
                 newPassword: $scope.reset.newPassword
             }).then(function() {
-                console.log("Paaassword changed successfully!");
+                console.log("Password changed successfully!");
             }).catch(function(error) {
                 console.error("Error: ", error);
             });

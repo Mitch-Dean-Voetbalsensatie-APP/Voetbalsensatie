@@ -18,6 +18,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase']) .run(fun
     }
     );
 })
+
+//this will get the data from the english competition API
 .factory('engelandApi', function($http) {
     return {
         getLeague: function() {
@@ -47,6 +49,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase']) .run(fun
         },
     }
 })
+
+//this will get the data from the SPANISH competition API
 .factory('spainApi', function($http) {
     return {
         getLeague: function() {
@@ -76,6 +80,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase']) .run(fun
         },
     }
 })
+
+//this will get the data from the ITALY competition API
 .factory('italyApi', function($http) {
     return {
         getLeague: function() {
@@ -105,6 +111,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase']) .run(fun
         },
     }
 })
+
+//this will get the data from the GERMANY competition API
 .factory('germanyApi', function($http) {
     return {
         getLeague: function() {
@@ -134,6 +142,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase']) .run(fun
         },
     }
 })
+
+//this will get the data from the PORTUGAL competition API
 .factory('portugalApi', function($http) {
     return {
         getLeague: function() {
@@ -164,6 +174,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase']) .run(fun
         },
     }
 })
+
+//this will get the data from the DUTCH competition API
 .factory('dutchApi', function($http) {
     return {
         getLeague: function() {
@@ -193,6 +205,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase']) .run(fun
         },
     }
 })
+
+//this will get the data from the FRANCE competition API
 .factory('franceApi', function($http) {
     return {
         getLeague: function() {
@@ -222,6 +236,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase']) .run(fun
         },
     }
 })
+
+//this will get the data from the CHAMPIONS LEAGUE competition API
 .factory('championsApi', function($http) {
     return {
         getLeague: function() {
@@ -252,6 +268,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase']) .run(fun
         },
     }
 })
+
+//this will get the data from the EU competition API
 .factory('euApi', function($http) {
     return {
         getLeague: function() {
@@ -282,6 +300,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase']) .run(fun
         },
     }
 })
+
+//Here do you set the links of the pages in the APP
 .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider .state('app', {
         url: '/app', abstract: true, templateUrl: 'templates/menu.html', controller: 'AccountCtrl'
