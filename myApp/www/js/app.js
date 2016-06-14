@@ -659,7 +659,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase']) .run(fun
     .state('app.teaminplayeu', {
         url: '/teaminplayeu', views: {
             'menuContent': {
-                templateUrl: 'templates/teaminplay.html', controller: 'EUCtrl'
+                templateUrl: 'templates/teaminplayek.html', controller: 'EUCtrl'
             }
         }
     }).state('app.teamfinishedeu', {
