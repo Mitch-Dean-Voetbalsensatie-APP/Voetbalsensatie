@@ -1,0 +1,22 @@
+<ion-view>
+    <ion-nav-title>Marktwaarde</ion-nav-title>
+    <ion-content>
+        <ion-list>
+            <ion-item class="itemsbuiten" ng-repeat="t in team.teams">
+
+                <div style="overflow-x:auto;">
+                    <table>
+
+                        <tr>
+
+                            <td class="clubnamen"> <img class="logoclub" ng-src="{{t.crestUrl}}"> {{t.name}}</td>
+                            <td class="marktwaardeblok">{{t.squadMarketValue}} </td>
+
+                        </tr>
+
+                    </table>
+                </div>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

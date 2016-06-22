@@ -1,0 +1,34 @@
+<ion-view>
+    <ion-nav-title>
+        Live Wedstrijden
+    </ion-nav-title>
+    <ion-content>
+        <ion-list>
+            <img class="ramos" src="img/ramosnoinfo.jpg">
+
+            <ion-item class="itemsbuiten" ng-repeat="team in isActive">
+
+                <div style="overflow-x:auto;">
+                    <table>
+
+                        <tr>
+
+                            <td class="clubnamengespeeld"> {{team.homeTeamName}}</td>
+                            <td class="groenvakjes">{{team.result.goalsHomeTeam}} </td>
+                            <td class="grotevanvakjes"> - </td>
+                            <td class="groenvakjes">{{team.result.goalsAwayTeam}}</td>
+                            <td class="clubnamengespeeld">{{team.awayTeamName}} </td>
+
+                        </tr>
+
+                    </table>
+                </div>
+
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar-assertive">
+        <h1 class="title" style="text-align: center;"> Wedstrijden beschikbaar vanaf: September</h1>
+    </ion-footer-bar>
+</ion-view>
